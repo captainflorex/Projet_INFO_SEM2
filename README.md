@@ -112,4 +112,8 @@ Puis lancez l'executable genere dans le dossier `build/`.
 
 ## Auteurs
 
-Projet realise dans le cadre du cours d'INFO S2.
+Floriant chaffray
+Tom petitjean
+Remi matteoda
+Candice Oswald
+
