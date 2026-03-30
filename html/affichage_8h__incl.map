@@ -1,11 +1,11 @@
 <map id="heat/affichage.h" name="heat/affichage.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="42,5,156,32"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,155,76,181"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,35,73,55,58,81,49,111,44,140,39,139,44,110,53,79,68,52,89,30"/>
-<area shape="rect" id="Node000003" href="$entites_8h.html" title=" " alt="" coords="121,155,192,181"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="111,30,130,52,146,79,154,110,158,141,153,138,149,111,141,81,126,55,111,35"/>
-<area shape="rect" id="Node000004" href="$menu_8h.html" title=" " alt="" coords="67,80,131,107"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="100,30,102,65,97,64,98,35"/>
-<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="91,106,62,144,58,141,87,109"/>
-<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="110,105,140,142,135,143,108,110"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="34,5,171,38"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,167,91,199"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,41,69,61,54,87,48,119,47,151,42,151,42,119,50,85,65,58,87,36"/>
+<area shape="rect" id="Node000003" href="$entites_8h.html" title=" " alt="" coords="126,167,208,199"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="119,36,140,58,156,85,165,118,169,152,164,150,160,119,151,87,135,61,119,41"/>
+<area shape="rect" id="Node000004" href="$menu_8h.html" title=" " alt="" coords="64,86,141,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="104,36,105,71,100,70,102,41"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="94,118,69,156,65,152,90,121"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="116,117,147,155,142,155,114,122"/>
 </map>

@@ -1,17 +1,14 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8c.html#a840291bc02cba5474a4cb46a9b9566fe',1,'main.c']]],
-  ['main_2ec_1',['main.c',['../main_8c.html',1,'']]],
-  ['max_5farmes_2',['MAX_ARMES',['../entites_8h.html#a41cb7bda3c9c7ccb151bfe8c87bc0a70',1,'entites.h']]],
-  ['max_5fbulles_3',['MAX_BULLES',['../entites_8h.html#a772c22e70237d36cf621df6a2235ff61',1,'entites.h']]],
-  ['max_5fprojectiles_4',['MAX_PROJECTILES',['../entites_8h.html#adbc131e9b147b67d84003e054b355365',1,'entites.h']]],
-  ['menu_2ec_5',['menu.c',['../menu_8c.html',1,'']]],
-  ['menu_2eh_6',['menu.h',['../menu_8h.html',1,'']]],
-  ['menu_5finit_7',['menu_init',['../menu_8c.html#a9f7f93c6f1e2b624e8cf71df3f37517a',1,'menu_init(EtatMenu *em):&#160;menu.c'],['../menu_8h.html#a9f7f93c6f1e2b624e8cf71df3f37517a',1,'menu_init(EtatMenu *em):&#160;menu.c']]],
-  ['menu_5fmettre_5fa_5fjour_8',['menu_mettre_a_jour',['../menu_8c.html#a3913bce4e975a52d19ed8450f553b4f2',1,'menu_mettre_a_jour(EtatMenu *em):&#160;menu.c'],['../menu_8h.html#a3913bce4e975a52d19ed8450f553b4f2',1,'menu_mettre_a_jour(EtatMenu *em):&#160;menu.c']]],
-  ['menu_5fnouvelle_5fpartie_9',['MENU_NOUVELLE_PARTIE',['../menu_8h.html#a697513d0346fbaa26784191b9cbbf093a6fb2cce6876c14b2320b86d39ebf12b4',1,'menu.h']]],
-  ['menu_5fquitter_10',['MENU_QUITTER',['../menu_8h.html#a697513d0346fbaa26784191b9cbbf093aeda6b268840b05d8bc39cbf6b0cfd117',1,'menu.h']]],
-  ['menu_5fregles_11',['MENU_REGLES',['../menu_8h.html#a697513d0346fbaa26784191b9cbbf093a0adc3d84580d24b157660d6b6f939967',1,'menu.h']]],
-  ['menu_5freprendre_5fpartie_12',['MENU_REPRENDRE_PARTIE',['../menu_8h.html#a697513d0346fbaa26784191b9cbbf093a1edbca7839d01020f061191245876b14',1,'menu.h']]],
-  ['menu_5fsaisir_5fpseudo_13',['menu_saisir_pseudo',['../menu_8c.html#a015a16da2577c972ef258e595f5634b0',1,'menu_saisir_pseudo(EtatMenu *em):&#160;menu.c'],['../menu_8h.html#a015a16da2577c972ef258e595f5634b0',1,'menu_saisir_pseudo(EtatMenu *em):&#160;menu.c']]]
+  ['jeu_2ec_0',['jeu.c',['../jeu_8c.html',1,'']]],
+  ['jeu_2eh_1',['jeu.h',['../jeu_8h.html',1,'']]],
+  ['jeu_5finit_5fniveau_2',['jeu_init_niveau',['../jeu_8h.html#ac3b9eb13e1446e9c5aa5ee8c7bae31f9',1,'jeu_init_niveau(EtatJeu *ej, int niveau):&#160;jeu.c'],['../jeu_8c.html#ac3b9eb13e1446e9c5aa5ee8c7bae31f9',1,'jeu_init_niveau(EtatJeu *ej, int niveau):&#160;jeu.c']]],
+  ['jeu_5fmettre_5fa_5fjour_3',['jeu_mettre_a_jour',['../jeu_8h.html#a6c267bac373aba16a2d30f98c5786dfd',1,'jeu_mettre_a_jour(EtatJeu *ej, float dt):&#160;jeu.c'],['../jeu_8c.html#a6c267bac373aba16a2d30f98c5786dfd',1,'jeu_mettre_a_jour(EtatJeu *ej, float dt):&#160;jeu.c']]],
+  ['jeu_5fniveau_5fgagne_4',['jeu_niveau_gagne',['../jeu_8h.html#accec6939a115e95b6fe0dd557161d78e',1,'jeu_niveau_gagne(const EtatJeu *ej):&#160;jeu.c'],['../jeu_8c.html#accec6939a115e95b6fe0dd557161d78e',1,'jeu_niveau_gagne(const EtatJeu *ej):&#160;jeu.c']]],
+  ['jeu_5fniveau_5fperdu_5',['jeu_niveau_perdu',['../jeu_8h.html#addc45c25e35e48d44131714b8e7f7516',1,'jeu_niveau_perdu(const EtatJeu *ej):&#160;jeu.c'],['../jeu_8c.html#addc45c25e35e48d44131714b8e7f7516',1,'jeu_niveau_perdu(const EtatJeu *ej):&#160;jeu.c']]],
+  ['jeu_5fverifier_5fcollisions_6',['jeu_verifier_collisions',['../jeu_8h.html#a0fdf5ccf00e016cdf02d6fd09ef52295',1,'jeu_verifier_collisions(EtatJeu *ej):&#160;jeu.c'],['../jeu_8c.html#a0fdf5ccf00e016cdf02d6fd09ef52295',1,'jeu_verifier_collisions(EtatJeu *ej):&#160;jeu.c']]],
+  ['joueur_7',['Joueur',['../struct_joueur.html',1,'']]],
+  ['joueur_8',['joueur',['../struct_etat_jeu.html#a7dee0e2699f36b8a465ae681834af88f',1,'EtatJeu']]],
+  ['joueur_5fsignaler_5ftir_9',['joueur_signaler_tir',['../affichage_8h.html#a8a136500425935baff6b4aefc3d7ba80',1,'joueur_signaler_tir(void):&#160;affichage.c'],['../affichage_8c.html#a8a136500425935baff6b4aefc3d7ba80',1,'joueur_signaler_tir(void):&#160;affichage.c']]],
+  ['joueur_5ftirer_10',['joueur_tirer',['../jeu_8h.html#aa567b6f3c9bd1a4df9d6b4683b5b46be',1,'joueur_tirer(EtatJeu *ej):&#160;jeu.c'],['../jeu_8c.html#aa567b6f3c9bd1a4df9d6b4683b5b46be',1,'joueur_tirer(EtatJeu *ej):&#160;jeu.c']]]
 ];

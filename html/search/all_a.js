@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['nb_5fbulles_0',['nb_bulles',['../struct_etat_jeu.html#aba9c833f5fd68d3d93e9781c282c8229',1,'EtatJeu']]],
-  ['nb_5felements_5fmenu_1',['NB_ELEMENTS_MENU',['../menu_8h.html#a08500339c9e3ef0a4e5f54fb67fce728',1,'menu.h']]],
-  ['niveau_2',['niveau',['../struct_etat_jeu.html#ad6d7ae27c8298976545ebfde15b4df4a',1,'EtatJeu']]]
+  ['lance_5feclairs_0',['lance_eclairs',['../struct_bulle.html#a9791f1ae1668cba807a70847326f2662',1,'Bulle']]],
+  ['largeur_5ffenetre_1',['LARGEUR_FENETRE',['../entites_8h.html#a6068a247ff9ece1b0a9773c58144906c',1,'entites.h']]],
+  ['libelles_5fmenu_2',['LIBELLES_MENU',['../menu_8c.html#a499a5e286fc4181187726055786536c0',1,'menu.c']]],
+  ['lister_5fsauvegardes_3',['lister_sauvegardes',['../sauvegarde_8h.html#a84f8b199f22919236cd9dedbf7b5186f',1,'lister_sauvegardes(char tampons[][PSEUDO_LEN], int *niveaux, int taille_max):&#160;sauvegarde.c'],['../sauvegarde_8c.html#a84f8b199f22919236cd9dedbf7b5186f',1,'lister_sauvegardes(char tampons[][PSEUDO_LEN], int *niveaux, int taille_max):&#160;sauvegarde.c']]]
 ];

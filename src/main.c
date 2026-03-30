@@ -10,6 +10,8 @@ volatile int tics = 0;
 void compteur(void) { tics++; }
 END_OF_FUNCTION(compteur)
 
+//test
+
 typedef enum {
     ETAT_MENU,
     ETAT_SAISIE_PSEUDO,

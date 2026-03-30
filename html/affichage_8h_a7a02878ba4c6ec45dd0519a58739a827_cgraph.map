@@ -1,5 +1,5 @@
 <map id="affichage_charger_ressources" name="affichage_charger_ressources">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,200,32"/>
-<area shape="rect" id="Node000002" href="$affichage_8c.html#a1c25b13612b19721d644c2bb2a78e5dc" title=" " alt="" coords="248,5,374,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,16,235,19,230,19,200,21"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,241,38"/>
+<area shape="rect" id="Node000002" href="$affichage_8c.html#a1c25b13612b19721d644c2bb2a78e5dc" title=" " alt="" coords="289,5,443,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="241,19,276,22,271,22,241,24"/>
 </map>

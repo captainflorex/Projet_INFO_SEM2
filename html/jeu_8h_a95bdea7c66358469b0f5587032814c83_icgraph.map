@@ -1,9 +1,9 @@
 <map id="bulle_diviser" name="bulle_diviser">
-<area shape="rect" id="Node000001" title=" " alt="" coords="468,5,562,32"/>
-<area shape="rect" id="Node000002" href="$jeu_8c.html#a0fdf5ccf00e016cdf02d6fd09ef52295" title=" " alt="" coords="275,5,420,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="450,19,421,21,420,16,455,19"/>
-<area shape="rect" id="Node000003" href="$jeu_8c.html#a6c267bac373aba16a2d30f98c5786dfd" title=" " alt="" coords="103,5,227,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="257,19,227,21,227,16,262,19"/>
-<area shape="rect" id="Node000004" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,55,32"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="84,20,55,21,55,16,89,18"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="545,5,661,38"/>
+<area shape="rect" id="Node000002" href="$jeu_8c.html#a0fdf5ccf00e016cdf02d6fd09ef52295" title=" " alt="" coords="314,5,497,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="527,22,498,24,498,19,532,22"/>
+<area shape="rect" id="Node000003" href="$jeu_8c.html#a6c267bac373aba16a2d30f98c5786dfd" title=" " alt="" coords="112,5,266,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="296,22,266,24,266,19,301,22"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,64,38"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="93,22,64,24,64,19,99,21"/>
 </map>

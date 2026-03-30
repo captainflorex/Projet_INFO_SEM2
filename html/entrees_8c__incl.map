@@ -1,7 +1,7 @@
 <map id="src/entrees.c" name="src/entrees.c">
-<area shape="rect" id="Node000001" title=" " alt="" coords="42,5,140,32"/>
-<area shape="rect" id="Node000002" href="$entrees_8h.html" title=" " alt="" coords="5,80,81,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="85,31,62,69,58,65,80,34"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="105,80,176,107"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="101,30,126,67,121,67,98,35"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="48,5,159,38"/>
+<area shape="rect" id="Node000002" href="$entrees_8h.html" title=" " alt="" coords="5,86,92,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,37,70,75,66,72,90,40"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="115,86,200,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="115,36,141,73,136,73,113,41"/>
 </map>

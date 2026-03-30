@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['jeu_2ec_0',['jeu.c',['../jeu_8c.html',1,'']]],
-  ['jeu_2eh_1',['jeu.h',['../jeu_8h.html',1,'']]]
+  ['entites_2eh_0',['entites.h',['../entites_8h.html',1,'']]],
+  ['entrees_2ec_1',['entrees.c',['../entrees_8c.html',1,'']]],
+  ['entrees_2eh_2',['entrees.h',['../entrees_8h.html',1,'']]]
 ];
