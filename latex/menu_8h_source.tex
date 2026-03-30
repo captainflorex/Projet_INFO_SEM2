@@ -1,0 +1,35 @@
+\doxysection{menu.\+h}
+\hypertarget{menu_8h_source}{}\label{menu_8h_source}\index{heat/menu.h@{heat/menu.h}}
+\doxymbox{\hyperlink{menu_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MENU\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MENU\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <allegro.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{entites_8h}{entites.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ NB\_ELEMENTS\_MENU\ 4}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00010\ \ \doxymbox{\hyperlink{menu_8h_a697513d0346fbaa26784191b9cbbf093a6fb2cce6876c14b2320b86d39ebf12b4}{MENU\_NOUVELLE\_PARTIE}}\ =\ 0,}
+\DoxyCodeLine{00011\ \ \doxymbox{\hyperlink{menu_8h_a697513d0346fbaa26784191b9cbbf093a1edbca7839d01020f061191245876b14}{MENU\_REPRENDRE\_PARTIE}},}
+\DoxyCodeLine{00012\ \ \doxymbox{\hyperlink{menu_8h_a697513d0346fbaa26784191b9cbbf093a0adc3d84580d24b157660d6b6f939967}{MENU\_REGLES}},}
+\DoxyCodeLine{00013\ \ \doxymbox{\hyperlink{menu_8h_a697513d0346fbaa26784191b9cbbf093aeda6b268840b05d8bc39cbf6b0cfd117}{MENU\_QUITTER}}}
+\DoxyCodeLine{00014\ \}\ \doxymbox{\hyperlink{menu_8h_a697513d0346fbaa26784191b9cbbf093}{ElementMenu}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00017\ \ \textcolor{keywordtype}{int}\ \ \doxymbox{\hyperlink{struct_etat_menu_ab3544f0488f630de2d9dce4cb43a18b8}{element\_selectionne}};}
+\DoxyCodeLine{00018\ \ \textcolor{keywordtype}{char}\ \doxymbox{\hyperlink{struct_etat_menu_a8b693f3c69736ec2ae129887b17d93d5}{pseudo\_saisi}}[\doxymbox{\hyperlink{entites_8h_a5d2813c915f8962316bdba34165daef5}{PSEUDO\_LEN}}];}
+\DoxyCodeLine{00019\ \ \textcolor{keywordtype}{int}\ \ \doxymbox{\hyperlink{struct_etat_menu_a5f915e5f8f3f8f065f3e75c1df8b6eac}{saisie\_en\_cours}};}
+\DoxyCodeLine{00020\ \ \textcolor{keywordtype}{int}\ \ \doxymbox{\hyperlink{struct_etat_menu_a51485ba2fa7fd3305c3db5275f018d73}{afficher\_regles}};}
+\DoxyCodeLine{00021\ \}\ \doxymbox{\hyperlink{struct_etat_menu}{EtatMenu}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{menu_8h_a9f7f93c6f1e2b624e8cf71df3f37517a}{menu\_init}}(\doxymbox{\hyperlink{struct_etat_menu}{EtatMenu}}\ *em);}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{int}\ \ \doxymbox{\hyperlink{menu_8h_a3913bce4e975a52d19ed8450f553b4f2}{menu\_mettre\_a\_jour}}(\doxymbox{\hyperlink{struct_etat_menu}{EtatMenu}}\ *em);}
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{menu_8h_a015a16da2577c972ef258e595f5634b0}{menu\_saisir\_pseudo}}(\doxymbox{\hyperlink{struct_etat_menu}{EtatMenu}}\ *em);}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{menu_8h_a5ea310a2d8bd7c9b2e2c6050629dd7b0}{afficher\_menu}}(BITMAP\ *tampon,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_etat_menu}{EtatMenu}}\ *em);}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{menu_8h_aa21de65fbde7933c3234a51ff1cf192f}{afficher\_regles}}(BITMAP\ *tampon);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

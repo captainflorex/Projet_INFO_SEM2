@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="struct_boss" kind="struct" language="C++" prot="public">
+    <compoundname>Boss</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_boss_1a8edf1d9d4cccf1a2b036d2c3f65c8681" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Boss::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>Boss::x</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="entites.h" line="60" column="11" bodyfile="entites.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_boss_1a5872a3518b99314af857322c97c3b800" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Boss::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>Boss::y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="entites.h" line="60" column="13" bodyfile="entites.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_boss_1a3f9482821d86e68131678f33a1ed65c6" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Boss::vx</definition>
+        <argsstring></argsstring>
+        <name>vx</name>
+        <qualifiedname>Boss::vx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="entites.h" line="61" column="11" bodyfile="entites.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_boss_1ab08d69ef70e68d1e681293dfaf218dcb" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Boss::vy</definition>
+        <argsstring></argsstring>
+        <name>vy</name>
+        <qualifiedname>Boss::vy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="entites.h" line="61" column="14" bodyfile="entites.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_boss_1a9276aeb24cc00e6bd8aada39190f0334" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Boss::points_vie</definition>
+        <argsstring></argsstring>
+        <name>points_vie</name>
+        <qualifiedname>Boss::points_vie</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="entites.h" line="62" column="11" bodyfile="entites.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_boss_1a885e2a3d77e66c251358a887e8db4e39" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Boss::active</definition>
+        <argsstring></argsstring>
+        <name>active</name>
+        <qualifiedname>Boss::active</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="entites.h" line="63" column="11" bodyfile="entites.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="entites.h" line="59" column="1" bodyfile="entites.h" bodystart="59" bodyend="64"/>
+    <listofallmembers>
+      <member refid="struct_boss_1a885e2a3d77e66c251358a887e8db4e39" prot="public" virt="non-virtual"><scope>Boss</scope><name>active</name></member>
+      <member refid="struct_boss_1a9276aeb24cc00e6bd8aada39190f0334" prot="public" virt="non-virtual"><scope>Boss</scope><name>points_vie</name></member>
+      <member refid="struct_boss_1a3f9482821d86e68131678f33a1ed65c6" prot="public" virt="non-virtual"><scope>Boss</scope><name>vx</name></member>
+      <member refid="struct_boss_1ab08d69ef70e68d1e681293dfaf218dcb" prot="public" virt="non-virtual"><scope>Boss</scope><name>vy</name></member>
+      <member refid="struct_boss_1a8edf1d9d4cccf1a2b036d2c3f65c8681" prot="public" virt="non-virtual"><scope>Boss</scope><name>x</name></member>
+      <member refid="struct_boss_1a5872a3518b99314af857322c97c3b800" prot="public" virt="non-virtual"><scope>Boss</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

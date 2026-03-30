@@ -1,0 +1,167 @@
+\doxysection{heat/\+menu.h File Reference}
+\hypertarget{menu_8h}{}\label{menu_8h}\index{heat/menu.h@{heat/menu.h}}
+{\ttfamily \+\#include $<$allegro.\+h$>$}\newline
+{\ttfamily \+\#include "{}entites.\+h"{}}\newline
+Include dependency graph for menu.\+h:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{menu_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{menu_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{menu_8h_a08500339c9e3ef0a4e5f54fb67fce728}{NB\+\_\+\+ELEMENTS\+\_\+\+MENU}}~4
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{menu_8h_a697513d0346fbaa26784191b9cbbf093}{Element\+Menu}} \{ \doxymbox{\hyperlink{menu_8h_a697513d0346fbaa26784191b9cbbf093a6fb2cce6876c14b2320b86d39ebf12b4}{MENU\+\_\+\+NOUVELLE\+\_\+\+PARTIE}} = 0
+, \doxymbox{\hyperlink{menu_8h_a697513d0346fbaa26784191b9cbbf093a1edbca7839d01020f061191245876b14}{MENU\+\_\+\+REPRENDRE\+\_\+\+PARTIE}}
+, \doxymbox{\hyperlink{menu_8h_a697513d0346fbaa26784191b9cbbf093a0adc3d84580d24b157660d6b6f939967}{MENU\+\_\+\+REGLES}}
+, \doxymbox{\hyperlink{menu_8h_a697513d0346fbaa26784191b9cbbf093aeda6b268840b05d8bc39cbf6b0cfd117}{MENU\+\_\+\+QUITTER}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{menu_8h_a9f7f93c6f1e2b624e8cf71df3f37517a}{menu\+\_\+init}} (\doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}em)
+\item 
+int \doxymbox{\hyperlink{menu_8h_a3913bce4e975a52d19ed8450f553b4f2}{menu\+\_\+mettre\+\_\+a\+\_\+jour}} (\doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}em)
+\item 
+void \doxymbox{\hyperlink{menu_8h_a015a16da2577c972ef258e595f5634b0}{menu\+\_\+saisir\+\_\+pseudo}} (\doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}em)
+\item 
+void \doxymbox{\hyperlink{menu_8h_a5ea310a2d8bd7c9b2e2c6050629dd7b0}{afficher\+\_\+menu}} (BITMAP \texorpdfstring{$\ast$}{*}tampon, const \doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}em)
+\item 
+void \doxymbox{\hyperlink{menu_8h_aa21de65fbde7933c3234a51ff1cf192f}{afficher\+\_\+regles}} (BITMAP \texorpdfstring{$\ast$}{*}tampon)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{menu_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{menu_8h_a08500339c9e3ef0a4e5f54fb67fce728}\index{menu.h@{menu.h}!NB\_ELEMENTS\_MENU@{NB\_ELEMENTS\_MENU}}
+\index{NB\_ELEMENTS\_MENU@{NB\_ELEMENTS\_MENU}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{NB\_ELEMENTS\_MENU}{NB\_ELEMENTS\_MENU}}
+{\footnotesize\ttfamily \label{menu_8h_a08500339c9e3ef0a4e5f54fb67fce728} 
+\+\#define NB\+\_\+\+ELEMENTS\+\_\+\+MENU~4}
+
+
+
+\label{doc-enum-members}
+\Hypertarget{menu_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{menu_8h_a697513d0346fbaa26784191b9cbbf093}\index{menu.h@{menu.h}!ElementMenu@{ElementMenu}}
+\index{ElementMenu@{ElementMenu}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{ElementMenu}{ElementMenu}}
+{\footnotesize\ttfamily \label{menu_8h_a697513d0346fbaa26784191b9cbbf093} 
+enum \doxymbox{\hyperlink{menu_8h_a697513d0346fbaa26784191b9cbbf093}{Element\+Menu}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MENU\_NOUVELLE\_PARTIE@{MENU\_NOUVELLE\_PARTIE}!menu.h@{menu.h}}
+\index{menu.h@{menu.h}!MENU\_NOUVELLE\_PARTIE@{MENU\_NOUVELLE\_PARTIE}}
+}\Hypertarget{menu_8h_a697513d0346fbaa26784191b9cbbf093a6fb2cce6876c14b2320b86d39ebf12b4}\label{menu_8h_a697513d0346fbaa26784191b9cbbf093a6fb2cce6876c14b2320b86d39ebf12b4} 
+MENU\+\_\+\+NOUVELLE\+\_\+\+PARTIE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MENU\_REPRENDRE\_PARTIE@{MENU\_REPRENDRE\_PARTIE}!menu.h@{menu.h}}
+\index{menu.h@{menu.h}!MENU\_REPRENDRE\_PARTIE@{MENU\_REPRENDRE\_PARTIE}}
+}\Hypertarget{menu_8h_a697513d0346fbaa26784191b9cbbf093a1edbca7839d01020f061191245876b14}\label{menu_8h_a697513d0346fbaa26784191b9cbbf093a1edbca7839d01020f061191245876b14} 
+MENU\+\_\+\+REPRENDRE\+\_\+\+PARTIE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MENU\_REGLES@{MENU\_REGLES}!menu.h@{menu.h}}
+\index{menu.h@{menu.h}!MENU\_REGLES@{MENU\_REGLES}}
+}\Hypertarget{menu_8h_a697513d0346fbaa26784191b9cbbf093a0adc3d84580d24b157660d6b6f939967}\label{menu_8h_a697513d0346fbaa26784191b9cbbf093a0adc3d84580d24b157660d6b6f939967} 
+MENU\+\_\+\+REGLES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MENU\_QUITTER@{MENU\_QUITTER}!menu.h@{menu.h}}
+\index{menu.h@{menu.h}!MENU\_QUITTER@{MENU\_QUITTER}}
+}\Hypertarget{menu_8h_a697513d0346fbaa26784191b9cbbf093aeda6b268840b05d8bc39cbf6b0cfd117}\label{menu_8h_a697513d0346fbaa26784191b9cbbf093aeda6b268840b05d8bc39cbf6b0cfd117} 
+MENU\+\_\+\+QUITTER&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{menu_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{menu_8h_a5ea310a2d8bd7c9b2e2c6050629dd7b0}\index{menu.h@{menu.h}!afficher\_menu@{afficher\_menu}}
+\index{afficher\_menu@{afficher\_menu}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{afficher\_menu()}{afficher\_menu()}}
+{\footnotesize\ttfamily \label{menu_8h_a5ea310a2d8bd7c9b2e2c6050629dd7b0} 
+void afficher\+\_\+menu (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{, }\item[{const \doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}}]{em}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{menu_8h_a5ea310a2d8bd7c9b2e2c6050629dd7b0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8h_aa21de65fbde7933c3234a51ff1cf192f}\index{menu.h@{menu.h}!afficher\_regles@{afficher\_regles}}
+\index{afficher\_regles@{afficher\_regles}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{afficher\_regles()}{afficher\_regles()}}
+{\footnotesize\ttfamily \label{menu_8h_aa21de65fbde7933c3234a51ff1cf192f} 
+void afficher\+\_\+regles (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{menu_8h_aa21de65fbde7933c3234a51ff1cf192f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8h_a9f7f93c6f1e2b624e8cf71df3f37517a}\index{menu.h@{menu.h}!menu\_init@{menu\_init}}
+\index{menu\_init@{menu\_init}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{menu\_init()}{menu\_init()}}
+{\footnotesize\ttfamily \label{menu_8h_a9f7f93c6f1e2b624e8cf71df3f37517a} 
+void menu\+\_\+init (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}}]{em}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{menu_8h_a9f7f93c6f1e2b624e8cf71df3f37517a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8h_a3913bce4e975a52d19ed8450f553b4f2}\index{menu.h@{menu.h}!menu\_mettre\_a\_jour@{menu\_mettre\_a\_jour}}
+\index{menu\_mettre\_a\_jour@{menu\_mettre\_a\_jour}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{menu\_mettre\_a\_jour()}{menu\_mettre\_a\_jour()}}
+{\footnotesize\ttfamily \label{menu_8h_a3913bce4e975a52d19ed8450f553b4f2} 
+int menu\+\_\+mettre\+\_\+a\+\_\+jour (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}}]{em}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{menu_8h_a3913bce4e975a52d19ed8450f553b4f2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8h_a015a16da2577c972ef258e595f5634b0}\index{menu.h@{menu.h}!menu\_saisir\_pseudo@{menu\_saisir\_pseudo}}
+\index{menu\_saisir\_pseudo@{menu\_saisir\_pseudo}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{menu\_saisir\_pseudo()}{menu\_saisir\_pseudo()}}
+{\footnotesize\ttfamily \label{menu_8h_a015a16da2577c972ef258e595f5634b0} 
+void menu\+\_\+saisir\+\_\+pseudo (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}}]{em}{}\end{DoxyParamCaption})}
+

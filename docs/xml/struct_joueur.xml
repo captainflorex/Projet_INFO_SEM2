@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="struct_joueur" kind="struct" language="C++" prot="public">
+    <compoundname>Joueur</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_joueur_1a2107af8ce47a6f97d095b22690a2c4c4" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Joueur::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>Joueur::x</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="entites.h" line="29" column="11" bodyfile="entites.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_joueur_1ad20c25b41ed37bbd7bbbe8746c2160a2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Joueur::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>Joueur::y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="entites.h" line="29" column="13" bodyfile="entites.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_joueur_1a70d5fe053297331173073eb5d7e688bd" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Joueur::vx</definition>
+        <argsstring></argsstring>
+        <name>vx</name>
+        <qualifiedname>Joueur::vx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="entites.h" line="30" column="11" bodyfile="entites.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_joueur_1a83ffd7975e660463a18b1ad04b9429f3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Joueur::vivant</definition>
+        <argsstring></argsstring>
+        <name>vivant</name>
+        <qualifiedname>Joueur::vivant</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="entites.h" line="31" column="11" bodyfile="entites.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_joueur_1a5c7d135fb5f360d696c4dc493e257ce9" prot="public" static="no" mutable="no">
+        <type>TypeArme</type>
+        <definition>TypeArme Joueur::arme</definition>
+        <argsstring></argsstring>
+        <name>arme</name>
+        <qualifiedname>Joueur::arme</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="entites.h" line="32" column="14" bodyfile="entites.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_joueur_1a97a65bf2fbe0c252d300022842c5a56b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Joueur::duree_arme</definition>
+        <argsstring></argsstring>
+        <name>duree_arme</name>
+        <qualifiedname>Joueur::duree_arme</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="entites.h" line="33" column="11" bodyfile="entites.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_joueur_1a680896b9ff71c2762ae653ef6aa7c8ce" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Joueur::score</definition>
+        <argsstring></argsstring>
+        <name>score</name>
+        <qualifiedname>Joueur::score</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="entites.h" line="34" column="11" bodyfile="entites.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_joueur_1a11dc17c636bcfdd3d261fc3b00a9ab20" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Joueur::pseudo[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>pseudo</name>
+        <qualifiedname>Joueur::pseudo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="entites.h" line="35" column="11" bodyfile="entites.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="entites.h" line="28" column="1" bodyfile="entites.h" bodystart="28" bodyend="36"/>
+    <listofallmembers>
+      <member refid="struct_joueur_1a5c7d135fb5f360d696c4dc493e257ce9" prot="public" virt="non-virtual"><scope>Joueur</scope><name>arme</name></member>
+      <member refid="struct_joueur_1a97a65bf2fbe0c252d300022842c5a56b" prot="public" virt="non-virtual"><scope>Joueur</scope><name>duree_arme</name></member>
+      <member refid="struct_joueur_1a11dc17c636bcfdd3d261fc3b00a9ab20" prot="public" virt="non-virtual"><scope>Joueur</scope><name>pseudo</name></member>
+      <member refid="struct_joueur_1a680896b9ff71c2762ae653ef6aa7c8ce" prot="public" virt="non-virtual"><scope>Joueur</scope><name>score</name></member>
+      <member refid="struct_joueur_1a83ffd7975e660463a18b1ad04b9429f3" prot="public" virt="non-virtual"><scope>Joueur</scope><name>vivant</name></member>
+      <member refid="struct_joueur_1a70d5fe053297331173073eb5d7e688bd" prot="public" virt="non-virtual"><scope>Joueur</scope><name>vx</name></member>
+      <member refid="struct_joueur_1a2107af8ce47a6f97d095b22690a2c4c4" prot="public" virt="non-virtual"><scope>Joueur</scope><name>x</name></member>
+      <member refid="struct_joueur_1ad20c25b41ed37bbd7bbbe8746c2160a2" prot="public" virt="non-virtual"><scope>Joueur</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

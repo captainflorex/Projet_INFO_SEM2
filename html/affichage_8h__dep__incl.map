@@ -1,0 +1,9 @@
+<map id="heat/affichage.h" name="heat/affichage.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="120,5,234,32"/>
+<area shape="rect" id="Node000002" href="$affichage_8c.html" title=" " alt="" coords="5,80,112,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,41,81,82,78,77,141,40"/>
+<area shape="rect" id="Node000003" href="$main_8c.html" title=" " alt="" coords="136,80,218,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="179,46,179,81,175,78,175,50"/>
+<area shape="rect" id="Node000004" href="$menu_8c.html" title=" " alt="" coords="242,80,328,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="209,38,269,79,264,79,208,44"/>
+</map>

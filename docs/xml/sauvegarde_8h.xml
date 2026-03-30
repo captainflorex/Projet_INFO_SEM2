@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="sauvegarde_8h" kind="file" language="C++">
+    <compoundname>sauvegarde.h</compoundname>
+    <includes refid="entites_8h" local="yes">entites.h</includes>
+    <includedby refid="main_8c" local="yes">main.c</includedby>
+    <includedby refid="sauvegarde_8c" local="yes">sauvegarde.c</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>entites.h</label>
+        <link refid="entites_8h_source"/>
+      </node>
+      <node id="1">
+        <label>sauvegarde.h</label>
+        <link refid="sauvegarde_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>main.c</label>
+        <link refid="main_8c_source"/>
+      </node>
+      <node id="3">
+        <label>sauvegarde.c</label>
+        <link refid="sauvegarde_8c_source"/>
+      </node>
+      <node id="1">
+        <label>sauvegarde.h</label>
+        <link refid="sauvegarde_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="sauvegarde_8h_1a3a4b199f7550c3126a16bc4c9d29de15" prot="public" static="no">
+        <name>FICHIER_SAUVEGARDE</name>
+        <initializer>&quot;sauvegardes.txt&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sauvegarde.h" line="6" column="9" bodyfile="sauvegarde.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="sauvegarde_8h_1a26ec48c760eb5033b7daa90e34880188" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sauvegarder_partie</definition>
+        <argsstring>(const char *pseudo, int niveau)</argsstring>
+        <name>sauvegarder_partie</name>
+        <param>
+          <type>const char *</type>
+          <declname>pseudo</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>niveau</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sauvegarde.h" line="14" column="6" bodyfile="sauvegarde.c" bodystart="5" bodyend="10" declfile="sauvegarde.h" declline="14" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="sauvegarde_8h_1af3a2c189baddea2c0ec249be72805129" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int charger_partie</definition>
+        <argsstring>(const char *pseudo)</argsstring>
+        <name>charger_partie</name>
+        <param>
+          <type>const char *</type>
+          <declname>pseudo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sauvegarde.h" line="21" column="5" bodyfile="sauvegarde.c" bodystart="12" bodyend="25" declfile="sauvegarde.h" declline="21" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="sauvegarde_8h_1a7f0ac9f972c17264c699c6929d6aadae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int lister_sauvegardes</definition>
+        <argsstring>(char tampons[][32], int *niveaux, int taille_max)</argsstring>
+        <name>lister_sauvegardes</name>
+        <param>
+          <type>char</type>
+          <declname>tampons</declname>
+          <array>[][32]</array>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>niveaux</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>taille_max</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sauvegarde.h" line="31" column="5" bodyfile="sauvegarde.c" bodystart="27" bodyend="38" declfile="sauvegarde.h" declline="31" declcolumn="5"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SAUVEGARDE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SAUVEGARDE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;entites.h&quot;</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">/*<sp/>pour<sp/>PSEUDO_LEN<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FICHIER_SAUVEGARDE<sp/>&quot;sauvegardes.txt&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Sauvegarde<sp/>le<sp/>pseudo<sp/>et<sp/>le<sp/>niveau<sp/>atteint<sp/>dans<sp/>le<sp/>fichier<sp/>de<sp/>sauvegarde.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>Plusieurs<sp/>parties<sp/>peuvent<sp/>être<sp/>sauvegardées<sp/>dans<sp/>le<sp/>même<sp/>fichier.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>Entrée<sp/>:<sp/>pseudo<sp/>-&gt;<sp/>nom<sp/>du<sp/>joueur</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>niveau<sp/>-&gt;<sp/>dernier<sp/>niveau<sp/>gagné</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sauvegarder_partie(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pseudo,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>niveau);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>Charge<sp/>la<sp/>dernière<sp/>sauvegarde<sp/>correspondant<sp/>au<sp/>pseudo<sp/>donné.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>Entrée<sp/><sp/>:<sp/>pseudo<sp/>-&gt;<sp/>nom<sp/>du<sp/>joueur<sp/>recherché</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*<sp/>Sortie<sp/><sp/>:<sp/>numéro<sp/>du<sp/>dernier<sp/>niveau<sp/>sauvegardé,<sp/>ou<sp/>-1<sp/>si<sp/>non<sp/>trouvé</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>charger_partie(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pseudo);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/>*<sp/>Affiche<sp/>la<sp/>liste<sp/>de<sp/>toutes<sp/>les<sp/>parties<sp/>sauvegardées.</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/>*<sp/>Utile<sp/>pour<sp/>le<sp/>menu<sp/>&quot;Reprendre<sp/>une<sp/>partie&quot;.</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>Entrée<sp/>:<sp/>tampons<sp/><sp/><sp/><sp/>-&gt;<sp/>tableau<sp/>de<sp/>chaînes<sp/>pour<sp/>stocker<sp/>les<sp/>pseudos<sp/>trouvés</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>niveaux<sp/><sp/><sp/><sp/>-&gt;<sp/>tableau<sp/>d&apos;entiers<sp/>pour<sp/>stocker<sp/>les<sp/>niveaux<sp/>associés</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>taille_max<sp/>-&gt;<sp/>taille<sp/>maximale<sp/>des<sp/>tableaux</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/>Sortie<sp/>:<sp/>nombre<sp/>de<sp/>sauvegardes<sp/>trouvées</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lister_sauvegardes(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>tampons[][PSEUDO_LEN],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*niveaux,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>taille_max);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="sauvegarde.h"/>
+  </compounddef>
+</doxygen>

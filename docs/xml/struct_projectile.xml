@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="struct_projectile" kind="struct" language="C++" prot="public">
+    <compoundname>Projectile</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_projectile_1a0bf544bf90988687a910268b615aed08" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Projectile::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>Projectile::x</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="entites.h" line="48" column="11" bodyfile="entites.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_projectile_1a04963d09e6b45aee1d5d96f8112fb075" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Projectile::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>Projectile::y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="entites.h" line="48" column="13" bodyfile="entites.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_projectile_1a2081fe99e23a4605b86c8aab4a5d78b0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Projectile::vy</definition>
+        <argsstring></argsstring>
+        <name>vy</name>
+        <qualifiedname>Projectile::vy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="entites.h" line="49" column="11" bodyfile="entites.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_projectile_1adf17efc99b04360ba3e64b97971c299b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Projectile::active</definition>
+        <argsstring></argsstring>
+        <name>active</name>
+        <qualifiedname>Projectile::active</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="entites.h" line="50" column="11" bodyfile="entites.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="entites.h" line="47" column="1" bodyfile="entites.h" bodystart="47" bodyend="51"/>
+    <listofallmembers>
+      <member refid="struct_projectile_1adf17efc99b04360ba3e64b97971c299b" prot="public" virt="non-virtual"><scope>Projectile</scope><name>active</name></member>
+      <member refid="struct_projectile_1a2081fe99e23a4605b86c8aab4a5d78b0" prot="public" virt="non-virtual"><scope>Projectile</scope><name>vy</name></member>
+      <member refid="struct_projectile_1a0bf544bf90988687a910268b615aed08" prot="public" virt="non-virtual"><scope>Projectile</scope><name>x</name></member>
+      <member refid="struct_projectile_1a04963d09e6b45aee1d5d96f8112fb075" prot="public" virt="non-virtual"><scope>Projectile</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

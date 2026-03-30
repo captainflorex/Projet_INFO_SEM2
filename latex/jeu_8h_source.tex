@@ -1,0 +1,24 @@
+\doxysection{jeu.\+h}
+\hypertarget{jeu_8h_source}{}\label{jeu_8h_source}\index{heat/jeu.h@{heat/jeu.h}}
+\doxymbox{\hyperlink{jeu_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ JEU\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ JEU\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{entites_8h}{entites.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{jeu_8h_ac3b9eb13e1446e9c5aa5ee8c7bae31f9}{jeu\_init\_niveau}}(\doxymbox{\hyperlink{struct_etat_jeu}{EtatJeu}}\ *ej,\ \textcolor{keywordtype}{int}\ niveau);}
+\DoxyCodeLine{00007\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{jeu_8h_a6c267bac373aba16a2d30f98c5786dfd}{jeu\_mettre\_a\_jour}}(\doxymbox{\hyperlink{struct_etat_jeu}{EtatJeu}}\ *ej,\ \textcolor{keywordtype}{float}\ dt);}
+\DoxyCodeLine{00008\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{jeu_8h_a35db185c59a638dfe4f06995eaeb7e00}{bulle\_deplacer}}(\doxymbox{\hyperlink{struct_bulle}{Bulle}}\ *b,\ \textcolor{keywordtype}{float}\ dt,\ \textcolor{keywordtype}{float}\ largeur\_zone,\ \textcolor{keywordtype}{float}\ hauteur\_zone);}
+\DoxyCodeLine{00009\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{jeu_8h_a95bdea7c66358469b0f5587032814c83}{bulle\_diviser}}(\doxymbox{\hyperlink{struct_etat_jeu}{EtatJeu}}\ *ej,\ \textcolor{keywordtype}{int}\ indice);}
+\DoxyCodeLine{00010\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{jeu_8h_a0fdf5ccf00e016cdf02d6fd09ef52295}{jeu\_verifier\_collisions}}(\doxymbox{\hyperlink{struct_etat_jeu}{EtatJeu}}\ *ej);}
+\DoxyCodeLine{00011\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{jeu_8h_aa567b6f3c9bd1a4df9d6b4683b5b46be}{joueur\_tirer}}(\doxymbox{\hyperlink{struct_etat_jeu}{EtatJeu}}\ *ej);}
+\DoxyCodeLine{00012\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{jeu_8h_a0fec73e93b6dc52d71bfc31f4c20fbf5}{boss\_deplacer}}(\doxymbox{\hyperlink{struct_boss}{Boss}}\ *b,\ \textcolor{keywordtype}{float}\ dt,\ \textcolor{keywordtype}{float}\ largeur\_zone);}
+\DoxyCodeLine{00013\ \textcolor{keywordtype}{int}\ \ \doxymbox{\hyperlink{jeu_8h_accec6939a115e95b6fe0dd557161d78e}{jeu\_niveau\_gagne}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_etat_jeu}{EtatJeu}}\ *ej);}
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{int}\ \ \doxymbox{\hyperlink{jeu_8h_addc45c25e35e48d44131714b8e7f7516}{jeu\_niveau\_perdu}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_etat_jeu}{EtatJeu}}\ *ej);}
+\DoxyCodeLine{00015\ \textcolor{keywordtype}{int}\ \ \doxymbox{\hyperlink{jeu_8h_adbd875e13250e4155452816f4a51f9ac}{verifier\_collision\_cercle\_rect}}(\textcolor{keywordtype}{float}\ cx,\ \textcolor{keywordtype}{float}\ cy,\ \textcolor{keywordtype}{float}\ r,}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{float}\ rx,\ \textcolor{keywordtype}{float}\ ry,\ \textcolor{keywordtype}{float}\ larg,\ \textcolor{keywordtype}{float}\ haut);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

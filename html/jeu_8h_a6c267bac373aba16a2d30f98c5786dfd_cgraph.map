@@ -1,0 +1,14 @@
+<map id="jeu_mettre_a_jour" name="jeu_mettre_a_jour">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,130,83"/>
+<area shape="rect" id="Node000002" href="$jeu_8c.html#a0fec73e93b6dc52d71bfc31f4c20fbf5" title=" " alt="" coords="198,5,303,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,53,187,35,183,38,119,58"/>
+<area shape="rect" id="Node000003" href="$jeu_8c.html#a35db185c59a638dfe4f06995eaeb7e00" title=" " alt="" coords="198,56,302,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="130,67,185,68,180,70,131,72"/>
+<area shape="rect" id="Node000005" href="$jeu_8c.html#a0fdf5ccf00e016cdf02d6fd09ef52295" title=" " alt="" coords="178,107,323,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="119,81,187,101,182,103,118,86"/>
+<area shape="rect" id="Node000004" href="$jeu_8c.html#a04fd5d00b05181b0046eec5c7a877412" title=" " alt="" coords="374,56,461,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="303,67,361,69,356,70,303,72"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="296,103,357,87,362,86,298,109"/>
+<area shape="rect" id="Node000006" href="$jeu_8c.html#a95bdea7c66358469b0f5587032814c83" title=" " alt="" coords="371,107,464,133"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="323,117,358,120,353,120,323,123"/>
+</map>

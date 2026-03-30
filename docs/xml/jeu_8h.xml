@@ -1,0 +1,299 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="jeu_8h" kind="file" language="C++">
+    <compoundname>jeu.h</compoundname>
+    <includes refid="entites_8h" local="yes">entites.h</includes>
+    <includedby refid="affichage_8c" local="yes">affichage.c</includedby>
+    <includedby refid="jeu_8c" local="yes">jeu.c</includedby>
+    <includedby refid="main_8c" local="yes">main.c</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>entites.h</label>
+        <link refid="entites_8h_source"/>
+      </node>
+      <node id="1">
+        <label>jeu.h</label>
+        <link refid="jeu_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>affichage.c</label>
+        <link refid="affichage_8c_source"/>
+      </node>
+      <node id="3">
+        <label>jeu.c</label>
+        <link refid="jeu_8c_source"/>
+      </node>
+      <node id="1">
+        <label>jeu.h</label>
+        <link refid="jeu_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>main.c</label>
+        <link refid="main_8c_source"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="jeu_8h_1ac3b9eb13e1446e9c5aa5ee8c7bae31f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void jeu_init_niveau</definition>
+        <argsstring>(EtatJeu *ej, int niveau)</argsstring>
+        <name>jeu_init_niveau</name>
+        <param>
+          <type><ref refid="struct_etat_jeu" kindref="compound">EtatJeu</ref> *</type>
+          <declname>ej</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>niveau</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="jeu.h" line="6" column="6" bodyfile="jeu.c" bodystart="17" bodyend="38" declfile="jeu.h" declline="6" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="jeu_8h_1a6c267bac373aba16a2d30f98c5786dfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void jeu_mettre_a_jour</definition>
+        <argsstring>(EtatJeu *ej, float dt)</argsstring>
+        <name>jeu_mettre_a_jour</name>
+        <param>
+          <type><ref refid="struct_etat_jeu" kindref="compound">EtatJeu</ref> *</type>
+          <declname>ej</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="jeu.h" line="7" column="6" bodyfile="jeu.c" bodystart="40" bodyend="77" declfile="jeu.h" declline="7" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="jeu_8h_1a35db185c59a638dfe4f06995eaeb7e00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bulle_deplacer</definition>
+        <argsstring>(Bulle *b, float dt, float largeur_zone, float hauteur_zone)</argsstring>
+        <name>bulle_deplacer</name>
+        <param>
+          <type><ref refid="struct_bulle" kindref="compound">Bulle</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>largeur_zone</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>hauteur_zone</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="jeu.h" line="8" column="6" bodyfile="jeu.c" bodystart="79" bodyend="92" declfile="jeu.h" declline="8" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="jeu_8h_1a95bdea7c66358469b0f5587032814c83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void bulle_diviser</definition>
+        <argsstring>(EtatJeu *ej, int indice)</argsstring>
+        <name>bulle_diviser</name>
+        <param>
+          <type><ref refid="struct_etat_jeu" kindref="compound">EtatJeu</ref> *</type>
+          <declname>ej</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>indice</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="jeu.h" line="9" column="6" bodyfile="jeu.c" bodystart="94" bodyend="116" declfile="jeu.h" declline="9" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="jeu_8h_1a0fdf5ccf00e016cdf02d6fd09ef52295" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void jeu_verifier_collisions</definition>
+        <argsstring>(EtatJeu *ej)</argsstring>
+        <name>jeu_verifier_collisions</name>
+        <param>
+          <type><ref refid="struct_etat_jeu" kindref="compound">EtatJeu</ref> *</type>
+          <declname>ej</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="jeu.h" line="10" column="6" bodyfile="jeu.c" bodystart="118" bodyend="153" declfile="jeu.h" declline="10" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="jeu_8h_1aa567b6f3c9bd1a4df9d6b4683b5b46be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void joueur_tirer</definition>
+        <argsstring>(EtatJeu *ej)</argsstring>
+        <name>joueur_tirer</name>
+        <param>
+          <type><ref refid="struct_etat_jeu" kindref="compound">EtatJeu</ref> *</type>
+          <declname>ej</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="jeu.h" line="11" column="6" bodyfile="jeu.c" bodystart="155" bodyend="165" declfile="jeu.h" declline="11" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="jeu_8h_1a0fec73e93b6dc52d71bfc31f4c20fbf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void boss_deplacer</definition>
+        <argsstring>(Boss *b, float dt, float largeur_zone)</argsstring>
+        <name>boss_deplacer</name>
+        <param>
+          <type><ref refid="struct_boss" kindref="compound">Boss</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>largeur_zone</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="jeu.h" line="12" column="6" bodyfile="jeu.c" bodystart="167" bodyend="171" declfile="jeu.h" declline="12" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="jeu_8h_1accec6939a115e95b6fe0dd557161d78e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int jeu_niveau_gagne</definition>
+        <argsstring>(const EtatJeu *ej)</argsstring>
+        <name>jeu_niveau_gagne</name>
+        <param>
+          <type>const <ref refid="struct_etat_jeu" kindref="compound">EtatJeu</ref> *</type>
+          <declname>ej</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="jeu.h" line="13" column="6" bodyfile="jeu.c" bodystart="173" bodyend="178" declfile="jeu.h" declline="13" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="jeu_8h_1addc45c25e35e48d44131714b8e7f7516" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int jeu_niveau_perdu</definition>
+        <argsstring>(const EtatJeu *ej)</argsstring>
+        <name>jeu_niveau_perdu</name>
+        <param>
+          <type>const <ref refid="struct_etat_jeu" kindref="compound">EtatJeu</ref> *</type>
+          <declname>ej</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="jeu.h" line="14" column="6" bodyfile="jeu.c" bodystart="180" bodyend="182" declfile="jeu.h" declline="14" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="jeu_8h_1adbd875e13250e4155452816f4a51f9ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int verifier_collision_cercle_rect</definition>
+        <argsstring>(float cx, float cy, float r, float rx, float ry, float larg, float haut)</argsstring>
+        <name>verifier_collision_cercle_rect</name>
+        <param>
+          <type>float</type>
+          <declname>cx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>cy</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>rx</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>ry</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>larg</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>haut</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="jeu.h" line="15" column="6" bodyfile="jeu.c" bodystart="184" bodyend="190" declfile="jeu.h" declline="15" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>JEU_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JEU_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;entites.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>jeu_init_niveau(<ref refid="struct_etat_jeu" kindref="compound">EtatJeu</ref><sp/>*ej,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>niveau);</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>jeu_mettre_a_jour(<ref refid="struct_etat_jeu" kindref="compound">EtatJeu</ref><sp/>*ej,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>bulle_deplacer(<ref refid="struct_bulle" kindref="compound">Bulle</ref><sp/>*b,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>largeur_zone,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>hauteur_zone);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>bulle_diviser(<ref refid="struct_etat_jeu" kindref="compound">EtatJeu</ref><sp/>*ej,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>indice);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>jeu_verifier_collisions(<ref refid="struct_etat_jeu" kindref="compound">EtatJeu</ref><sp/>*ej);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>joueur_tirer(<ref refid="struct_etat_jeu" kindref="compound">EtatJeu</ref><sp/>*ej);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>boss_deplacer(<ref refid="struct_boss" kindref="compound">Boss</ref><sp/>*b,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>largeur_zone);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/>jeu_niveau_gagne(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_etat_jeu" kindref="compound">EtatJeu</ref><sp/>*ej);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/>jeu_niveau_perdu(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_etat_jeu" kindref="compound">EtatJeu</ref><sp/>*ej);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/>verifier_collision_cercle_rect(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>cx,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>cy,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>r,</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>rx,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ry,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>larg,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>haut);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="jeu.h"/>
+  </compounddef>
+</doxygen>

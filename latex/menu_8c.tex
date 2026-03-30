@@ -1,0 +1,121 @@
+\doxysection{src/\+menu.c File Reference}
+\hypertarget{menu_8c}{}\label{menu_8c}\index{src/menu.c@{src/menu.c}}
+{\ttfamily \+\#include $<$allegro.\+h$>$}\newline
+{\ttfamily \+\#include "{}menu.\+h"{}}\newline
+{\ttfamily \+\#include "{}affichage.\+h"{}}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for menu.\+c:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{menu_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{menu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a}{menu\+\_\+init}} (\doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}em)
+\item 
+int \doxymbox{\hyperlink{menu_8c_a3913bce4e975a52d19ed8450f553b4f2}{menu\+\_\+mettre\+\_\+a\+\_\+jour}} (\doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}em)
+\item 
+void \doxymbox{\hyperlink{menu_8c_a015a16da2577c972ef258e595f5634b0}{menu\+\_\+saisir\+\_\+pseudo}} (\doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}em)
+\item 
+void \doxymbox{\hyperlink{menu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0}{afficher\+\_\+menu}} (BITMAP \texorpdfstring{$\ast$}{*}tampon, const \doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}em)
+\item 
+void \doxymbox{\hyperlink{menu_8c_aa21de65fbde7933c3234a51ff1cf192f}{afficher\+\_\+regles}} (BITMAP \texorpdfstring{$\ast$}{*}tampon)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{menu_8c_a499a5e286fc4181187726055786536c0}{LIBELLES\+\_\+\+MENU}} \+[\doxymbox{\hyperlink{menu_8h_a08500339c9e3ef0a4e5f54fb67fce728}{NB\+\_\+\+ELEMENTS\+\_\+\+MENU}}]\+
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{menu_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{menu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0}\index{menu.c@{menu.c}!afficher\_menu@{afficher\_menu}}
+\index{afficher\_menu@{afficher\_menu}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{afficher\_menu()}{afficher\_menu()}}
+{\footnotesize\ttfamily \label{menu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0} 
+void afficher\+\_\+menu (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{, }\item[{const \doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}}]{em}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{menu_8c_a5ea310a2d8bd7c9b2e2c6050629dd7b0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_aa21de65fbde7933c3234a51ff1cf192f}\index{menu.c@{menu.c}!afficher\_regles@{afficher\_regles}}
+\index{afficher\_regles@{afficher\_regles}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{afficher\_regles()}{afficher\_regles()}}
+{\footnotesize\ttfamily \label{menu_8c_aa21de65fbde7933c3234a51ff1cf192f} 
+void afficher\+\_\+regles (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{menu_8c_aa21de65fbde7933c3234a51ff1cf192f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a}\index{menu.c@{menu.c}!menu\_init@{menu\_init}}
+\index{menu\_init@{menu\_init}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_init()}{menu\_init()}}
+{\footnotesize\ttfamily \label{menu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a} 
+void menu\+\_\+init (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}}]{em}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{menu_8c_a9f7f93c6f1e2b624e8cf71df3f37517a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_a3913bce4e975a52d19ed8450f553b4f2}\index{menu.c@{menu.c}!menu\_mettre\_a\_jour@{menu\_mettre\_a\_jour}}
+\index{menu\_mettre\_a\_jour@{menu\_mettre\_a\_jour}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_mettre\_a\_jour()}{menu\_mettre\_a\_jour()}}
+{\footnotesize\ttfamily \label{menu_8c_a3913bce4e975a52d19ed8450f553b4f2} 
+int menu\+\_\+mettre\+\_\+a\+\_\+jour (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}}]{em}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{menu_8c_a3913bce4e975a52d19ed8450f553b4f2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8c_a015a16da2577c972ef258e595f5634b0}\index{menu.c@{menu.c}!menu\_saisir\_pseudo@{menu\_saisir\_pseudo}}
+\index{menu\_saisir\_pseudo@{menu\_saisir\_pseudo}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{menu\_saisir\_pseudo()}{menu\_saisir\_pseudo()}}
+{\footnotesize\ttfamily \label{menu_8c_a015a16da2577c972ef258e595f5634b0} 
+void menu\+\_\+saisir\+\_\+pseudo (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}}]{em}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-var-members}
+\Hypertarget{menu_8c_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{menu_8c_a499a5e286fc4181187726055786536c0}\index{menu.c@{menu.c}!LIBELLES\_MENU@{LIBELLES\_MENU}}
+\index{LIBELLES\_MENU@{LIBELLES\_MENU}!menu.c@{menu.c}}
+\doxysubsubsection{\texorpdfstring{LIBELLES\_MENU}{LIBELLES\_MENU}}
+{\footnotesize\ttfamily \label{menu_8c_a499a5e286fc4181187726055786536c0} 
+const char\texorpdfstring{$\ast$}{*} LIBELLES\+\_\+\+MENU\+[\doxymbox{\hyperlink{menu_8h_a08500339c9e3ef0a4e5f54fb67fce728}{NB\+\_\+\+ELEMENTS\+\_\+\+MENU}}]\+\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}Nouvelle\ partie"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}Reprendre\ une\ partie"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}Regles\ du\ jeu"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}Quitter"{}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

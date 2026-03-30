@@ -1,0 +1,203 @@
+\doxysection{heat/\+jeu.h File Reference}
+\hypertarget{jeu_8h}{}\label{jeu_8h}\index{heat/jeu.h@{heat/jeu.h}}
+{\ttfamily \+\#include "{}entites.\+h"{}}\newline
+Include dependency graph for jeu.\+h:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{jeu_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{jeu_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{jeu_8h_ac3b9eb13e1446e9c5aa5ee8c7bae31f9}{jeu\+\_\+init\+\_\+niveau}} (\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}ej, int niveau)
+\item 
+void \doxymbox{\hyperlink{jeu_8h_a6c267bac373aba16a2d30f98c5786dfd}{jeu\+\_\+mettre\+\_\+a\+\_\+jour}} (\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}ej, float dt)
+\item 
+void \doxymbox{\hyperlink{jeu_8h_a35db185c59a638dfe4f06995eaeb7e00}{bulle\+\_\+deplacer}} (\doxymbox{\hyperlink{struct_bulle}{Bulle}} \texorpdfstring{$\ast$}{*}b, float dt, float largeur\+\_\+zone, float hauteur\+\_\+zone)
+\item 
+void \doxymbox{\hyperlink{jeu_8h_a95bdea7c66358469b0f5587032814c83}{bulle\+\_\+diviser}} (\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}ej, int indice)
+\item 
+void \doxymbox{\hyperlink{jeu_8h_a0fdf5ccf00e016cdf02d6fd09ef52295}{jeu\+\_\+verifier\+\_\+collisions}} (\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}ej)
+\item 
+void \doxymbox{\hyperlink{jeu_8h_aa567b6f3c9bd1a4df9d6b4683b5b46be}{joueur\+\_\+tirer}} (\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}ej)
+\item 
+void \doxymbox{\hyperlink{jeu_8h_a0fec73e93b6dc52d71bfc31f4c20fbf5}{boss\+\_\+deplacer}} (\doxymbox{\hyperlink{struct_boss}{Boss}} \texorpdfstring{$\ast$}{*}b, float dt, float largeur\+\_\+zone)
+\item 
+int \doxymbox{\hyperlink{jeu_8h_accec6939a115e95b6fe0dd557161d78e}{jeu\+\_\+niveau\+\_\+gagne}} (const \doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}ej)
+\item 
+int \doxymbox{\hyperlink{jeu_8h_addc45c25e35e48d44131714b8e7f7516}{jeu\+\_\+niveau\+\_\+perdu}} (const \doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}ej)
+\item 
+int \doxymbox{\hyperlink{jeu_8h_adbd875e13250e4155452816f4a51f9ac}{verifier\+\_\+collision\+\_\+cercle\+\_\+rect}} (float cx, float cy, float r, float rx, float ry, float larg, float haut)
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{jeu_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{jeu_8h_a0fec73e93b6dc52d71bfc31f4c20fbf5}\index{jeu.h@{jeu.h}!boss\_deplacer@{boss\_deplacer}}
+\index{boss\_deplacer@{boss\_deplacer}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{boss\_deplacer()}{boss\_deplacer()}}
+{\footnotesize\ttfamily \label{jeu_8h_a0fec73e93b6dc52d71bfc31f4c20fbf5} 
+void boss\+\_\+deplacer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{b}{, }\item[{float}]{dt}{, }\item[{float}]{largeur\+\_\+zone}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_a0fec73e93b6dc52d71bfc31f4c20fbf5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_a35db185c59a638dfe4f06995eaeb7e00}\index{jeu.h@{jeu.h}!bulle\_deplacer@{bulle\_deplacer}}
+\index{bulle\_deplacer@{bulle\_deplacer}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{bulle\_deplacer()}{bulle\_deplacer()}}
+{\footnotesize\ttfamily \label{jeu_8h_a35db185c59a638dfe4f06995eaeb7e00} 
+void bulle\+\_\+deplacer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_bulle}{Bulle}} \texorpdfstring{$\ast$}{*}}]{b}{, }\item[{float}]{dt}{, }\item[{float}]{largeur\+\_\+zone}{, }\item[{float}]{hauteur\+\_\+zone}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{jeu_8h_a35db185c59a638dfe4f06995eaeb7e00_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_a35db185c59a638dfe4f06995eaeb7e00_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_a95bdea7c66358469b0f5587032814c83}\index{jeu.h@{jeu.h}!bulle\_diviser@{bulle\_diviser}}
+\index{bulle\_diviser@{bulle\_diviser}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{bulle\_diviser()}{bulle\_diviser()}}
+{\footnotesize\ttfamily \label{jeu_8h_a95bdea7c66358469b0f5587032814c83} 
+void bulle\+\_\+diviser (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{, }\item[{int}]{indice}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_a95bdea7c66358469b0f5587032814c83_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_ac3b9eb13e1446e9c5aa5ee8c7bae31f9}\index{jeu.h@{jeu.h}!jeu\_init\_niveau@{jeu\_init\_niveau}}
+\index{jeu\_init\_niveau@{jeu\_init\_niveau}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{jeu\_init\_niveau()}{jeu\_init\_niveau()}}
+{\footnotesize\ttfamily \label{jeu_8h_ac3b9eb13e1446e9c5aa5ee8c7bae31f9} 
+void jeu\+\_\+init\+\_\+niveau (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{, }\item[{int}]{niveau}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{jeu_8h_ac3b9eb13e1446e9c5aa5ee8c7bae31f9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_a6c267bac373aba16a2d30f98c5786dfd}\index{jeu.h@{jeu.h}!jeu\_mettre\_a\_jour@{jeu\_mettre\_a\_jour}}
+\index{jeu\_mettre\_a\_jour@{jeu\_mettre\_a\_jour}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{jeu\_mettre\_a\_jour()}{jeu\_mettre\_a\_jour()}}
+{\footnotesize\ttfamily \label{jeu_8h_a6c267bac373aba16a2d30f98c5786dfd} 
+void jeu\+\_\+mettre\+\_\+a\+\_\+jour (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{, }\item[{float}]{dt}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_a6c267bac373aba16a2d30f98c5786dfd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{jeu_8h_a6c267bac373aba16a2d30f98c5786dfd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_accec6939a115e95b6fe0dd557161d78e}\index{jeu.h@{jeu.h}!jeu\_niveau\_gagne@{jeu\_niveau\_gagne}}
+\index{jeu\_niveau\_gagne@{jeu\_niveau\_gagne}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{jeu\_niveau\_gagne()}{jeu\_niveau\_gagne()}}
+{\footnotesize\ttfamily \label{jeu_8h_accec6939a115e95b6fe0dd557161d78e} 
+int jeu\+\_\+niveau\+\_\+gagne (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{jeu_8h_accec6939a115e95b6fe0dd557161d78e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_addc45c25e35e48d44131714b8e7f7516}\index{jeu.h@{jeu.h}!jeu\_niveau\_perdu@{jeu\_niveau\_perdu}}
+\index{jeu\_niveau\_perdu@{jeu\_niveau\_perdu}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{jeu\_niveau\_perdu()}{jeu\_niveau\_perdu()}}
+{\footnotesize\ttfamily \label{jeu_8h_addc45c25e35e48d44131714b8e7f7516} 
+int jeu\+\_\+niveau\+\_\+perdu (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{jeu_8h_addc45c25e35e48d44131714b8e7f7516_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_a0fdf5ccf00e016cdf02d6fd09ef52295}\index{jeu.h@{jeu.h}!jeu\_verifier\_collisions@{jeu\_verifier\_collisions}}
+\index{jeu\_verifier\_collisions@{jeu\_verifier\_collisions}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{jeu\_verifier\_collisions()}{jeu\_verifier\_collisions()}}
+{\footnotesize\ttfamily \label{jeu_8h_a0fdf5ccf00e016cdf02d6fd09ef52295} 
+void jeu\+\_\+verifier\+\_\+collisions (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{jeu_8h_a0fdf5ccf00e016cdf02d6fd09ef52295_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_a0fdf5ccf00e016cdf02d6fd09ef52295_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_aa567b6f3c9bd1a4df9d6b4683b5b46be}\index{jeu.h@{jeu.h}!joueur\_tirer@{joueur\_tirer}}
+\index{joueur\_tirer@{joueur\_tirer}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{joueur\_tirer()}{joueur\_tirer()}}
+{\footnotesize\ttfamily \label{jeu_8h_aa567b6f3c9bd1a4df9d6b4683b5b46be} 
+void joueur\+\_\+tirer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{jeu_8h_aa567b6f3c9bd1a4df9d6b4683b5b46be_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_adbd875e13250e4155452816f4a51f9ac}\index{jeu.h@{jeu.h}!verifier\_collision\_cercle\_rect@{verifier\_collision\_cercle\_rect}}
+\index{verifier\_collision\_cercle\_rect@{verifier\_collision\_cercle\_rect}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{verifier\_collision\_cercle\_rect()}{verifier\_collision\_cercle\_rect()}}
+{\footnotesize\ttfamily \label{jeu_8h_adbd875e13250e4155452816f4a51f9ac} 
+int verifier\+\_\+collision\+\_\+cercle\+\_\+rect (\begin{DoxyParamCaption}\item[{float}]{cx}{, }\item[{float}]{cy}{, }\item[{float}]{r}{, }\item[{float}]{rx}{, }\item[{float}]{ry}{, }\item[{float}]{larg}{, }\item[{float}]{haut}{}\end{DoxyParamCaption})}
+

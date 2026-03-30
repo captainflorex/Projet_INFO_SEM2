@@ -1,0 +1,1104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="affichage_8c" kind="file" language="C++">
+    <compoundname>affichage.c</compoundname>
+    <includes local="no">allegro.h</includes>
+    <includes refid="affichage_8h" local="yes">affichage.h</includes>
+    <includes refid="entites_8h" local="yes">entites.h</includes>
+    <includes refid="menu_8h" local="yes">menu.h</includes>
+    <includes refid="jeu_8h" local="yes">jeu.h</includes>
+    <includes local="no">stdio.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>affichage.c</label>
+        <link refid="affichage_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>affichage.h</label>
+        <link refid="affichage_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>entites.h</label>
+        <link refid="entites_8h_source"/>
+      </node>
+      <node id="6">
+        <label>jeu.h</label>
+        <link refid="jeu_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>menu.h</label>
+        <link refid="menu_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>allegro.h</label>
+      </node>
+      <node id="7">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="affichage_8c_1aafdb4c150dee655e9e053ab74941ef59" prot="public" static="no" mutable="no">
+        <type>BITMAP *</type>
+        <definition>BITMAP* fond_jeu</definition>
+        <argsstring></argsstring>
+        <name>fond_jeu</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="8" column="8" bodyfile="affichage.c" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="affichage_8c_1a95978b3edc79a3de210ad1d11fe78207" prot="public" static="no" mutable="no">
+        <type>BITMAP *</type>
+        <definition>BITMAP* fond_menu</definition>
+        <argsstring></argsstring>
+        <name>fond_menu</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="9" column="8" bodyfile="affichage.c" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="affichage_8c_1aca2075c4f049282c156ff6345994070b" prot="public" static="no" mutable="no">
+        <type>BITMAP *</type>
+        <definition>BITMAP* sprite_bulle_grande</definition>
+        <argsstring></argsstring>
+        <name>sprite_bulle_grande</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="11" column="8" bodyfile="affichage.c" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="affichage_8c_1a707d80fcda5da578f3773783afb42b06" prot="public" static="no" mutable="no">
+        <type>BITMAP *</type>
+        <definition>BITMAP* sprite_bulle_moyenne</definition>
+        <argsstring></argsstring>
+        <name>sprite_bulle_moyenne</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="12" column="8" bodyfile="affichage.c" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="affichage_8c_1a7701096c3377f2b8c1610ee82c16c948" prot="public" static="no" mutable="no">
+        <type>BITMAP *</type>
+        <definition>BITMAP* sprite_bulle_petite</definition>
+        <argsstring></argsstring>
+        <name>sprite_bulle_petite</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="13" column="8" bodyfile="affichage.c" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="affichage_8c_1a17c8ac2bec834c0ce6174e71f674b22a" prot="public" static="no" mutable="no">
+        <type>BITMAP *</type>
+        <definition>BITMAP* sprite_bulle_minuscule</definition>
+        <argsstring></argsstring>
+        <name>sprite_bulle_minuscule</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="14" column="8" bodyfile="affichage.c" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="affichage_8c_1ac5016a348ebd5d7bc769d953d6f2c3d7" prot="public" static="yes" mutable="no">
+        <type>BITMAP *</type>
+        <definition>BITMAP* sprite_idle</definition>
+        <argsstring></argsstring>
+        <name>sprite_idle</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="17" column="15" bodyfile="affichage.c" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="affichage_8c_1afa5b3e0232a97fceac8c47a1ccb3af08" prot="public" static="yes" mutable="no">
+        <type>BITMAP *</type>
+        <definition>BITMAP* sprite_tir</definition>
+        <argsstring></argsstring>
+        <name>sprite_tir</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="18" column="15" bodyfile="affichage.c" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="affichage_8c_1a4e55036ed67909724a2c9e9b0d57aaba" prot="public" static="yes" mutable="no">
+        <type>BITMAP *</type>
+        <definition>BITMAP* sprite_marche_d1</definition>
+        <argsstring></argsstring>
+        <name>sprite_marche_d1</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="19" column="15" bodyfile="affichage.c" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="affichage_8c_1abf168d163912660f8428786ae0a214d5" prot="public" static="yes" mutable="no">
+        <type>BITMAP *</type>
+        <definition>BITMAP* sprite_marche_d2</definition>
+        <argsstring></argsstring>
+        <name>sprite_marche_d2</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="20" column="15" bodyfile="affichage.c" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="affichage_8c_1a19e9232df01aeef66d373c241a0f8e37" prot="public" static="yes" mutable="no">
+        <type>BITMAP *</type>
+        <definition>BITMAP* sprite_marche_g1</definition>
+        <argsstring></argsstring>
+        <name>sprite_marche_g1</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="21" column="15" bodyfile="affichage.c" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="affichage_8c_1a91f4a87cbf1d26c61c089bab29c51f7a" prot="public" static="yes" mutable="no">
+        <type>BITMAP *</type>
+        <definition>BITMAP* sprite_marche_g2</definition>
+        <argsstring></argsstring>
+        <name>sprite_marche_g2</name>
+        <initializer>= NULL</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="22" column="15" bodyfile="affichage.c" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="affichage_8c_1af2b9eff02ed27d3a363f2661f736e29e" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int compteur_anim</definition>
+        <argsstring></argsstring>
+        <name>compteur_anim</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="25" column="12" bodyfile="affichage.c" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="affichage_8c_1a03d99c0ee63caab838bb59082eeee138" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int duree_tir</definition>
+        <argsstring></argsstring>
+        <name>duree_tir</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="26" column="12" bodyfile="affichage.c" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="affichage_8c_1a1c25b13612b19721d644c2bb2a78e5dc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void appliquer_masque</definition>
+        <argsstring>(BITMAP *bmp)</argsstring>
+        <name>appliquer_masque</name>
+        <param>
+          <type>BITMAP *</type>
+          <declname>bmp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="29" column="13" bodyfile="affichage.c" bodystart="29" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="affichage_8c_1af2b7de53cf7bf2c5b95799f030af32ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void affichage_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>affichage_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="40" column="6" bodyfile="affichage.c" bodystart="40" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="affichage_8c_1a7a02878ba4c6ec45dd0519a58739a827" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void affichage_charger_ressources</definition>
+        <argsstring>(void)</argsstring>
+        <name>affichage_charger_ressources</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="50" column="6" bodyfile="affichage.c" bodystart="50" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="affichage_8c_1a471bebb0f446aa0133a5ca961fc275e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void affichage_liberer_ressources</definition>
+        <argsstring>(void)</argsstring>
+        <name>affichage_liberer_ressources</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="103" column="6" bodyfile="affichage.c" bodystart="103" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="affichage_8c_1a8a136500425935baff6b4aefc3d7ba80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void joueur_signaler_tir</definition>
+        <argsstring>(void)</argsstring>
+        <name>joueur_signaler_tir</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="121" column="6" bodyfile="affichage.c" bodystart="121" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="affichage_8c_1a93bdb235cdec69d6d2f23b1b8ef206ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void afficher_joueur</definition>
+        <argsstring>(BITMAP *tampon, const Joueur *j)</argsstring>
+        <name>afficher_joueur</name>
+        <param>
+          <type>BITMAP *</type>
+          <declname>tampon</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_joueur" kindref="compound">Joueur</ref> *</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="126" column="6" bodyfile="affichage.c" bodystart="126" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="affichage_8c_1ade696254e724634f854cee7ce6ee56cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void afficher_bulle</definition>
+        <argsstring>(BITMAP *tampon, const Bulle *b)</argsstring>
+        <name>afficher_bulle</name>
+        <param>
+          <type>BITMAP *</type>
+          <declname>tampon</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_bulle" kindref="compound">Bulle</ref> *</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="168" column="6" bodyfile="affichage.c" bodystart="168" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="affichage_8c_1a9c65f34c4526bb0897b649aeb3f811f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void afficher_hud</definition>
+        <argsstring>(BITMAP *tampon, const EtatJeu *ej)</argsstring>
+        <name>afficher_hud</name>
+        <param>
+          <type>BITMAP *</type>
+          <declname>tampon</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_etat_jeu" kindref="compound">EtatJeu</ref> *</type>
+          <declname>ej</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="202" column="6" bodyfile="affichage.c" bodystart="202" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="affichage_8c_1aa6ca7e6dcc8191527cebc39a5e84a87b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void afficher_boss</definition>
+        <argsstring>(BITMAP *tampon, const Boss *boss)</argsstring>
+        <name>afficher_boss</name>
+        <param>
+          <type>BITMAP *</type>
+          <declname>tampon</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_boss" kindref="compound">Boss</ref> *</type>
+          <declname>boss</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="280" column="6" bodyfile="affichage.c" bodystart="280" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="affichage_8c_1a4e1cd4bd86ac9915e3332b41346005fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void afficher_projectile</definition>
+        <argsstring>(BITMAP *tampon, const Projectile *p)</argsstring>
+        <name>afficher_projectile</name>
+        <param>
+          <type>BITMAP *</type>
+          <declname>tampon</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_projectile" kindref="compound">Projectile</ref> *</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="291" column="6" bodyfile="affichage.c" bodystart="291" bodyend="307"/>
+      </memberdef>
+      <memberdef kind="function" id="affichage_8c_1a5056814c53d4eec079dec720b21324a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void afficher_jeu</definition>
+        <argsstring>(BITMAP *tampon, const EtatJeu *ej)</argsstring>
+        <name>afficher_jeu</name>
+        <param>
+          <type>BITMAP *</type>
+          <declname>tampon</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_etat_jeu" kindref="compound">EtatJeu</ref> *</type>
+          <declname>ej</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="311" column="6" bodyfile="affichage.c" bodystart="311" bodyend="326"/>
+      </memberdef>
+      <memberdef kind="function" id="affichage_8c_1a416f9b7333b0226e5cab25214be7ec33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void afficher_pause</definition>
+        <argsstring>(BITMAP *tampon, const EtatJeu *ej)</argsstring>
+        <name>afficher_pause</name>
+        <param>
+          <type>BITMAP *</type>
+          <declname>tampon</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_etat_jeu" kindref="compound">EtatJeu</ref> *</type>
+          <declname>ej</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="328" column="6" bodyfile="affichage.c" bodystart="328" bodyend="366"/>
+      </memberdef>
+      <memberdef kind="function" id="affichage_8c_1ae1c5c0297d6e728c5716a324121e9061" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void dessiner_chiffre_geant</definition>
+        <argsstring>(BITMAP *tampon, int chiffre, int x, int y, int couleur)</argsstring>
+        <name>dessiner_chiffre_geant</name>
+        <param>
+          <type>BITMAP *</type>
+          <declname>tampon</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>chiffre</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>couleur</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="369" column="13" bodyfile="affichage.c" bodystart="369" bodyend="408"/>
+      </memberdef>
+      <memberdef kind="function" id="affichage_8c_1ae09ee85bc962e3a9ff1cb5934b972c03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void afficher_decompte</definition>
+        <argsstring>(BITMAP *tampon, int compte)</argsstring>
+        <name>afficher_decompte</name>
+        <param>
+          <type>BITMAP *</type>
+          <declname>tampon</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>compte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="410" column="6" bodyfile="affichage.c" bodystart="410" bodyend="446"/>
+      </memberdef>
+      <memberdef kind="function" id="affichage_8c_1a43d3a0e89e053e3d5909b25ba84fa013" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void afficher_victoire</definition>
+        <argsstring>(BITMAP *tampon)</argsstring>
+        <name>afficher_victoire</name>
+        <param>
+          <type>BITMAP *</type>
+          <declname>tampon</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="450" column="6" bodyfile="affichage.c" bodystart="450" bodyend="459"/>
+      </memberdef>
+      <memberdef kind="function" id="affichage_8c_1a3d37afe9287430123b96a943a23ea26e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void afficher_defaite</definition>
+        <argsstring>(BITMAP *tampon)</argsstring>
+        <name>afficher_defaite</name>
+        <param>
+          <type>BITMAP *</type>
+          <declname>tampon</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="461" column="6" bodyfile="affichage.c" bodystart="461" bodyend="470"/>
+      </memberdef>
+      <memberdef kind="function" id="affichage_8c_1a3becc20c55db2b75ebbd75c5ad9cdbfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void afficher_saisie_pseudo</definition>
+        <argsstring>(BITMAP *tampon, const EtatMenu *em)</argsstring>
+        <name>afficher_saisie_pseudo</name>
+        <param>
+          <type>BITMAP *</type>
+          <declname>tampon</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_etat_menu" kindref="compound">EtatMenu</ref> *</type>
+          <declname>em</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="affichage.c" line="472" column="6" bodyfile="affichage.c" bodystart="472" bodyend="496"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;allegro.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;affichage.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;entites.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;menu.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;jeu.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">BITMAP<sp/>*fond_jeu<sp/><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">BITMAP<sp/>*fond_menu<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">BITMAP<sp/>*sprite_bulle_grande<sp/><sp/><sp/><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">BITMAP<sp/>*sprite_bulle_moyenne<sp/><sp/><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">BITMAP<sp/>*sprite_bulle_petite<sp/><sp/><sp/><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">BITMAP<sp/>*sprite_bulle_minuscule<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Sprites<sp/>joueur<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>BITMAP<sp/>*sprite_idle<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>BITMAP<sp/>*sprite_tir<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>BITMAP<sp/>*sprite_marche_d1<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>BITMAP<sp/>*sprite_marche_d2<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>BITMAP<sp/>*sprite_marche_g1<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>BITMAP<sp/>*sprite_marche_g2<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>État<sp/>animation<sp/>joueur<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>compteur_anim<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>duree_tir<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>appliquer_masque(BITMAP<sp/>*bmp)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!bmp)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>magenta<sp/>=<sp/>makecol(255,<sp/>0,<sp/>255);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>masque<sp/><sp/>=<sp/>bitmap_mask_color(bmp);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>0;<sp/>y<sp/>&lt;<sp/>bmp-&gt;h;<sp/>y++)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0;<sp/>x<sp/>&lt;<sp/>bmp-&gt;w;<sp/>x++)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(getpixel(bmp,<sp/>x,<sp/>y)<sp/>==<sp/>magenta)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>putpixel(bmp,<sp/>x,<sp/>y,<sp/>masque);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>affichage_init(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>allegro_init();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>install_keyboard();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>install_mouse();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>install_timer();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>set_color_depth(32);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>set_gfx_mode(GFX_AUTODETECT_WINDOWED,<sp/>LARGEUR_FENETRE,<sp/>HAUTEUR_FENETRE,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>set_window_title(</highlight><highlight class="stringliteral">&quot;Super<sp/>Bulles&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>affichage_charger_ressources(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Fond<sp/>jeu<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>fond_jeu<sp/>=<sp/>load_bitmap(</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;C:\\Users\\Rems1\\CLionProjects\\Projet_INFO_SEM2\\cmake-build-debug\\ressources\\fonds\\fond_jeu.bmp&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fond_jeu<sp/>&amp;&amp;<sp/>(fond_jeu-&gt;w<sp/>!=<sp/>LARGEUR_FENETRE<sp/>||<sp/>fond_jeu-&gt;h<sp/>!=<sp/>HAUTEUR_ZONE))<sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BITMAP<sp/>*redim<sp/>=<sp/>create_bitmap(LARGEUR_FENETRE,<sp/>HAUTEUR_ZONE);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stretch_blit(fond_jeu,<sp/>redim,<sp/>0,<sp/>0,<sp/>fond_jeu-&gt;w,<sp/>fond_jeu-&gt;h,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>0,<sp/>LARGEUR_FENETRE,<sp/>HAUTEUR_ZONE);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>destroy_bitmap(fond_jeu);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fond_jeu<sp/>=<sp/>redim;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!fond_jeu)<sp/>{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fond_jeu<sp/>=<sp/>create_bitmap(LARGEUR_FENETRE,<sp/>HAUTEUR_ZONE);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear_to_color(fond_jeu,<sp/>makecol(20,<sp/>20,<sp/>80));</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Fond<sp/>menu<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>fond_menu<sp/>=<sp/>create_bitmap(LARGEUR_FENETRE,<sp/>HAUTEUR_FENETRE);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>stretch_blit(fond_jeu,<sp/>fond_menu,<sp/>0,<sp/>0,<sp/>fond_jeu-&gt;w,<sp/>fond_jeu-&gt;h,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0,<sp/>0,<sp/>LARGEUR_FENETRE,<sp/>HAUTEUR_FENETRE);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>drawing_mode(DRAW_MODE_TRANS,<sp/>NULL,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>set_trans_blender(0,<sp/>0,<sp/>0,<sp/>150);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>rectfill(fond_menu,<sp/>0,<sp/>0,<sp/>LARGEUR_FENETRE,<sp/>HAUTEUR_FENETRE,<sp/>makecol(0,<sp/>0,<sp/>0));</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>drawing_mode(DRAW_MODE_SOLID,<sp/>NULL,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Sprites<sp/>bulles<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_bulle_grande<sp/><sp/><sp/><sp/>=<sp/>load_bitmap(</highlight><highlight class="stringliteral">&quot;ressources/sprites/bulle_grande.bmp&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/>NULL);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_bulle_moyenne<sp/><sp/><sp/>=<sp/>load_bitmap(</highlight><highlight class="stringliteral">&quot;ressources/sprites/bulle_moyenne.bmp&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/>NULL);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_bulle_petite<sp/><sp/><sp/><sp/>=<sp/>load_bitmap(</highlight><highlight class="stringliteral">&quot;ressources/sprites/bulle_petite.bmp&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/>NULL);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_bulle_minuscule<sp/>=<sp/>load_bitmap(</highlight><highlight class="stringliteral">&quot;ressources/sprites/bulle_minuscule.bmp&quot;</highlight><highlight class="normal">,<sp/>NULL);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>appliquer_masque(sprite_bulle_grande);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>appliquer_masque(sprite_bulle_moyenne);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>appliquer_masque(sprite_bulle_petite);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>appliquer_masque(sprite_bulle_minuscule);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Sprites<sp/>joueur<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_idle<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>load_bitmap(</highlight><highlight class="stringliteral">&quot;ressources/sprites/joueur_idle.bmp&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_tir<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>load_bitmap(</highlight><highlight class="stringliteral">&quot;ressources/sprites/joueur_tir.bmp&quot;</highlight><highlight class="normal">,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NULL);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_marche_d1<sp/>=<sp/>load_bitmap(</highlight><highlight class="stringliteral">&quot;ressources/sprites/joueur_marche_d1.bmp&quot;</highlight><highlight class="normal">,<sp/><sp/>NULL);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_marche_d2<sp/>=<sp/>load_bitmap(</highlight><highlight class="stringliteral">&quot;ressources/sprites/joueur_marche_d2.bmp&quot;</highlight><highlight class="normal">,<sp/><sp/>NULL);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_marche_g1<sp/>=<sp/>load_bitmap(</highlight><highlight class="stringliteral">&quot;ressources/sprites/joueur_marche_g1.bmp&quot;</highlight><highlight class="normal">,<sp/><sp/>NULL);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>sprite_marche_g2<sp/>=<sp/>load_bitmap(</highlight><highlight class="stringliteral">&quot;ressources/sprites/joueur_marche_g2.bmp&quot;</highlight><highlight class="normal">,<sp/><sp/>NULL);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>appliquer_masque(sprite_idle);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>appliquer_masque(sprite_tir);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>appliquer_masque(sprite_marche_d1);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>appliquer_masque(sprite_marche_d2);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>appliquer_masque(sprite_marche_g1);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>appliquer_masque(sprite_marche_g2);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>affichage_liberer_ressources(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fond_jeu)<sp/><sp/>{<sp/>destroy_bitmap(fond_jeu);<sp/><sp/>fond_jeu<sp/><sp/>=<sp/>NULL;<sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fond_menu)<sp/>{<sp/>destroy_bitmap(fond_menu);<sp/>fond_menu<sp/>=<sp/>NULL;<sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sprite_bulle_grande)<sp/><sp/><sp/><sp/>{<sp/>destroy_bitmap(sprite_bulle_grande);<sp/><sp/><sp/><sp/>sprite_bulle_grande<sp/><sp/><sp/><sp/>=<sp/>NULL;<sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sprite_bulle_moyenne)<sp/><sp/><sp/>{<sp/>destroy_bitmap(sprite_bulle_moyenne);<sp/><sp/><sp/>sprite_bulle_moyenne<sp/><sp/><sp/>=<sp/>NULL;<sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sprite_bulle_petite)<sp/><sp/><sp/><sp/>{<sp/>destroy_bitmap(sprite_bulle_petite);<sp/><sp/><sp/><sp/>sprite_bulle_petite<sp/><sp/><sp/><sp/>=<sp/>NULL;<sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sprite_bulle_minuscule)<sp/>{<sp/>destroy_bitmap(sprite_bulle_minuscule);<sp/>sprite_bulle_minuscule<sp/>=<sp/>NULL;<sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sprite_idle)<sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>destroy_bitmap(sprite_idle);<sp/><sp/><sp/><sp/><sp/><sp/>sprite_idle<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>NULL;<sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sprite_tir)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/>destroy_bitmap(sprite_tir);<sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprite_tir<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>NULL;<sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sprite_marche_d1)<sp/>{<sp/>destroy_bitmap(sprite_marche_d1);<sp/>sprite_marche_d1<sp/>=<sp/>NULL;<sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sprite_marche_d2)<sp/>{<sp/>destroy_bitmap(sprite_marche_d2);<sp/>sprite_marche_d2<sp/>=<sp/>NULL;<sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sprite_marche_g1)<sp/>{<sp/>destroy_bitmap(sprite_marche_g1);<sp/>sprite_marche_g1<sp/>=<sp/>NULL;<sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sprite_marche_g2)<sp/>{<sp/>destroy_bitmap(sprite_marche_g2);<sp/>sprite_marche_g2<sp/>=<sp/>NULL;<sp/>}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Appelée<sp/>depuis<sp/>main.c<sp/>quand<sp/>le<sp/>joueur<sp/>tire<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>joueur_signaler_tir(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>duree_tir<sp/>=<sp/>10;<sp/></highlight><highlight class="comment">/*<sp/>affiche<sp/>le<sp/>sprite<sp/>tir<sp/>pendant<sp/>10<sp/>tics<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>afficher_joueur(BITMAP<sp/>*tampon,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_joueur" kindref="compound">Joueur</ref><sp/>*j)<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!j-&gt;vivant)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>BITMAP<sp/>*sprite<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Priorité<sp/>1<sp/>:<sp/>tir<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(duree_tir<sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/>sprite_tir)<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprite<sp/>=<sp/>sprite_tir;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>duree_tir--;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Priorité<sp/>2<sp/>:<sp/>marche<sp/>droite<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(j-&gt;vx<sp/>&gt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>compteur_anim++;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(compteur_anim<sp/>&gt;=<sp/>16)<sp/>compteur_anim<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprite<sp/>=<sp/>(compteur_anim<sp/>&lt;<sp/>8)<sp/>?<sp/>sprite_marche_d1<sp/>:<sp/>sprite_marche_d2;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Priorité<sp/>3<sp/>:<sp/>marche<sp/>gauche<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(j-&gt;vx<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>compteur_anim++;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(compteur_anim<sp/>&gt;=<sp/>16)<sp/>compteur_anim<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprite<sp/>=<sp/>(compteur_anim<sp/>&lt;<sp/>8)<sp/>?<sp/>sprite_marche_g1<sp/>:<sp/>sprite_marche_g2;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Priorité<sp/>4<sp/>:<sp/>idle<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>compteur_anim<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprite<sp/>=<sp/>sprite_idle;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Fallback<sp/>rectangle<sp/>si<sp/>sprite<sp/>manquant<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!sprite)<sp/>{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rectfill(tampon,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)j-&gt;x<sp/>-<sp/>12,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)j-&gt;y<sp/>-<sp/>20,</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)j-&gt;x<sp/>+<sp/>12,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)j-&gt;y<sp/>+<sp/>20,<sp/>makecol(0,<sp/>200,<sp/>255));</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rect(tampon,<sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)j-&gt;x<sp/>-<sp/>12,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)j-&gt;y<sp/>-<sp/>20,</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)j-&gt;x<sp/>+<sp/>12,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)j-&gt;y<sp/>+<sp/>20,<sp/>makecol(255,<sp/>255,<sp/>255));</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>draw_sprite(tampon,<sp/>sprite,</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)j-&gt;x<sp/>-<sp/>sprite-&gt;w<sp/>/<sp/>2,</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)j-&gt;y<sp/>-<sp/>sprite-&gt;h<sp/>/<sp/>2);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>afficher_bulle(BITMAP<sp/>*tampon,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_bulle" kindref="compound">Bulle</ref><sp/>*b)<sp/>{</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!b-&gt;active)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>BITMAP<sp/>*sprite<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(b-&gt;taille)<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>BULLE_GRANDE:<sp/><sp/><sp/><sp/>sprite<sp/>=<sp/>sprite_bulle_grande;<sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>BULLE_MOYENNE:<sp/><sp/><sp/>sprite<sp/>=<sp/>sprite_bulle_moyenne;<sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>BULLE_PETITE:<sp/><sp/><sp/><sp/>sprite<sp/>=<sp/>sprite_bulle_petite;<sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>BULLE_MINUSCULE:<sp/>sprite<sp/>=<sp/>sprite_bulle_minuscule;<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sprite)<sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>taille<sp/>=<sp/>(int)(rayon_bulle(b-&gt;taille)<sp/>*<sp/>2);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BITMAP<sp/>*redim<sp/>=<sp/>create_bitmap(taille,<sp/>taille);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear_to_color(redim,<sp/>bitmap_mask_color(redim));</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stretch_sprite(redim,<sp/>sprite,<sp/>0,<sp/>0,<sp/>taille,<sp/>taille);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>draw_sprite(tampon,<sp/>redim,</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)b-&gt;x<sp/>-<sp/>taille<sp/>/<sp/>2,</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)b-&gt;y<sp/>-<sp/>taille<sp/>/<sp/>2);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>destroy_bitmap(redim);</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>couleurs[4]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>makecol(220,<sp/>50,<sp/><sp/>50),</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>makecol(230,<sp/>140,<sp/>20),</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>makecol(50,<sp/><sp/>180,<sp/>50),</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>makecol(50,<sp/><sp/>130,<sp/>230)</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>circlefill(tampon,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)b-&gt;x,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)b-&gt;y,</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)rayon_bulle(b-&gt;taille),<sp/>couleurs[b-&gt;taille]);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>circle(tampon,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)b-&gt;x,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)b-&gt;y,</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)rayon_bulle(b-&gt;taille),<sp/>makecol(255,<sp/>255,<sp/>255));</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>afficher_hud(BITMAP<sp/>*tampon,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_etat_jeu" kindref="compound">EtatJeu</ref><sp/>*ej)<sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y0<sp/>=<sp/>HAUTEUR_ZONE;<sp/></highlight><highlight class="comment">/*<sp/>540<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Fond<sp/>dégradé<sp/>sombre<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>HAUTEUR_INFO;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>val<sp/>=<sp/>15<sp/>+<sp/>i<sp/>/<sp/>3;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hline(tampon,<sp/>0,<sp/>y0<sp/>+<sp/>i,<sp/>LARGEUR_FENETRE,<sp/>makecol(val,<sp/>val,<sp/>val<sp/>+<sp/>30));</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Ligne<sp/>de<sp/>séparation<sp/>cyan<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>hline(tampon,<sp/>0,<sp/>y0,<sp/><sp/><sp/><sp/><sp/>LARGEUR_FENETRE,<sp/>makecol(0,<sp/><sp/>200,<sp/>255));</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>hline(tampon,<sp/>0,<sp/>y0<sp/>+<sp/>1,<sp/>LARGEUR_FENETRE,<sp/>makecol(0,<sp/><sp/>100,<sp/>150));</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>===<sp/>PSEUDO<sp/>(gauche)<sp/>===<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>textprintf_ex(tampon,<sp/>font,<sp/>15,<sp/>y0<sp/>+<sp/>10,</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>makecol(150,<sp/>150,<sp/>150),<sp/>-1,<sp/></highlight><highlight class="stringliteral">&quot;JOUEUR&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>textprintf_ex(tampon,<sp/>font,<sp/>15,<sp/>y0<sp/>+<sp/>24,</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>makecol(255,<sp/>255,<sp/>255),<sp/>-1,<sp/></highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/>ej-&gt;joueur.pseudo);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Séparateur<sp/>vertical<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>vline(tampon,<sp/>160,<sp/>y0<sp/>+<sp/>8,<sp/>y0<sp/>+<sp/>HAUTEUR_INFO<sp/>-<sp/>8,<sp/>makecol(0,<sp/>100,<sp/>150));</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>===<sp/>SCORE<sp/>(centre-gauche)<sp/>===<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/>textprintf_ex(tampon,<sp/>font,<sp/>175,<sp/>y0<sp/>+<sp/>10,</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>makecol(150,<sp/>150,<sp/>150),<sp/>-1,<sp/></highlight><highlight class="stringliteral">&quot;SCORE&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>textprintf_ex(tampon,<sp/>font,<sp/>175,<sp/>y0<sp/>+<sp/>24,</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>makecol(255,<sp/>220,<sp/>0),<sp/>-1,<sp/></highlight><highlight class="stringliteral">&quot;%06d&quot;</highlight><highlight class="normal">,<sp/>ej-&gt;joueur.score);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Séparateur<sp/>vertical<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>vline(tampon,<sp/>320,<sp/>y0<sp/>+<sp/>8,<sp/>y0<sp/>+<sp/>HAUTEUR_INFO<sp/>-<sp/>8,<sp/>makecol(0,<sp/>100,<sp/>150));</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>===<sp/>NIVEAU<sp/>(centre)<sp/>===<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>textprintf_ex(tampon,<sp/>font,<sp/>335,<sp/>y0<sp/>+<sp/>10,</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>makecol(150,<sp/>150,<sp/>150),<sp/>-1,<sp/></highlight><highlight class="stringliteral">&quot;NIVEAU&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>textprintf_ex(tampon,<sp/>font,<sp/>335,<sp/>y0<sp/>+<sp/>24,</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>makecol(0,<sp/>220,<sp/>255),<sp/>-1,<sp/></highlight><highlight class="stringliteral">&quot;%d<sp/>/<sp/>4&quot;</highlight><highlight class="normal">,<sp/>ej-&gt;niveau);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Séparateur<sp/>vertical<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>vline(tampon,<sp/>460,<sp/>y0<sp/>+<sp/>8,<sp/>y0<sp/>+<sp/>HAUTEUR_INFO<sp/>-<sp/>8,<sp/>makecol(0,<sp/>100,<sp/>150));</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>===<sp/>TEMPS<sp/>(droite)<sp/>avec<sp/>barre<sp/>de<sp/>progression<sp/>===<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>textprintf_ex(tampon,<sp/>font,<sp/>475,<sp/>y0<sp/>+<sp/>10,</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>makecol(150,<sp/>150,<sp/>150),<sp/>-1,<sp/></highlight><highlight class="stringliteral">&quot;TEMPS&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Couleur<sp/>qui<sp/>vire<sp/>au<sp/>rouge<sp/>quand<sp/>il<sp/>reste<sp/>peu<sp/>de<sp/>temps<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>col_temps;</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(ej-&gt;temps_restant<sp/>&gt;<sp/>30.0f)<sp/>col_temps<sp/>=<sp/>makecol(0,<sp/><sp/><sp/>255,<sp/>100);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ej-&gt;temps_restant<sp/>&gt;<sp/>10.0f)<sp/>col_temps<sp/>=<sp/>makecol(255,<sp/>180,<sp/><sp/><sp/>0);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>col_temps<sp/>=<sp/>makecol(255,<sp/><sp/>50,<sp/><sp/>50);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>textprintf_ex(tampon,<sp/>font,<sp/>475,<sp/>y0<sp/>+<sp/>24,</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>col_temps,<sp/>-1,<sp/></highlight><highlight class="stringliteral">&quot;%.0fs&quot;</highlight><highlight class="normal">,<sp/>ej-&gt;temps_restant);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Barre<sp/>de<sp/>temps<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>barre_x<sp/><sp/><sp/><sp/><sp/>=<sp/>540;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>barre_largeur<sp/>=<sp/>240;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>barre_h<sp/><sp/><sp/><sp/><sp/>=<sp/>10;</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>barre_y<sp/><sp/><sp/><sp/><sp/>=<sp/>y0<sp/>+<sp/>25;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ratio<sp/><sp/><sp/><sp/><sp/>=<sp/>ej-&gt;temps_restant<sp/>/<sp/>60.0f;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ratio<sp/>&lt;<sp/>0)<sp/>ratio<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ratio<sp/>&gt;<sp/>1)<sp/>ratio<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Fond<sp/>barre<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>rectfill(tampon,<sp/>barre_x,<sp/>barre_y,</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>barre_x<sp/>+<sp/>barre_largeur,<sp/>barre_y<sp/>+<sp/>barre_h,</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>makecol(20,<sp/>20,<sp/>40));</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/>rect(tampon,<sp/>barre_x,<sp/>barre_y,</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>barre_x<sp/>+<sp/>barre_largeur,<sp/>barre_y<sp/>+<sp/>barre_h,</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>makecol(0,<sp/>80,<sp/>120));</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Remplissage<sp/>barre<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ratio<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rectfill(tampon,<sp/>barre_x<sp/>+<sp/>1,<sp/>barre_y<sp/>+<sp/>1,</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>barre_x<sp/>+<sp/>1<sp/>+<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)((barre_largeur<sp/>-<sp/>2)<sp/>*<sp/>ratio),</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>barre_y<sp/>+<sp/>barre_h<sp/>-<sp/>1,<sp/>col_temps);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>afficher_boss(BITMAP<sp/>*tampon,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_boss" kindref="compound">Boss</ref><sp/>*boss)<sp/>{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!boss-&gt;active)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/>rectfill(tampon,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)boss-&gt;x-30,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)boss-&gt;y-30,</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)boss-&gt;x+30,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)boss-&gt;y+30,<sp/>makecol(200,<sp/>0,<sp/>200));</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>rect(tampon,<sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)boss-&gt;x-30,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)boss-&gt;y-30,</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)boss-&gt;x+30,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)boss-&gt;y+30,<sp/>makecol(255,<sp/>100,<sp/>255));</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>rectfill(tampon,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)boss-&gt;x-30,<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)boss-&gt;y-45,</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)boss-&gt;x-30<sp/>+<sp/>boss-&gt;points_vie*2,</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)boss-&gt;y-35,<sp/>makecol(255,<sp/>0,<sp/>0));</highlight></codeline>
+<codeline lineno="289"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>afficher_projectile(BITMAP<sp/>*tampon,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_projectile" kindref="compound">Projectile</ref><sp/>*p)<sp/>{</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!p-&gt;active)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>(int)p-&gt;x;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>(int)p-&gt;y;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Traînée<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/>circlefill(tampon,<sp/>x,<sp/>y<sp/>+<sp/>6,<sp/>2,<sp/>makecol(0,<sp/><sp/>80,<sp/>120));</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/>circlefill(tampon,<sp/>x,<sp/>y<sp/>+<sp/>3,<sp/>3,<sp/>makecol(0,<sp/>150,<sp/>200));</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Boule<sp/>principale<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>circlefill(tampon,<sp/>x,<sp/>y,<sp/>4,<sp/>makecol(0,<sp/><sp/>220,<sp/>255));</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>circlefill(tampon,<sp/>x,<sp/>y,<sp/>2,<sp/>makecol(200,<sp/>255,<sp/>255));</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Halo<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/>circle(tampon,<sp/>x,<sp/>y,<sp/>5,<sp/>makecol(0,<sp/>100,<sp/>180));</highlight></codeline>
+<codeline lineno="307"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>afficher_jeu(BITMAP<sp/>*tampon,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_etat_jeu" kindref="compound">EtatJeu</ref><sp/>*ej)<sp/>{</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fond_jeu)</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blit(fond_jeu,<sp/>tampon,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>LARGEUR_FENETRE,<sp/>HAUTEUR_ZONE);</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rectfill(tampon,<sp/>0,<sp/>0,<sp/>LARGEUR_FENETRE,<sp/>HAUTEUR_ZONE,<sp/>makecol(10,<sp/>10,<sp/>30));</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>MAX_BULLES;<sp/>i++)</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>afficher_bulle(tampon,<sp/>&amp;ej-&gt;bulles[i]);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>MAX_PROJECTILES;<sp/>i++)</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>afficher_projectile(tampon,<sp/>&amp;ej-&gt;projectiles[i]);</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/>afficher_joueur(tampon,<sp/>&amp;ej-&gt;joueur);</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ej-&gt;boss.active)</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>afficher_boss(tampon,<sp/>&amp;ej-&gt;boss);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/>afficher_hud(tampon,<sp/>ej);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>afficher_pause(BITMAP<sp/>*tampon,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_etat_jeu" kindref="compound">EtatJeu</ref><sp/>*ej)<sp/>{</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Overlay<sp/>sombre<sp/>semi-transparent<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>drawing_mode(DRAW_MODE_TRANS,<sp/>NULL,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/>set_trans_blender(0,<sp/>0,<sp/>0,<sp/>160);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/>rectfill(tampon,<sp/>0,<sp/>0,<sp/>LARGEUR_FENETRE,<sp/>HAUTEUR_ZONE,<sp/>makecol(0,<sp/>0,<sp/>0));</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/>drawing_mode(DRAW_MODE_SOLID,<sp/>NULL,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Panneau<sp/>central<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>px<sp/>=<sp/>LARGEUR_FENETRE<sp/>/<sp/>2<sp/>-<sp/>150;</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>py<sp/>=<sp/>HAUTEUR_ZONE<sp/><sp/><sp/><sp/>/<sp/>2<sp/>-<sp/>80;</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/>rectfill(tampon,<sp/>px,<sp/><sp/><sp/><sp/><sp/>py,<sp/><sp/><sp/><sp/><sp/>px+300,<sp/>py+160,<sp/>makecol(10,<sp/><sp/>10,<sp/><sp/>40));</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/>rect<sp/><sp/><sp/><sp/>(tampon,<sp/>px,<sp/><sp/><sp/><sp/><sp/>py,<sp/><sp/><sp/><sp/><sp/>px+300,<sp/>py+160,<sp/>makecol(0,<sp/><sp/>200,<sp/>255));</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/>rect<sp/><sp/><sp/><sp/>(tampon,<sp/>px+2,<sp/><sp/><sp/>py+2,<sp/><sp/><sp/>px+298,<sp/>py+158,<sp/>makecol(0,<sp/><sp/>80,<sp/><sp/>120));</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Titre<sp/>PAUSE<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/>textout_centre_ex(tampon,<sp/>font,<sp/></highlight><highlight class="stringliteral">&quot;PAUSE&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LARGEUR_FENETRE<sp/>/<sp/>2,<sp/>py<sp/>+<sp/>20,</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>makecol(0,<sp/>220,<sp/>255),<sp/>-1);</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Ligne<sp/>décorative<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/>hline(tampon,<sp/>px<sp/>+<sp/>20,<sp/>py<sp/>+<sp/>40,<sp/>px<sp/>+<sp/>280,<sp/>makecol(0,<sp/>100,<sp/>150));</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Instructions<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/>textout_centre_ex(tampon,<sp/>font,<sp/></highlight><highlight class="stringliteral">&quot;P<sp/><sp/>-<sp/><sp/>Reprendre&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LARGEUR_FENETRE<sp/>/<sp/>2,<sp/>py<sp/>+<sp/>60,</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>makecol(255,<sp/>255,<sp/>255),<sp/>-1);</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/>textout_centre_ex(tampon,<sp/>font,<sp/></highlight><highlight class="stringliteral">&quot;ECHAP<sp/><sp/>-<sp/><sp/>Menu<sp/>principal&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LARGEUR_FENETRE<sp/>/<sp/>2,<sp/>py<sp/>+<sp/>85,</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>makecol(200,<sp/>200,<sp/>200),<sp/>-1);</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Ligne<sp/>décorative<sp/>bas<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/>hline(tampon,<sp/>px<sp/>+<sp/>20,<sp/>py<sp/>+<sp/>110,<sp/>px<sp/>+<sp/>280,<sp/>makecol(0,<sp/>100,<sp/>150));</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Score<sp/>actuel<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>buf[32];</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(buf,<sp/></highlight><highlight class="stringliteral">&quot;Score<sp/>:<sp/>%06d&quot;</highlight><highlight class="normal">,<sp/>ej-&gt;joueur.score);</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/>textout_centre_ex(tampon,<sp/>font,<sp/>buf,LARGEUR_FENETRE<sp/>/<sp/>2,<sp/>py<sp/>+<sp/>128,makecol(255,<sp/>220,<sp/>0),<sp/>-1);</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Dessine<sp/>un<sp/>chiffre<sp/>géant<sp/>en<sp/>pixel<sp/>art<sp/>à<sp/>la<sp/>position<sp/>(x,<sp/>y)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dessiner_chiffre_geant(BITMAP<sp/>*tampon,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>chiffre,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>couleur)<sp/>{</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Chaque<sp/>chiffre<sp/>=<sp/>grille<sp/>3x5<sp/>blocs<sp/>de<sp/>20x20px<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b<sp/>=<sp/>20;<sp/></highlight><highlight class="comment">/*<sp/>taille<sp/>d&apos;un<sp/>bloc<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>0=vide<sp/>1=plein<sp/>—<sp/>grille<sp/>[chiffre][ligne][colonne]<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>grilles[10][5][3]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{{1,1,1},{1,0,1},{1,0,1},{1,0,1},{1,1,1}},<sp/></highlight><highlight class="comment">/*<sp/>0<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{{0,1,0},{1,1,0},{0,1,0},{0,1,0},{1,1,1}},<sp/></highlight><highlight class="comment">/*<sp/>1<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{{1,1,1},{0,0,1},{1,1,1},{1,0,0},{1,1,1}},<sp/></highlight><highlight class="comment">/*<sp/>2<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{{1,1,1},{0,0,1},{1,1,1},{0,0,1},{1,1,1}},<sp/></highlight><highlight class="comment">/*<sp/>3<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{{1,0,1},{1,0,1},{1,1,1},{0,0,1},{0,0,1}},<sp/></highlight><highlight class="comment">/*<sp/>4<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{{1,1,1},{1,0,0},{1,1,1},{0,0,1},{1,1,1}},<sp/></highlight><highlight class="comment">/*<sp/>5<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{{1,1,1},{1,0,0},{1,1,1},{1,0,1},{1,1,1}},<sp/></highlight><highlight class="comment">/*<sp/>6<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{{1,1,1},{0,0,1},{0,0,1},{0,0,1},{0,0,1}},<sp/></highlight><highlight class="comment">/*<sp/>7<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{{1,1,1},{1,0,1},{1,1,1},{1,0,1},{1,1,1}},<sp/></highlight><highlight class="comment">/*<sp/>8<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{{1,1,1},{1,0,1},{1,1,1},{0,0,1},{1,1,1}},<sp/></highlight><highlight class="comment">/*<sp/>9<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>larg_totale<sp/>=<sp/>3<sp/>*<sp/>b;</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>haut_totale<sp/>=<sp/>5<sp/>*<sp/>b;</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ox<sp/>=<sp/>x<sp/>-<sp/>larg_totale<sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="390"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>oy<sp/>=<sp/>y<sp/>-<sp/>haut_totale<sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"></highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ligne<sp/>=<sp/>0;<sp/>ligne<sp/>&lt;<sp/>5;<sp/>ligne++)<sp/>{</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>col<sp/>=<sp/>0;<sp/>col<sp/>&lt;<sp/>3;<sp/>col++)<sp/>{</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(grilles[chiffre][ligne][col])<sp/>{</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Bloc<sp/>principal<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rectfill(tampon,</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ox<sp/>+<sp/>col*b<sp/>+<sp/>2,<sp/>oy<sp/>+<sp/>ligne*b<sp/>+<sp/>2,</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ox<sp/>+<sp/>col*b<sp/>+<sp/>b<sp/>-<sp/>2,<sp/>oy<sp/>+<sp/>ligne*b<sp/>+<sp/>b<sp/>-<sp/>2,</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>couleur);</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Reflet<sp/>clair<sp/>en<sp/>haut<sp/>à<sp/>gauche<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="401"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rectfill(tampon,</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ox<sp/>+<sp/>col*b<sp/>+<sp/>2,<sp/>oy<sp/>+<sp/>ligne*b<sp/>+<sp/>2,</highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ox<sp/>+<sp/>col*b<sp/>+<sp/>b<sp/>-<sp/>2,<sp/>oy<sp/>+<sp/>ligne*b<sp/>+<sp/>6,</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>makecol(255,<sp/>255,<sp/>255));</highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="408"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"></highlight></codeline>
+<codeline lineno="410"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>afficher_decompte(BITMAP<sp/>*tampon,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>compte)<sp/>{</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Overlay<sp/>sombre<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/>drawing_mode(DRAW_MODE_TRANS,<sp/>NULL,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/>set_trans_blender(0,<sp/>0,<sp/>0,<sp/>120);</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/>rectfill(tampon,<sp/>0,<sp/>0,<sp/>LARGEUR_FENETRE,<sp/>HAUTEUR_ZONE,<sp/>makecol(0,<sp/>0,<sp/>0));</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/>drawing_mode(DRAW_MODE_SOLID,<sp/>NULL,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"></highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cx<sp/>=<sp/>LARGEUR_FENETRE<sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cy<sp/>=<sp/>HAUTEUR_ZONE<sp/><sp/><sp/><sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="419"><highlight class="normal"></highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Couleur<sp/>selon<sp/>le<sp/>chiffre<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>couleur;</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(compte<sp/>==<sp/>3)<sp/>couleur<sp/>=<sp/>makecol(255,<sp/><sp/>60,<sp/><sp/>60);</highlight></codeline>
+<codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(compte<sp/>==<sp/>2)<sp/>couleur<sp/>=<sp/>makecol(255,<sp/>180,<sp/><sp/><sp/>0);</highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>couleur<sp/>=<sp/>makecol(50,<sp/><sp/>255,<sp/><sp/>80);</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"></highlight></codeline>
+<codeline lineno="426"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Halo<sp/>derrière<sp/>le<sp/>chiffre<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="427"><highlight class="normal"><sp/><sp/><sp/><sp/>circlefill(tampon,<sp/>cx,<sp/>cy,<sp/>90,<sp/>makecol(</highlight></codeline>
+<codeline lineno="428"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>getr(couleur)<sp/>/<sp/>5,</highlight></codeline>
+<codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>getg(couleur)<sp/>/<sp/>5,</highlight></codeline>
+<codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>getb(couleur)<sp/>/<sp/>5));</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/>circle(tampon,<sp/>cx,<sp/>cy,<sp/>90,<sp/>couleur);</highlight></codeline>
+<codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/>circle(tampon,<sp/>cx,<sp/>cy,<sp/>91,<sp/>couleur);</highlight></codeline>
+<codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/>circle(tampon,<sp/>cx,<sp/>cy,<sp/>92,<sp/>makecol(</highlight></codeline>
+<codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>getr(couleur)<sp/>/<sp/>3,</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>getg(couleur)<sp/>/<sp/>3,</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>getb(couleur)<sp/>/<sp/>3));</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"></highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Chiffre<sp/>géant<sp/>centré<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/>dessiner_chiffre_geant(tampon,<sp/>compte,<sp/>cx,<sp/>cy,<sp/>couleur);</highlight></codeline>
+<codeline lineno="440"><highlight class="normal"></highlight></codeline>
+<codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Texte<sp/>en<sp/>bas<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="442"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*msg<sp/>=<sp/>(compte<sp/>==<sp/>1)<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;C&apos;EST<sp/>PARTI<sp/>!&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;PRET<sp/>?&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="443"><highlight class="normal"><sp/><sp/><sp/><sp/>textout_centre_ex(tampon,<sp/>font,<sp/>msg,</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cx,<sp/>cy<sp/>+<sp/>110,</highlight></codeline>
+<codeline lineno="445"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>makecol(255,<sp/>255,<sp/>255),<sp/>-1);</highlight></codeline>
+<codeline lineno="446"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="447"><highlight class="normal"></highlight></codeline>
+<codeline lineno="448"><highlight class="normal"></highlight></codeline>
+<codeline lineno="449"><highlight class="normal"></highlight></codeline>
+<codeline lineno="450"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>afficher_victoire(BITMAP<sp/>*tampon)<sp/>{</highlight></codeline>
+<codeline lineno="451"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fond_jeu)</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blit(fond_jeu,<sp/>tampon,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>LARGEUR_FENETRE,<sp/>HAUTEUR_ZONE);</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="454"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear_to_color(tampon,<sp/>makecol(0,<sp/>50,<sp/>0));</highlight></codeline>
+<codeline lineno="455"><highlight class="normal"><sp/><sp/><sp/><sp/>textout_centre_ex(tampon,<sp/>font,<sp/></highlight><highlight class="stringliteral">&quot;VICTOIRE<sp/>!&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="456"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCREEN_W/2,<sp/>SCREEN_H/2-20,<sp/>makecol(255,<sp/>255,<sp/>0),<sp/>-1);</highlight></codeline>
+<codeline lineno="457"><highlight class="normal"><sp/><sp/><sp/><sp/>textout_centre_ex(tampon,<sp/>font,<sp/></highlight><highlight class="stringliteral">&quot;Appuyez<sp/>sur<sp/>Entree&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="458"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCREEN_W/2,<sp/>SCREEN_H/2+20,<sp/>makecol(255,<sp/>255,<sp/>255),<sp/>-1);</highlight></codeline>
+<codeline lineno="459"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="460"><highlight class="normal"></highlight></codeline>
+<codeline lineno="461"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>afficher_defaite(BITMAP<sp/>*tampon)<sp/>{</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fond_jeu)</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blit(fond_jeu,<sp/>tampon,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>LARGEUR_FENETRE,<sp/>HAUTEUR_ZONE);</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="465"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear_to_color(tampon,<sp/>makecol(50,<sp/>0,<sp/>0));</highlight></codeline>
+<codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/>textout_centre_ex(tampon,<sp/>font,<sp/></highlight><highlight class="stringliteral">&quot;GAME<sp/>OVER&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCREEN_W/2,<sp/>SCREEN_H/2-20,<sp/>makecol(255,<sp/>0,<sp/>0),<sp/>-1);</highlight></codeline>
+<codeline lineno="468"><highlight class="normal"><sp/><sp/><sp/><sp/>textout_centre_ex(tampon,<sp/>font,<sp/></highlight><highlight class="stringliteral">&quot;Appuyez<sp/>sur<sp/>Entree&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="469"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SCREEN_W/2,<sp/>SCREEN_H/2+20,<sp/>makecol(255,<sp/>255,<sp/>255),<sp/>-1);</highlight></codeline>
+<codeline lineno="470"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="471"><highlight class="normal"></highlight></codeline>
+<codeline lineno="472"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>afficher_saisie_pseudo(BITMAP<sp/>*tampon,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_etat_menu" kindref="compound">EtatMenu</ref><sp/>*em)<sp/>{</highlight></codeline>
+<codeline lineno="473"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fond_menu)</highlight></codeline>
+<codeline lineno="474"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blit(fond_menu,<sp/>tampon,<sp/>0,<sp/>0,<sp/>0,<sp/>0,<sp/>SCREEN_W,<sp/>SCREEN_H);</highlight></codeline>
+<codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="476"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>clear_to_color(tampon,<sp/>makecol(10,<sp/>10,<sp/>50));</highlight></codeline>
+<codeline lineno="477"><highlight class="normal"></highlight></codeline>
+<codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>px<sp/>=<sp/>SCREEN_W<sp/>/<sp/>2<sp/>-<sp/>200;</highlight></codeline>
+<codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>py<sp/>=<sp/>SCREEN_H<sp/>/<sp/>2<sp/>-<sp/>80;</highlight></codeline>
+<codeline lineno="480"><highlight class="normal"><sp/><sp/><sp/><sp/>rectfill(tampon,<sp/>px,<sp/>py,<sp/>px<sp/>+<sp/>400,<sp/>py<sp/>+<sp/>160,<sp/>makecol(20,<sp/>20,<sp/>60));</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/>rect(tampon,<sp/><sp/><sp/><sp/><sp/>px,<sp/>py,<sp/>px<sp/>+<sp/>400,<sp/>py<sp/>+<sp/>160,<sp/>makecol(100,<sp/>100,<sp/>255));</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"></highlight></codeline>
+<codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/>textprintf_centre_ex(tampon,<sp/>font,<sp/>SCREEN_W<sp/>/<sp/>2,<sp/>py<sp/>+<sp/>20,</highlight></codeline>
+<codeline lineno="484"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>makecol(255,<sp/>220,<sp/>0),<sp/>-1,<sp/></highlight><highlight class="stringliteral">&quot;ENTREZ<sp/>VOTRE<sp/>PSEUDO&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="485"><highlight class="normal"></highlight></codeline>
+<codeline lineno="486"><highlight class="normal"><sp/><sp/><sp/><sp/>rectfill(tampon,<sp/>px<sp/>+<sp/>20,<sp/>py<sp/>+<sp/>60,<sp/>px<sp/>+<sp/>380,<sp/>py<sp/>+<sp/>90,<sp/>makecol(10,<sp/>10,<sp/>40));</highlight></codeline>
+<codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/>rect(tampon,<sp/><sp/><sp/><sp/><sp/>px<sp/>+<sp/>20,<sp/>py<sp/>+<sp/>60,<sp/>px<sp/>+<sp/>380,<sp/>py<sp/>+<sp/>90,<sp/>makecol(150,<sp/>150,<sp/>255));</highlight></codeline>
+<codeline lineno="488"><highlight class="normal"></highlight></codeline>
+<codeline lineno="489"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>affichage[PSEUDO_LEN<sp/>+<sp/>2];</highlight></codeline>
+<codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(affichage,<sp/></highlight><highlight class="stringliteral">&quot;%s_&quot;</highlight><highlight class="normal">,<sp/>em-&gt;pseudo_saisi);</highlight></codeline>
+<codeline lineno="491"><highlight class="normal"><sp/><sp/><sp/><sp/>textprintf_ex(tampon,<sp/>font,<sp/>px<sp/>+<sp/>30,<sp/>py<sp/>+<sp/>68,</highlight></codeline>
+<codeline lineno="492"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>makecol(255,<sp/>255,<sp/>255),<sp/>-1,<sp/></highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/>affichage);</highlight></codeline>
+<codeline lineno="493"><highlight class="normal"></highlight></codeline>
+<codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/>textprintf_centre_ex(tampon,<sp/>font,<sp/>SCREEN_W<sp/>/<sp/>2,<sp/>py<sp/>+<sp/>120,</highlight></codeline>
+<codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>makecol(180,<sp/>180,<sp/>180),<sp/>-1,<sp/></highlight><highlight class="stringliteral">&quot;Appuyez<sp/>sur<sp/>ENTREE<sp/>pour<sp/>valider&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="496"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="affichage.c"/>
+  </compounddef>
+</doxygen>

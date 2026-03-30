@@ -1,0 +1,448 @@
+\doxysection{src/\+affichage.c File Reference}
+\hypertarget{affichage_8c}{}\label{affichage_8c}\index{src/affichage.c@{src/affichage.c}}
+{\ttfamily \+\#include $<$allegro.\+h$>$}\newline
+{\ttfamily \+\#include "{}affichage.\+h"{}}\newline
+{\ttfamily \+\#include "{}entites.\+h"{}}\newline
+{\ttfamily \+\#include "{}menu.\+h"{}}\newline
+{\ttfamily \+\#include "{}jeu.\+h"{}}\newline
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+Include dependency graph for affichage.\+c:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{affichage_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{affichage_8c_a1c25b13612b19721d644c2bb2a78e5dc}{appliquer\+\_\+masque}} (BITMAP \texorpdfstring{$\ast$}{*}bmp)
+\item 
+void \doxymbox{\hyperlink{affichage_8c_af2b7de53cf7bf2c5b95799f030af32ee}{affichage\+\_\+init}} (void)
+\item 
+void \doxymbox{\hyperlink{affichage_8c_a7a02878ba4c6ec45dd0519a58739a827}{affichage\+\_\+charger\+\_\+ressources}} (void)
+\item 
+void \doxymbox{\hyperlink{affichage_8c_a471bebb0f446aa0133a5ca961fc275e3}{affichage\+\_\+liberer\+\_\+ressources}} (void)
+\item 
+void \doxymbox{\hyperlink{affichage_8c_a8a136500425935baff6b4aefc3d7ba80}{joueur\+\_\+signaler\+\_\+tir}} (void)
+\item 
+void \doxymbox{\hyperlink{affichage_8c_a93bdb235cdec69d6d2f23b1b8ef206ed}{afficher\+\_\+joueur}} (BITMAP \texorpdfstring{$\ast$}{*}tampon, const \doxymbox{\hyperlink{struct_joueur}{Joueur}} \texorpdfstring{$\ast$}{*}j)
+\item 
+void \doxymbox{\hyperlink{affichage_8c_ade696254e724634f854cee7ce6ee56cb}{afficher\+\_\+bulle}} (BITMAP \texorpdfstring{$\ast$}{*}tampon, const \doxymbox{\hyperlink{struct_bulle}{Bulle}} \texorpdfstring{$\ast$}{*}b)
+\item 
+void \doxymbox{\hyperlink{affichage_8c_a9c65f34c4526bb0897b649aeb3f811f6}{afficher\+\_\+hud}} (BITMAP \texorpdfstring{$\ast$}{*}tampon, const \doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}ej)
+\item 
+void \doxymbox{\hyperlink{affichage_8c_aa6ca7e6dcc8191527cebc39a5e84a87b}{afficher\+\_\+boss}} (BITMAP \texorpdfstring{$\ast$}{*}tampon, const \doxymbox{\hyperlink{struct_boss}{Boss}} \texorpdfstring{$\ast$}{*}boss)
+\item 
+void \doxymbox{\hyperlink{affichage_8c_a4e1cd4bd86ac9915e3332b41346005fb}{afficher\+\_\+projectile}} (BITMAP \texorpdfstring{$\ast$}{*}tampon, const \doxymbox{\hyperlink{struct_projectile}{Projectile}} \texorpdfstring{$\ast$}{*}p)
+\item 
+void \doxymbox{\hyperlink{affichage_8c_a5056814c53d4eec079dec720b21324a5}{afficher\+\_\+jeu}} (BITMAP \texorpdfstring{$\ast$}{*}tampon, const \doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}ej)
+\item 
+void \doxymbox{\hyperlink{affichage_8c_a416f9b7333b0226e5cab25214be7ec33}{afficher\+\_\+pause}} (BITMAP \texorpdfstring{$\ast$}{*}tampon, const \doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}ej)
+\item 
+static void \doxymbox{\hyperlink{affichage_8c_ae1c5c0297d6e728c5716a324121e9061}{dessiner\+\_\+chiffre\+\_\+geant}} (BITMAP \texorpdfstring{$\ast$}{*}tampon, int chiffre, int x, int y, int couleur)
+\item 
+void \doxymbox{\hyperlink{affichage_8c_ae09ee85bc962e3a9ff1cb5934b972c03}{afficher\+\_\+decompte}} (BITMAP \texorpdfstring{$\ast$}{*}tampon, int compte)
+\item 
+void \doxymbox{\hyperlink{affichage_8c_a43d3a0e89e053e3d5909b25ba84fa013}{afficher\+\_\+victoire}} (BITMAP \texorpdfstring{$\ast$}{*}tampon)
+\item 
+void \doxymbox{\hyperlink{affichage_8c_a3d37afe9287430123b96a943a23ea26e}{afficher\+\_\+defaite}} (BITMAP \texorpdfstring{$\ast$}{*}tampon)
+\item 
+void \doxymbox{\hyperlink{affichage_8c_a3becc20c55db2b75ebbd75c5ad9cdbfb}{afficher\+\_\+saisie\+\_\+pseudo}} (BITMAP \texorpdfstring{$\ast$}{*}tampon, const \doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}em)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+BITMAP \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{affichage_8c_aafdb4c150dee655e9e053ab74941ef59}{fond\+\_\+jeu}} = NULL
+\item 
+BITMAP \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{affichage_8c_a95978b3edc79a3de210ad1d11fe78207}{fond\+\_\+menu}} = NULL
+\item 
+BITMAP \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{affichage_8c_aca2075c4f049282c156ff6345994070b}{sprite\+\_\+bulle\+\_\+grande}} = NULL
+\item 
+BITMAP \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{affichage_8c_a707d80fcda5da578f3773783afb42b06}{sprite\+\_\+bulle\+\_\+moyenne}} = NULL
+\item 
+BITMAP \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{affichage_8c_a7701096c3377f2b8c1610ee82c16c948}{sprite\+\_\+bulle\+\_\+petite}} = NULL
+\item 
+BITMAP \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{affichage_8c_a17c8ac2bec834c0ce6174e71f674b22a}{sprite\+\_\+bulle\+\_\+minuscule}} = NULL
+\item 
+static BITMAP \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{affichage_8c_ac5016a348ebd5d7bc769d953d6f2c3d7}{sprite\+\_\+idle}} = NULL
+\item 
+static BITMAP \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{affichage_8c_afa5b3e0232a97fceac8c47a1ccb3af08}{sprite\+\_\+tir}} = NULL
+\item 
+static BITMAP \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{affichage_8c_a4e55036ed67909724a2c9e9b0d57aaba}{sprite\+\_\+marche\+\_\+d1}} = NULL
+\item 
+static BITMAP \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{affichage_8c_abf168d163912660f8428786ae0a214d5}{sprite\+\_\+marche\+\_\+d2}} = NULL
+\item 
+static BITMAP \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{affichage_8c_a19e9232df01aeef66d373c241a0f8e37}{sprite\+\_\+marche\+\_\+g1}} = NULL
+\item 
+static BITMAP \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{affichage_8c_a91f4a87cbf1d26c61c089bab29c51f7a}{sprite\+\_\+marche\+\_\+g2}} = NULL
+\item 
+static int \doxymbox{\hyperlink{affichage_8c_af2b9eff02ed27d3a363f2661f736e29e}{compteur\+\_\+anim}} = 0
+\item 
+static int \doxymbox{\hyperlink{affichage_8c_a03d99c0ee63caab838bb59082eeee138}{duree\+\_\+tir}} = 0
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{affichage_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{affichage_8c_a7a02878ba4c6ec45dd0519a58739a827}\index{affichage.c@{affichage.c}!affichage\_charger\_ressources@{affichage\_charger\_ressources}}
+\index{affichage\_charger\_ressources@{affichage\_charger\_ressources}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{affichage\_charger\_ressources()}{affichage\_charger\_ressources()}}
+{\footnotesize\ttfamily \label{affichage_8c_a7a02878ba4c6ec45dd0519a58739a827} 
+void affichage\+\_\+charger\+\_\+ressources (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{affichage_8c_a7a02878ba4c6ec45dd0519a58739a827_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{affichage_8c_a7a02878ba4c6ec45dd0519a58739a827_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{affichage_8c_af2b7de53cf7bf2c5b95799f030af32ee}\index{affichage.c@{affichage.c}!affichage\_init@{affichage\_init}}
+\index{affichage\_init@{affichage\_init}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{affichage\_init()}{affichage\_init()}}
+{\footnotesize\ttfamily \label{affichage_8c_af2b7de53cf7bf2c5b95799f030af32ee} 
+void affichage\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{affichage_8c_af2b7de53cf7bf2c5b95799f030af32ee_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{affichage_8c_a471bebb0f446aa0133a5ca961fc275e3}\index{affichage.c@{affichage.c}!affichage\_liberer\_ressources@{affichage\_liberer\_ressources}}
+\index{affichage\_liberer\_ressources@{affichage\_liberer\_ressources}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{affichage\_liberer\_ressources()}{affichage\_liberer\_ressources()}}
+{\footnotesize\ttfamily \label{affichage_8c_a471bebb0f446aa0133a5ca961fc275e3} 
+void affichage\+\_\+liberer\+\_\+ressources (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{affichage_8c_a471bebb0f446aa0133a5ca961fc275e3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{affichage_8c_aa6ca7e6dcc8191527cebc39a5e84a87b}\index{affichage.c@{affichage.c}!afficher\_boss@{afficher\_boss}}
+\index{afficher\_boss@{afficher\_boss}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{afficher\_boss()}{afficher\_boss()}}
+{\footnotesize\ttfamily \label{affichage_8c_aa6ca7e6dcc8191527cebc39a5e84a87b} 
+void afficher\+\_\+boss (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{, }\item[{const \doxymbox{\hyperlink{struct_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{boss}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{affichage_8c_aa6ca7e6dcc8191527cebc39a5e84a87b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{affichage_8c_ade696254e724634f854cee7ce6ee56cb}\index{affichage.c@{affichage.c}!afficher\_bulle@{afficher\_bulle}}
+\index{afficher\_bulle@{afficher\_bulle}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{afficher\_bulle()}{afficher\_bulle()}}
+{\footnotesize\ttfamily \label{affichage_8c_ade696254e724634f854cee7ce6ee56cb} 
+void afficher\+\_\+bulle (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{, }\item[{const \doxymbox{\hyperlink{struct_bulle}{Bulle}} \texorpdfstring{$\ast$}{*}}]{b}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{affichage_8c_ade696254e724634f854cee7ce6ee56cb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{affichage_8c_ade696254e724634f854cee7ce6ee56cb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{affichage_8c_ae09ee85bc962e3a9ff1cb5934b972c03}\index{affichage.c@{affichage.c}!afficher\_decompte@{afficher\_decompte}}
+\index{afficher\_decompte@{afficher\_decompte}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{afficher\_decompte()}{afficher\_decompte()}}
+{\footnotesize\ttfamily \label{affichage_8c_ae09ee85bc962e3a9ff1cb5934b972c03} 
+void afficher\+\_\+decompte (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{, }\item[{int}]{compte}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{affichage_8c_ae09ee85bc962e3a9ff1cb5934b972c03_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{affichage_8c_ae09ee85bc962e3a9ff1cb5934b972c03_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{affichage_8c_a3d37afe9287430123b96a943a23ea26e}\index{affichage.c@{affichage.c}!afficher\_defaite@{afficher\_defaite}}
+\index{afficher\_defaite@{afficher\_defaite}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{afficher\_defaite()}{afficher\_defaite()}}
+{\footnotesize\ttfamily \label{affichage_8c_a3d37afe9287430123b96a943a23ea26e} 
+void afficher\+\_\+defaite (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{affichage_8c_a3d37afe9287430123b96a943a23ea26e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{affichage_8c_a9c65f34c4526bb0897b649aeb3f811f6}\index{affichage.c@{affichage.c}!afficher\_hud@{afficher\_hud}}
+\index{afficher\_hud@{afficher\_hud}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{afficher\_hud()}{afficher\_hud()}}
+{\footnotesize\ttfamily \label{affichage_8c_a9c65f34c4526bb0897b649aeb3f811f6} 
+void afficher\+\_\+hud (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{, }\item[{const \doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{affichage_8c_a9c65f34c4526bb0897b649aeb3f811f6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{affichage_8c_a5056814c53d4eec079dec720b21324a5}\index{affichage.c@{affichage.c}!afficher\_jeu@{afficher\_jeu}}
+\index{afficher\_jeu@{afficher\_jeu}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{afficher\_jeu()}{afficher\_jeu()}}
+{\footnotesize\ttfamily \label{affichage_8c_a5056814c53d4eec079dec720b21324a5} 
+void afficher\+\_\+jeu (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{, }\item[{const \doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{affichage_8c_a5056814c53d4eec079dec720b21324a5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{affichage_8c_a5056814c53d4eec079dec720b21324a5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{affichage_8c_a93bdb235cdec69d6d2f23b1b8ef206ed}\index{affichage.c@{affichage.c}!afficher\_joueur@{afficher\_joueur}}
+\index{afficher\_joueur@{afficher\_joueur}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{afficher\_joueur()}{afficher\_joueur()}}
+{\footnotesize\ttfamily \label{affichage_8c_a93bdb235cdec69d6d2f23b1b8ef206ed} 
+void afficher\+\_\+joueur (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{, }\item[{const \doxymbox{\hyperlink{struct_joueur}{Joueur}} \texorpdfstring{$\ast$}{*}}]{j}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{affichage_8c_a93bdb235cdec69d6d2f23b1b8ef206ed_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{affichage_8c_a416f9b7333b0226e5cab25214be7ec33}\index{affichage.c@{affichage.c}!afficher\_pause@{afficher\_pause}}
+\index{afficher\_pause@{afficher\_pause}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{afficher\_pause()}{afficher\_pause()}}
+{\footnotesize\ttfamily \label{affichage_8c_a416f9b7333b0226e5cab25214be7ec33} 
+void afficher\+\_\+pause (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{, }\item[{const \doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{affichage_8c_a416f9b7333b0226e5cab25214be7ec33_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{affichage_8c_a4e1cd4bd86ac9915e3332b41346005fb}\index{affichage.c@{affichage.c}!afficher\_projectile@{afficher\_projectile}}
+\index{afficher\_projectile@{afficher\_projectile}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{afficher\_projectile()}{afficher\_projectile()}}
+{\footnotesize\ttfamily \label{affichage_8c_a4e1cd4bd86ac9915e3332b41346005fb} 
+void afficher\+\_\+projectile (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{, }\item[{const \doxymbox{\hyperlink{struct_projectile}{Projectile}} \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{affichage_8c_a4e1cd4bd86ac9915e3332b41346005fb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{affichage_8c_a3becc20c55db2b75ebbd75c5ad9cdbfb}\index{affichage.c@{affichage.c}!afficher\_saisie\_pseudo@{afficher\_saisie\_pseudo}}
+\index{afficher\_saisie\_pseudo@{afficher\_saisie\_pseudo}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{afficher\_saisie\_pseudo()}{afficher\_saisie\_pseudo()}}
+{\footnotesize\ttfamily \label{affichage_8c_a3becc20c55db2b75ebbd75c5ad9cdbfb} 
+void afficher\+\_\+saisie\+\_\+pseudo (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{, }\item[{const \doxymbox{\hyperlink{struct_etat_menu}{Etat\+Menu}} \texorpdfstring{$\ast$}{*}}]{em}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{affichage_8c_a3becc20c55db2b75ebbd75c5ad9cdbfb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{affichage_8c_a43d3a0e89e053e3d5909b25ba84fa013}\index{affichage.c@{affichage.c}!afficher\_victoire@{afficher\_victoire}}
+\index{afficher\_victoire@{afficher\_victoire}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{afficher\_victoire()}{afficher\_victoire()}}
+{\footnotesize\ttfamily \label{affichage_8c_a43d3a0e89e053e3d5909b25ba84fa013} 
+void afficher\+\_\+victoire (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{affichage_8c_a43d3a0e89e053e3d5909b25ba84fa013_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{affichage_8c_a1c25b13612b19721d644c2bb2a78e5dc}\index{affichage.c@{affichage.c}!appliquer\_masque@{appliquer\_masque}}
+\index{appliquer\_masque@{appliquer\_masque}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{appliquer\_masque()}{appliquer\_masque()}}
+{\footnotesize\ttfamily \label{affichage_8c_a1c25b13612b19721d644c2bb2a78e5dc} 
+void appliquer\+\_\+masque (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{bmp}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{affichage_8c_a1c25b13612b19721d644c2bb2a78e5dc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{affichage_8c_ae1c5c0297d6e728c5716a324121e9061}\index{affichage.c@{affichage.c}!dessiner\_chiffre\_geant@{dessiner\_chiffre\_geant}}
+\index{dessiner\_chiffre\_geant@{dessiner\_chiffre\_geant}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{dessiner\_chiffre\_geant()}{dessiner\_chiffre\_geant()}}
+{\footnotesize\ttfamily \label{affichage_8c_ae1c5c0297d6e728c5716a324121e9061} 
+void dessiner\+\_\+chiffre\+\_\+geant (\begin{DoxyParamCaption}\item[{BITMAP \texorpdfstring{$\ast$}{*}}]{tampon}{, }\item[{int}]{chiffre}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{int}]{couleur}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{affichage_8c_ae1c5c0297d6e728c5716a324121e9061_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{affichage_8c_a8a136500425935baff6b4aefc3d7ba80}\index{affichage.c@{affichage.c}!joueur\_signaler\_tir@{joueur\_signaler\_tir}}
+\index{joueur\_signaler\_tir@{joueur\_signaler\_tir}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{joueur\_signaler\_tir()}{joueur\_signaler\_tir()}}
+{\footnotesize\ttfamily \label{affichage_8c_a8a136500425935baff6b4aefc3d7ba80} 
+void joueur\+\_\+signaler\+\_\+tir (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{affichage_8c_a8a136500425935baff6b4aefc3d7ba80_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-var-members}
+\Hypertarget{affichage_8c_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{affichage_8c_af2b9eff02ed27d3a363f2661f736e29e}\index{affichage.c@{affichage.c}!compteur\_anim@{compteur\_anim}}
+\index{compteur\_anim@{compteur\_anim}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{compteur\_anim}{compteur\_anim}}
+{\footnotesize\ttfamily \label{affichage_8c_af2b9eff02ed27d3a363f2661f736e29e} 
+int compteur\+\_\+anim = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{affichage_8c_a03d99c0ee63caab838bb59082eeee138}\index{affichage.c@{affichage.c}!duree\_tir@{duree\_tir}}
+\index{duree\_tir@{duree\_tir}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{duree\_tir}{duree\_tir}}
+{\footnotesize\ttfamily \label{affichage_8c_a03d99c0ee63caab838bb59082eeee138} 
+int duree\+\_\+tir = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{affichage_8c_aafdb4c150dee655e9e053ab74941ef59}\index{affichage.c@{affichage.c}!fond\_jeu@{fond\_jeu}}
+\index{fond\_jeu@{fond\_jeu}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{fond\_jeu}{fond\_jeu}}
+{\footnotesize\ttfamily \label{affichage_8c_aafdb4c150dee655e9e053ab74941ef59} 
+BITMAP\texorpdfstring{$\ast$}{*} fond\+\_\+jeu = NULL}
+
+\Hypertarget{affichage_8c_a95978b3edc79a3de210ad1d11fe78207}\index{affichage.c@{affichage.c}!fond\_menu@{fond\_menu}}
+\index{fond\_menu@{fond\_menu}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{fond\_menu}{fond\_menu}}
+{\footnotesize\ttfamily \label{affichage_8c_a95978b3edc79a3de210ad1d11fe78207} 
+BITMAP\texorpdfstring{$\ast$}{*} fond\+\_\+menu = NULL}
+
+\Hypertarget{affichage_8c_aca2075c4f049282c156ff6345994070b}\index{affichage.c@{affichage.c}!sprite\_bulle\_grande@{sprite\_bulle\_grande}}
+\index{sprite\_bulle\_grande@{sprite\_bulle\_grande}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{sprite\_bulle\_grande}{sprite\_bulle\_grande}}
+{\footnotesize\ttfamily \label{affichage_8c_aca2075c4f049282c156ff6345994070b} 
+BITMAP\texorpdfstring{$\ast$}{*} sprite\+\_\+bulle\+\_\+grande = NULL}
+
+\Hypertarget{affichage_8c_a17c8ac2bec834c0ce6174e71f674b22a}\index{affichage.c@{affichage.c}!sprite\_bulle\_minuscule@{sprite\_bulle\_minuscule}}
+\index{sprite\_bulle\_minuscule@{sprite\_bulle\_minuscule}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{sprite\_bulle\_minuscule}{sprite\_bulle\_minuscule}}
+{\footnotesize\ttfamily \label{affichage_8c_a17c8ac2bec834c0ce6174e71f674b22a} 
+BITMAP\texorpdfstring{$\ast$}{*} sprite\+\_\+bulle\+\_\+minuscule = NULL}
+
+\Hypertarget{affichage_8c_a707d80fcda5da578f3773783afb42b06}\index{affichage.c@{affichage.c}!sprite\_bulle\_moyenne@{sprite\_bulle\_moyenne}}
+\index{sprite\_bulle\_moyenne@{sprite\_bulle\_moyenne}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{sprite\_bulle\_moyenne}{sprite\_bulle\_moyenne}}
+{\footnotesize\ttfamily \label{affichage_8c_a707d80fcda5da578f3773783afb42b06} 
+BITMAP\texorpdfstring{$\ast$}{*} sprite\+\_\+bulle\+\_\+moyenne = NULL}
+
+\Hypertarget{affichage_8c_a7701096c3377f2b8c1610ee82c16c948}\index{affichage.c@{affichage.c}!sprite\_bulle\_petite@{sprite\_bulle\_petite}}
+\index{sprite\_bulle\_petite@{sprite\_bulle\_petite}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{sprite\_bulle\_petite}{sprite\_bulle\_petite}}
+{\footnotesize\ttfamily \label{affichage_8c_a7701096c3377f2b8c1610ee82c16c948} 
+BITMAP\texorpdfstring{$\ast$}{*} sprite\+\_\+bulle\+\_\+petite = NULL}
+
+\Hypertarget{affichage_8c_ac5016a348ebd5d7bc769d953d6f2c3d7}\index{affichage.c@{affichage.c}!sprite\_idle@{sprite\_idle}}
+\index{sprite\_idle@{sprite\_idle}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{sprite\_idle}{sprite\_idle}}
+{\footnotesize\ttfamily \label{affichage_8c_ac5016a348ebd5d7bc769d953d6f2c3d7} 
+BITMAP\texorpdfstring{$\ast$}{*} sprite\+\_\+idle = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{affichage_8c_a4e55036ed67909724a2c9e9b0d57aaba}\index{affichage.c@{affichage.c}!sprite\_marche\_d1@{sprite\_marche\_d1}}
+\index{sprite\_marche\_d1@{sprite\_marche\_d1}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{sprite\_marche\_d1}{sprite\_marche\_d1}}
+{\footnotesize\ttfamily \label{affichage_8c_a4e55036ed67909724a2c9e9b0d57aaba} 
+BITMAP\texorpdfstring{$\ast$}{*} sprite\+\_\+marche\+\_\+d1 = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{affichage_8c_abf168d163912660f8428786ae0a214d5}\index{affichage.c@{affichage.c}!sprite\_marche\_d2@{sprite\_marche\_d2}}
+\index{sprite\_marche\_d2@{sprite\_marche\_d2}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{sprite\_marche\_d2}{sprite\_marche\_d2}}
+{\footnotesize\ttfamily \label{affichage_8c_abf168d163912660f8428786ae0a214d5} 
+BITMAP\texorpdfstring{$\ast$}{*} sprite\+\_\+marche\+\_\+d2 = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{affichage_8c_a19e9232df01aeef66d373c241a0f8e37}\index{affichage.c@{affichage.c}!sprite\_marche\_g1@{sprite\_marche\_g1}}
+\index{sprite\_marche\_g1@{sprite\_marche\_g1}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{sprite\_marche\_g1}{sprite\_marche\_g1}}
+{\footnotesize\ttfamily \label{affichage_8c_a19e9232df01aeef66d373c241a0f8e37} 
+BITMAP\texorpdfstring{$\ast$}{*} sprite\+\_\+marche\+\_\+g1 = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{affichage_8c_a91f4a87cbf1d26c61c089bab29c51f7a}\index{affichage.c@{affichage.c}!sprite\_marche\_g2@{sprite\_marche\_g2}}
+\index{sprite\_marche\_g2@{sprite\_marche\_g2}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{sprite\_marche\_g2}{sprite\_marche\_g2}}
+{\footnotesize\ttfamily \label{affichage_8c_a91f4a87cbf1d26c61c089bab29c51f7a} 
+BITMAP\texorpdfstring{$\ast$}{*} sprite\+\_\+marche\+\_\+g2 = NULL\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{affichage_8c_afa5b3e0232a97fceac8c47a1ccb3af08}\index{affichage.c@{affichage.c}!sprite\_tir@{sprite\_tir}}
+\index{sprite\_tir@{sprite\_tir}!affichage.c@{affichage.c}}
+\doxysubsubsection{\texorpdfstring{sprite\_tir}{sprite\_tir}}
+{\footnotesize\ttfamily \label{affichage_8c_afa5b3e0232a97fceac8c47a1ccb3af08} 
+BITMAP\texorpdfstring{$\ast$}{*} sprite\+\_\+tir = NULL\hspace{0.3cm}{\ttfamily [static]}}
+

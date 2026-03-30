@@ -1,0 +1,7 @@
+<map id="dessiner_chiffre_geant" name="dessiner_chiffre_geant">
+<area shape="rect" id="Node000001" title=" " alt="" coords="278,5,429,32"/>
+<area shape="rect" id="Node000002" href="$affichage_8c.html#ae09ee85bc962e3a9ff1cb5934b972c03" title=" " alt="" coords="103,5,230,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="260,19,230,21,230,16,265,19"/>
+<area shape="rect" id="Node000003" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,55,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="84,20,55,21,55,16,89,18"/>
+</map>

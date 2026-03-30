@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.16.1" xml:lang="en-US">
+  <compounddef id="struct_etat_menu" kind="struct" language="C++" prot="public">
+    <compoundname>EtatMenu</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_etat_menu_1ab3544f0488f630de2d9dce4cb43a18b8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int EtatMenu::element_selectionne</definition>
+        <argsstring></argsstring>
+        <name>element_selectionne</name>
+        <qualifiedname>EtatMenu::element_selectionne</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="menu.h" line="17" column="7" bodyfile="menu.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_etat_menu_1a77edef8e27e59f3422717a9cc1fc95d0" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char EtatMenu::pseudo_saisi[32]</definition>
+        <argsstring>[32]</argsstring>
+        <name>pseudo_saisi</name>
+        <qualifiedname>EtatMenu::pseudo_saisi</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="menu.h" line="18" column="7" bodyfile="menu.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_etat_menu_1a5f915e5f8f3f8f065f3e75c1df8b6eac" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int EtatMenu::saisie_en_cours</definition>
+        <argsstring></argsstring>
+        <name>saisie_en_cours</name>
+        <qualifiedname>EtatMenu::saisie_en_cours</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="menu.h" line="19" column="7" bodyfile="menu.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_etat_menu_1a51485ba2fa7fd3305c3db5275f018d73" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int EtatMenu::afficher_regles</definition>
+        <argsstring></argsstring>
+        <name>afficher_regles</name>
+        <qualifiedname>EtatMenu::afficher_regles</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="menu.h" line="20" column="7" bodyfile="menu.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="menu.h" line="16" column="1" bodyfile="menu.h" bodystart="16" bodyend="21"/>
+    <listofallmembers>
+      <member refid="struct_etat_menu_1a51485ba2fa7fd3305c3db5275f018d73" prot="public" virt="non-virtual"><scope>EtatMenu</scope><name>afficher_regles</name></member>
+      <member refid="struct_etat_menu_1ab3544f0488f630de2d9dce4cb43a18b8" prot="public" virt="non-virtual"><scope>EtatMenu</scope><name>element_selectionne</name></member>
+      <member refid="struct_etat_menu_1a77edef8e27e59f3422717a9cc1fc95d0" prot="public" virt="non-virtual"><scope>EtatMenu</scope><name>pseudo_saisi</name></member>
+      <member refid="struct_etat_menu_1a5f915e5f8f3f8f065f3e75c1df8b6eac" prot="public" virt="non-virtual"><scope>EtatMenu</scope><name>saisie_en_cours</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

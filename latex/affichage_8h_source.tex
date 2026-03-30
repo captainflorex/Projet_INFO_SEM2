@@ -1,0 +1,42 @@
+\doxysection{affichage.\+h}
+\hypertarget{affichage_8h_source}{}\label{affichage_8h_source}\index{heat/affichage.h@{heat/affichage.h}}
+\doxymbox{\hyperlink{affichage_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ AFFICHAGE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ AFFICHAGE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <allegro.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{entites_8h}{entites.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{menu_8h}{menu.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{extern}\ BITMAP\ *\doxymbox{\hyperlink{affichage_8c_aafdb4c150dee655e9e053ab74941ef59}{fond\_jeu}};}
+\DoxyCodeLine{00009\ \textcolor{keyword}{extern}\ BITMAP\ *\doxymbox{\hyperlink{affichage_8c_a95978b3edc79a3de210ad1d11fe78207}{fond\_menu}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{extern}\ BITMAP\ *\doxymbox{\hyperlink{affichage_8c_aca2075c4f049282c156ff6345994070b}{sprite\_bulle\_grande}};}
+\DoxyCodeLine{00012\ \textcolor{keyword}{extern}\ BITMAP\ *\doxymbox{\hyperlink{affichage_8c_a707d80fcda5da578f3773783afb42b06}{sprite\_bulle\_moyenne}};}
+\DoxyCodeLine{00013\ \textcolor{keyword}{extern}\ BITMAP\ *\doxymbox{\hyperlink{affichage_8c_a7701096c3377f2b8c1610ee82c16c948}{sprite\_bulle\_petite}};}
+\DoxyCodeLine{00014\ \textcolor{keyword}{extern}\ BITMAP\ *\doxymbox{\hyperlink{affichage_8c_a17c8ac2bec834c0ce6174e71f674b22a}{sprite\_bulle\_minuscule}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{affichage_8h_af2b7de53cf7bf2c5b95799f030af32ee}{affichage\_init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{affichage_8h_a7a02878ba4c6ec45dd0519a58739a827}{affichage\_charger\_ressources}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{affichage_8h_a471bebb0f446aa0133a5ca961fc275e3}{affichage\_liberer\_ressources}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{affichage_8h_a5056814c53d4eec079dec720b21324a5}{afficher\_jeu}}(BITMAP\ *tampon,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_etat_jeu}{EtatJeu}}\ *ej);}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{affichage_8h_a416f9b7333b0226e5cab25214be7ec33}{afficher\_pause}}(BITMAP\ *tampon,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_etat_jeu}{EtatJeu}}\ *ej);}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{affichage_8h_a9c65f34c4526bb0897b649aeb3f811f6}{afficher\_hud}}(BITMAP\ *tampon,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_etat_jeu}{EtatJeu}}\ *ej);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{affichage_8h_ade696254e724634f854cee7ce6ee56cb}{afficher\_bulle}}(BITMAP\ *tampon,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_bulle}{Bulle}}\ *b);}
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{affichage_8h_a93bdb235cdec69d6d2f23b1b8ef206ed}{afficher\_joueur}}(BITMAP\ *tampon,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_joueur}{Joueur}}\ *j);}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{affichage_8h_a4e1cd4bd86ac9915e3332b41346005fb}{afficher\_projectile}}(BITMAP\ *tampon,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_projectile}{Projectile}}\ *p);}
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{affichage_8h_aa6ca7e6dcc8191527cebc39a5e84a87b}{afficher\_boss}}(BITMAP\ *tampon,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_boss}{Boss}}\ *boss);}
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{affichage_8h_ae09ee85bc962e3a9ff1cb5934b972c03}{afficher\_decompte}}(BITMAP\ *tampon,\ \textcolor{keywordtype}{int}\ compte);}
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{affichage_8h_a43d3a0e89e053e3d5909b25ba84fa013}{afficher\_victoire}}(BITMAP\ *tampon);}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{affichage_8h_a3d37afe9287430123b96a943a23ea26e}{afficher\_defaite}}(BITMAP\ *tampon);}
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{affichage_8h_a3becc20c55db2b75ebbd75c5ad9cdbfb}{afficher\_saisie\_pseudo}}(BITMAP\ *tampon,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_etat_menu}{EtatMenu}}\ *em);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{comment}{/*\ Animation\ joueur\ */}}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{affichage_8h_a8a136500425935baff6b4aefc3d7ba80}{joueur\_signaler\_tir}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

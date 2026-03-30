@@ -1,0 +1,38 @@
+[
+{
+  "directory": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug",
+  "command": "C:\\Users\\flori\\Downloads\\MinGW\\MinGW\\bin\\gcc.exe -g -std=gnu99 -fdiagnostics-color=always -o CMakeFiles\\Projet_INFO_SEM2.dir\\main.c.obj -c \"C:\\Users\\flori\\Downloads\\Projet Info MI RENDU\\Projet_INFO_SEM2\\main.c\"",
+  "file": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/main.c",
+  "output": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug/CMakeFiles/Projet_INFO_SEM2.dir/main.c.obj"
+},
+{
+  "directory": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug",
+  "command": "C:\\Users\\flori\\Downloads\\MinGW\\MinGW\\bin\\gcc.exe -g -std=gnu99 -fdiagnostics-color=always -o CMakeFiles\\Projet_INFO_SEM2.dir\\affichage.c.obj -c \"C:\\Users\\flori\\Downloads\\Projet Info MI RENDU\\Projet_INFO_SEM2\\affichage.c\"",
+  "file": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/affichage.c",
+  "output": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug/CMakeFiles/Projet_INFO_SEM2.dir/affichage.c.obj"
+},
+{
+  "directory": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug",
+  "command": "C:\\Users\\flori\\Downloads\\MinGW\\MinGW\\bin\\gcc.exe -g -std=gnu99 -fdiagnostics-color=always -o CMakeFiles\\Projet_INFO_SEM2.dir\\jeu.c.obj -c \"C:\\Users\\flori\\Downloads\\Projet Info MI RENDU\\Projet_INFO_SEM2\\jeu.c\"",
+  "file": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/jeu.c",
+  "output": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug/CMakeFiles/Projet_INFO_SEM2.dir/jeu.c.obj"
+},
+{
+  "directory": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug",
+  "command": "C:\\Users\\flori\\Downloads\\MinGW\\MinGW\\bin\\gcc.exe -g -std=gnu99 -fdiagnostics-color=always -o CMakeFiles\\Projet_INFO_SEM2.dir\\entrees.c.obj -c \"C:\\Users\\flori\\Downloads\\Projet Info MI RENDU\\Projet_INFO_SEM2\\entrees.c\"",
+  "file": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/entrees.c",
+  "output": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug/CMakeFiles/Projet_INFO_SEM2.dir/entrees.c.obj"
+},
+{
+  "directory": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug",
+  "command": "C:\\Users\\flori\\Downloads\\MinGW\\MinGW\\bin\\gcc.exe -g -std=gnu99 -fdiagnostics-color=always -o CMakeFiles\\Projet_INFO_SEM2.dir\\menu.c.obj -c \"C:\\Users\\flori\\Downloads\\Projet Info MI RENDU\\Projet_INFO_SEM2\\menu.c\"",
+  "file": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/menu.c",
+  "output": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug/CMakeFiles/Projet_INFO_SEM2.dir/menu.c.obj"
+},
+{
+  "directory": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug",
+  "command": "C:\\Users\\flori\\Downloads\\MinGW\\MinGW\\bin\\gcc.exe -g -std=gnu99 -fdiagnostics-color=always -o CMakeFiles\\Projet_INFO_SEM2.dir\\sauvegarde.c.obj -c \"C:\\Users\\flori\\Downloads\\Projet Info MI RENDU\\Projet_INFO_SEM2\\sauvegarde.c\"",
+  "file": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/sauvegarde.c",
+  "output": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug/CMakeFiles/Projet_INFO_SEM2.dir/sauvegarde.c.obj"
+}
+]

@@ -1,0 +1,142 @@
+\doxysection{src/\+main.c File Reference}
+\hypertarget{main_8c}{}\label{main_8c}\index{src/main.c@{src/main.c}}
+{\ttfamily \+\#include $<$allegro.\+h$>$}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+{\ttfamily \+\#include "{}affichage.\+h"{}}\newline
+{\ttfamily \+\#include "{}jeu.\+h"{}}\newline
+{\ttfamily \+\#include "{}entrees.\+h"{}}\newline
+{\ttfamily \+\#include "{}menu.\+h"{}}\newline
+{\ttfamily \+\#include "{}sauvegarde.\+h"{}}\newline
+Include dependency graph for main.\+c:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815}{Etat\+Application}} \{ \newline
+\doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a62dbc8350c17b44d1269eb737f9c641e}{ETAT\+\_\+\+MENU}}
+, \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a3707f37bd11ad87c3a0f7b5fde1c6eed}{ETAT\+\_\+\+SAISIE\+\_\+\+PSEUDO}}
+, \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a38b284d47d74cf898b30cdcb07aa66a0}{ETAT\+\_\+\+EN\+\_\+\+JEU}}
+, \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815aaaf36b692a52d6e39908d37a6c0512bd}{ETAT\+\_\+\+PAUSE}}
+, \newline
+\doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a31f82efcc5848c2c56445cabb32633ea}{ETAT\+\_\+\+VICTOIRE}}
+, \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a9e6a39a14f43f33e3a229ec52f94627a}{ETAT\+\_\+\+DEFAITE}}
+, \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815a96fdaf8f905a56c455b8243468ab3f4d}{ETAT\+\_\+\+QUITTER}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{main_8c_ab997a9e67270e2ce595ea9362874f072}{compteur}} (void)
+\item 
+int \doxymbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile int \doxymbox{\hyperlink{main_8c_ae4cb8f99f5f96d1a98ba57a75dab5c09}{tics}} = 0
+\end{DoxyCompactItemize}
+
+
+\label{doc-enum-members}
+\Hypertarget{main_8c_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{main_8c_a3a6fdc193bb7d49efa29f51611331815}\index{main.c@{main.c}!EtatApplication@{EtatApplication}}
+\index{EtatApplication@{EtatApplication}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{EtatApplication}{EtatApplication}}
+{\footnotesize\ttfamily \label{main_8c_a3a6fdc193bb7d49efa29f51611331815} 
+enum \doxymbox{\hyperlink{main_8c_a3a6fdc193bb7d49efa29f51611331815}{Etat\+Application}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ETAT\_MENU@{ETAT\_MENU}!main.c@{main.c}}
+\index{main.c@{main.c}!ETAT\_MENU@{ETAT\_MENU}}
+}\Hypertarget{main_8c_a3a6fdc193bb7d49efa29f51611331815a62dbc8350c17b44d1269eb737f9c641e}\label{main_8c_a3a6fdc193bb7d49efa29f51611331815a62dbc8350c17b44d1269eb737f9c641e} 
+ETAT\+\_\+\+MENU&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ETAT\_SAISIE\_PSEUDO@{ETAT\_SAISIE\_PSEUDO}!main.c@{main.c}}
+\index{main.c@{main.c}!ETAT\_SAISIE\_PSEUDO@{ETAT\_SAISIE\_PSEUDO}}
+}\Hypertarget{main_8c_a3a6fdc193bb7d49efa29f51611331815a3707f37bd11ad87c3a0f7b5fde1c6eed}\label{main_8c_a3a6fdc193bb7d49efa29f51611331815a3707f37bd11ad87c3a0f7b5fde1c6eed} 
+ETAT\+\_\+\+SAISIE\+\_\+\+PSEUDO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ETAT\_EN\_JEU@{ETAT\_EN\_JEU}!main.c@{main.c}}
+\index{main.c@{main.c}!ETAT\_EN\_JEU@{ETAT\_EN\_JEU}}
+}\Hypertarget{main_8c_a3a6fdc193bb7d49efa29f51611331815a38b284d47d74cf898b30cdcb07aa66a0}\label{main_8c_a3a6fdc193bb7d49efa29f51611331815a38b284d47d74cf898b30cdcb07aa66a0} 
+ETAT\+\_\+\+EN\+\_\+\+JEU&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ETAT\_PAUSE@{ETAT\_PAUSE}!main.c@{main.c}}
+\index{main.c@{main.c}!ETAT\_PAUSE@{ETAT\_PAUSE}}
+}\Hypertarget{main_8c_a3a6fdc193bb7d49efa29f51611331815aaaf36b692a52d6e39908d37a6c0512bd}\label{main_8c_a3a6fdc193bb7d49efa29f51611331815aaaf36b692a52d6e39908d37a6c0512bd} 
+ETAT\+\_\+\+PAUSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ETAT\_VICTOIRE@{ETAT\_VICTOIRE}!main.c@{main.c}}
+\index{main.c@{main.c}!ETAT\_VICTOIRE@{ETAT\_VICTOIRE}}
+}\Hypertarget{main_8c_a3a6fdc193bb7d49efa29f51611331815a31f82efcc5848c2c56445cabb32633ea}\label{main_8c_a3a6fdc193bb7d49efa29f51611331815a31f82efcc5848c2c56445cabb32633ea} 
+ETAT\+\_\+\+VICTOIRE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ETAT\_DEFAITE@{ETAT\_DEFAITE}!main.c@{main.c}}
+\index{main.c@{main.c}!ETAT\_DEFAITE@{ETAT\_DEFAITE}}
+}\Hypertarget{main_8c_a3a6fdc193bb7d49efa29f51611331815a9e6a39a14f43f33e3a229ec52f94627a}\label{main_8c_a3a6fdc193bb7d49efa29f51611331815a9e6a39a14f43f33e3a229ec52f94627a} 
+ETAT\+\_\+\+DEFAITE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ETAT\_QUITTER@{ETAT\_QUITTER}!main.c@{main.c}}
+\index{main.c@{main.c}!ETAT\_QUITTER@{ETAT\_QUITTER}}
+}\Hypertarget{main_8c_a3a6fdc193bb7d49efa29f51611331815a96fdaf8f905a56c455b8243468ab3f4d}\label{main_8c_a3a6fdc193bb7d49efa29f51611331815a96fdaf8f905a56c455b8243468ab3f4d} 
+ETAT\+\_\+\+QUITTER&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{main_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8c_ab997a9e67270e2ce595ea9362874f072}\index{main.c@{main.c}!compteur@{compteur}}
+\index{compteur@{compteur}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{compteur()}{compteur()}}
+{\footnotesize\ttfamily \label{main_8c_ab997a9e67270e2ce595ea9362874f072} 
+void compteur (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the caller graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{main_8c_ab997a9e67270e2ce595ea9362874f072_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+int main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\+
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-var-members}
+\Hypertarget{main_8c_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8c_ae4cb8f99f5f96d1a98ba57a75dab5c09}\index{main.c@{main.c}!tics@{tics}}
+\index{tics@{tics}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{tics}{tics}}
+{\footnotesize\ttfamily \label{main_8c_ae4cb8f99f5f96d1a98ba57a75dab5c09} 
+volatile int tics = 0}
+
