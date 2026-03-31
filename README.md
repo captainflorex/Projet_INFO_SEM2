@@ -112,8 +112,8 @@ Puis lancez l'executable genere dans le dossier `build/`.
 
 ## Auteurs
 
-Floriant chaffray
-Tom petitjean
-Remi matteoda
-Candice Oswald
+Floriant CHAFFRAY
+Tom PETITJEAN
+Remi MATTEODA
+Candice OSWALD
 
