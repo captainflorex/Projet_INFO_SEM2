@@ -1,4 +1,5 @@
 #include "jeu.h"
+#include "eclair.h"
 #include "entites.h"
 #include <math.h>
 #include <stdlib.h>
@@ -16,6 +17,7 @@ float rayon_bulle(TailleBulle t) {
 
 void jeu_init_niveau(EtatJeu *ej, int niveau) {
     memset(ej, 0, sizeof(EtatJeu));
+    eclairs_init(&ej->eclairs);
     ej->niveau        = niveau;
     ej->temps_restant = 60.0f;
     ej->decompte      = 3;
@@ -25,17 +27,23 @@ void jeu_init_niveau(EtatJeu *ej, int niveau) {
     ej->joueur.vivant = 1;
     ej->joueur.arme   = ARME_BASIQUE;
 
-    /* Une bulle de départ par niveau (augmente avec le niveau) */
-    for (int i = 0; i < niveau && i < MAX_BULLES; i++) {
-        ej->bulles[i].active = 1;
-        ej->bulles[i].taille = BULLE_GRANDE;
-        ej->bulles[i].x      = 100.0f + i * 150.0f;
-        ej->bulles[i].y      = 100.0f;
-        ej->bulles[i].vx     = 80.0f + niveau * 10.0f;
-        ej->bulles[i].vy     = 0.0f;
-        ej->nb_bulles++;
+    if (niveau <= 2) {
+        /* Niveaux 1 et 2 : bulles visibles dès le départ */
+        for (int i = 0; i < niveau && i < MAX_BULLES; i++) {
+            ej->bulles[i].active = 1;
+            ej->bulles[i].taille = BULLE_GRANDE;
+            ej->bulles[i].x      = 100.0f + i * 150.0f;
+            ej->bulles[i].y      = 100.0f;
+            ej->bulles[i].vx     = 80.0f + niveau * 10.0f;
+            ej->bulles[i].vy     = 0.0f;
+            ej->nb_bulles++;
+        }
+    } else {
+        /* Niveaux 3 et 4 : bulles apparaissent après le décompte */
+        ej->bulles_en_attente = niveau;
     }
 }
+
 
 void jeu_mettre_a_jour(EtatJeu *ej, float dt) {
 
@@ -45,9 +53,60 @@ void jeu_mettre_a_jour(EtatJeu *ej, float dt) {
         if (ej->decompte_timer >= 1.0f) {
             ej->decompte_timer = 0.0f;
             ej->decompte--;
+
+            /* Spawn des bulles en attente quand le décompte se termine */
+            if (ej->decompte == 0 && ej->bulles_en_attente > 0) {
+                for (int i = 0; i < ej->bulles_en_attente && i < MAX_BULLES; i++) {
+                    ej->bulles[i].active = 1;
+                    ej->bulles[i].taille = BULLE_GRANDE;
+                    ej->bulles[i].x      = 100.0f + i * 150.0f;
+                    ej->bulles[i].y      = 100.0f;
+                    ej->bulles[i].vx     = 80.0f + ej->niveau * 10.0f;
+                    ej->bulles[i].vy     = 0.0f;
+                    ej->nb_bulles++;
+                }
+                ej->bulles_en_attente = 0;
+            }
         }
-        return; /* on bloque le jeu pendant le décompte */
+        return;
     }
+
+    /* Bonus qui tombent au sol */
+    if (ej->niveau >= 2) {
+        for (int i = 0; i < MAX_BONUS; i++) {
+            if (!ej->bonus[i].active) continue;
+            /* Décompte timer */
+            ej->bonus[i].timer -= dt;
+            if (ej->bonus[i].timer <= 0) {
+                ej->bonus[i].active = 0;   /* ← disparaît */
+                continue;
+            }
+            /* Chute */
+            ej->bonus[i].y += 80.0f * dt;
+            if (ej->bonus[i].y > HAUTEUR_ZONE - 10)
+                ej->bonus[i].y = HAUTEUR_ZONE - 10;
+
+            /* Collision joueur / bonus */
+            float dx = ej->joueur.x - ej->bonus[i].x;
+            float dy = ej->joueur.y - ej->bonus[i].y;
+            if (dx*dx + dy*dy < 30*30) {
+                ej->joueur.arme           = ej->bonus[i].type + 1; /* +1 car ARME_BASIQUE = 0 */
+                ej->timer_arme_speciale   = DUREE_ARME_SPECIALE;
+                ej->bonus[i].active        = 0;
+            }
+        }
+
+        /* Décompte durée arme spéciale */
+        if (ej->timer_arme_speciale > 0) {
+            ej->timer_arme_speciale -= dt;
+            if (ej->timer_arme_speciale <= 0) {
+                ej->timer_arme_speciale = 0;
+                ej->joueur.arme = ARME_BASIQUE;
+            }
+        }
+    }
+
+
 
     /* Déplacement joueur */
     ej->joueur.x += ej->joueur.vx * dt;
@@ -62,6 +121,7 @@ void jeu_mettre_a_jour(EtatJeu *ej, float dt) {
     /* Déplacement projectiles */
     for (int i = 0; i < MAX_PROJECTILES; i++) {
         if (!ej->projectiles[i].active) continue;
+        ej->projectiles[i].x += ej->projectiles[i].vx * dt;
         ej->projectiles[i].y += ej->projectiles[i].vy * dt;
         if (ej->projectiles[i].y < 0) ej->projectiles[i].active = 0;
     }
@@ -71,6 +131,24 @@ void jeu_mettre_a_jour(EtatJeu *ej, float dt) {
 
     /* Collisions */
     jeu_verifier_collisions(ej);
+
+    /* ===== ECLAIRS (niveau 3+) ===== */
+    if (ej->niveau >= 3) {
+        for (int i = 0; i < MAX_BULLES; i++) {
+            if (ej->bulles[i].active && rand() % 200 == 0)
+                eclair_spawner(&ej->eclairs, ej->bulles[i].x, ej->bulles[i].y);
+        }
+        eclairs_mettre_a_jour(&ej->eclairs);
+
+        if (eclairs_collision_personnage(&ej->eclairs,
+                                          ej->joueur.x, ej->joueur.y,
+                                          24.0f, 32.0f)) {
+            ej->joueur.vivant = 0;
+                                          }
+    }
+    /* Timer explosion visuelle */
+    if (ej->explosion_timer > 0)
+        ej->explosion_timer -= dt;
 
     /* Temps */
     ej->temps_restant -= dt;
@@ -93,6 +171,21 @@ void bulle_deplacer(Bulle *b, float dt, float largeur_zone, float hauteur_zone) 
 
 void bulle_diviser(EtatJeu *ej, int indice) {
     Bulle *b = &ej->bulles[indice];
+
+    /* 1 chance sur 4 de faire tomber un bonus (niveau 2+) */
+    if (ej->niveau >= 2 && rand() % 4 == 0) {
+        for (int i = 0; i < MAX_BONUS; i++) {
+            if (!ej->bonus[i].active) {
+                ej->bonus[i].active = 1;
+                ej->bonus[i].x     = b->x;
+                ej->bonus[i].y     = b->y;
+                ej->bonus[i].type  = rand() % NB_TYPES_BONUS;
+                ej->bonus[i].timer  = 8.0f;
+                break;
+            }
+        }
+    }
+
     if (b->taille == BULLE_MINUSCULE) { b->active = 0; return; }
 
     TailleBulle prochaine = b->taille + 1;
@@ -131,11 +224,29 @@ void jeu_verifier_collisions(EtatJeu *ej) {
             float dx = p->x - b->x, dy = p->y - b->y;
             if (dx*dx + dy*dy < (rb+4)*(rb+4)) {
                 p->active = 0;
+                ej->explosion_x     = p->x;
+                ej->explosion_y     = p->y;
+                ej->explosion_timer = 0.3f;
                 ej->joueur.score += 10 * (4 - b->taille);
-                bulle_diviser(ej, i);
+
+                if (p->explosion) {
+                    /* Explose toutes les bulles dans un rayon de 80px */
+                    for (int j = 0; j < MAX_BULLES; j++) {
+                        if (!ej->bulles[j].active) continue;
+                        float ex = ej->bulles[j].x - p->x;
+                        float ey = ej->bulles[j].y - p->y;
+                        if (ex*ex + ey*ey < 100*100) {
+                            ej->joueur.score += 10 * (4 - ej->bulles[j].taille);
+                            bulle_diviser(ej, j);
+                        }
+                    }
+                } else {
+                    bulle_diviser(ej, i);
+                }
                 break;
             }
         }
+
 
         /* Bulle / joueur */
         if (!b->active) continue;
@@ -153,14 +264,77 @@ void jeu_verifier_collisions(EtatJeu *ej) {
 }
 
 void joueur_tirer(EtatJeu *ej) {
-    for (int i = 0; i < MAX_PROJECTILES; i++) {
-        if (!ej->projectiles[i].active) {
-            ej->projectiles[i].active = 1;
-            ej->projectiles[i].x      = ej->joueur.x;
-            ej->projectiles[i].y      = ej->joueur.y - 20.0f;
-            ej->projectiles[i].vy     = -400.0f;
+    /* Arme basique : 1 seul tir à la fois */
+    if (ej->joueur.arme == ARME_BASIQUE) {
+        for (int i = 0; i < MAX_PROJECTILES; i++)
+            if (ej->projectiles[i].active) return;
+    }
+
+    switch (ej->joueur.arme) {
+
+        case ARME_BASIQUE:
+        default:
+            for (int i = 0; i < MAX_PROJECTILES; i++) {
+                if (!ej->projectiles[i].active) {
+                    ej->projectiles[i].active    = 1;
+                    ej->projectiles[i].x         = ej->joueur.x;
+                    ej->projectiles[i].y         = ej->joueur.y - 20.0f;
+                    ej->projectiles[i].vy        = -700.0f;
+                    ej->projectiles[i].explosion = 0;
+                    break;
+                }
+            }
             break;
+
+        case ARME_TIR_RAPIDE:
+            /* Tir rapide : pas de limite 1 balle */
+            for (int i = 0; i < MAX_PROJECTILES; i++) {
+                if (!ej->projectiles[i].active) {
+                    ej->projectiles[i].active    = 1;
+                    ej->projectiles[i].x         = ej->joueur.x;
+                    ej->projectiles[i].y         = ej->joueur.y - 20.0f;
+                    ej->projectiles[i].vy        = -900.0f;
+                    ej->projectiles[i].explosion = 0;
+                    break;
+                }
+            }
+            break;
+
+        case ARME_TIR_TRIPLE:
+            /* 3 projectiles : gauche, centre, droite */
+            { int crees = 0;
+              float vx_vals[3] = { -150.0f, 0.0f, 150.0f };
+              for (int i = 0; i < MAX_PROJECTILES && crees < 3; i++) {
+                  if (!ej->projectiles[i].active) {
+                      ej->projectiles[i].active    = 1;
+                      ej->projectiles[i].x         = ej->joueur.x;
+                      ej->projectiles[i].y         = ej->joueur.y - 20.0f;
+                      ej->projectiles[i].vx        = vx_vals[crees];
+                      ej->projectiles[i].vy        = -700.0f;
+                      ej->projectiles[i].explosion = 0;
+                      crees++;
+                  }
+              }
+            }
+            break;
+
+        case ARME_EXPLOSION:
+            /* 1 seul tir à la fois comme l'arme basique */
+                for (int i = 0; i < MAX_PROJECTILES; i++)
+                    if (ej->projectiles[i].active) return;   /* ← AJOUTE CE BLOCAGE */
+
+        for (int i = 0; i < MAX_PROJECTILES; i++) {
+            if (!ej->projectiles[i].active) {
+                ej->projectiles[i].active    = 1;
+                ej->projectiles[i].x         = ej->joueur.x;
+                ej->projectiles[i].y         = ej->joueur.y - 20.0f;
+                ej->projectiles[i].vx        = 0.0f;
+                ej->projectiles[i].vy        = -700.0f;
+                ej->projectiles[i].explosion = 1;
+                break;
+            }
         }
+        break;
     }
 }
 
@@ -171,16 +345,22 @@ void boss_deplacer(Boss *b, float dt, float largeur_zone) {
 }
 
 int jeu_niveau_gagne(const EtatJeu *ej) {
+    /* Si le décompte est encore en cours, on n'a pas gagné */
+    if (ej->decompte > 0) return 0;
+
+    /* Si des bulles sont encore en attente de spawn, on n'a pas gagné */
+    if (ej->bulles_en_attente > 0) return 0;
+
     for (int i = 0; i < MAX_BULLES; i++)
         if (ej->bulles[i].active) return 0;
     if (ej->boss.active) return 0;
     return 1;
 }
 
+
 int jeu_niveau_perdu(const EtatJeu *ej) {
     return (!ej->joueur.vivant || ej->temps_restant <= 0.0f);
 }
-
 int verifier_collision_cercle_rect(float cx, float cy, float r,
                                    float rx, float ry, float larg, float haut) {
     float px = cx < rx ? rx : (cx > rx+larg ? rx+larg : cx);
