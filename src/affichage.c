@@ -1,6 +1,8 @@
 #include <allegro.h>
+#include <alfont.h>
 #include "affichage.h"
 #include "entites.h"
+#include "eclair.h"
 #include "menu.h"
 #include "jeu.h"
 #include <stdio.h>
@@ -20,6 +22,10 @@ static BITMAP *sprite_marche_d1 = NULL;
 static BITMAP *sprite_marche_d2 = NULL;
 static BITMAP *sprite_marche_g1 = NULL;
 static BITMAP *sprite_marche_g2 = NULL;
+
+static BITMAP *sprite_bonus_explosion = NULL;
+static BITMAP *sprite_bonus_triple = NULL;
+static BITMAP *sprite_bonus_rapide = NULL;
 
 /* État animation joueur */
 static int compteur_anim = 0;
@@ -92,6 +98,14 @@ void affichage_charger_ressources(void) {
     sprite_marche_g1 = load_bitmap("ressources/sprites/joueur_marche_g1.bmp",  NULL);
     sprite_marche_g2 = load_bitmap("ressources/sprites/joueur_marche_g2.bmp",  NULL);
 
+    sprite_bonus_explosion = load_bitmap("ressources/sprites/bonus_explosion.bmp", NULL);
+    sprite_bonus_triple = load_bitmap("ressources/sprites/bonus_triple.bmp", NULL);
+    sprite_bonus_rapide = load_bitmap("ressources/sprites/bonus_rapide.bmp", NULL);
+
+    appliquer_masque(sprite_bonus_rapide);
+    appliquer_masque(sprite_bonus_triple);
+    appliquer_masque(sprite_bonus_explosion);
+
     appliquer_masque(sprite_idle);
     appliquer_masque(sprite_tir);
     appliquer_masque(sprite_marche_d1);
@@ -115,6 +129,10 @@ void affichage_liberer_ressources(void) {
     if (sprite_marche_d2) { destroy_bitmap(sprite_marche_d2); sprite_marche_d2 = NULL; }
     if (sprite_marche_g1) { destroy_bitmap(sprite_marche_g1); sprite_marche_g1 = NULL; }
     if (sprite_marche_g2) { destroy_bitmap(sprite_marche_g2); sprite_marche_g2 = NULL; }
+
+    if (sprite_bonus_explosion) { destroy_bitmap(sprite_bonus_explosion); sprite_bonus_explosion = NULL; }
+    if (sprite_bonus_triple) { destroy_bitmap(sprite_bonus_triple); sprite_bonus_triple = NULL; }
+    if (sprite_bonus_rapide) { destroy_bitmap(sprite_bonus_rapide); sprite_bonus_rapide = NULL; }
 }
 
 /* Appelée depuis main.c quand le joueur tire */
@@ -274,6 +292,20 @@ void afficher_hud(BITMAP *tampon, const EtatJeu *ej) {
         rectfill(tampon, barre_x + 1, barre_y + 1,
                  barre_x + 1 + (int)((barre_largeur - 2) * ratio),
                  barre_y + barre_h - 1, col_temps);
+
+    /* Arme active */
+    if (ej->joueur.arme != ARME_BASIQUE && ej->timer_arme_speciale > 0) {
+        const char *nom_arme = "";
+        switch (ej->joueur.arme) {
+            case ARME_TIR_RAPIDE: nom_arme = "TIR RAPIDE"; break;
+            case ARME_TIR_TRIPLE: nom_arme = "TIR TRIPLE"; break;
+            case ARME_EXPLOSION:  nom_arme = "EXPLOSION";  break;
+            default: break;
+        }
+        textprintf_ex(tampon, font, LARGEUR_FENETRE - 200, y0 + 10,
+                      makecol(0, 255, 100), -1, "%s  %.0fs", nom_arme, ej->timer_arme_speciale);
+    }
+
 }
 
 
@@ -319,11 +351,59 @@ void afficher_jeu(BITMAP *tampon, const EtatJeu *ej) {
     for (int i = 0; i < MAX_PROJECTILES; i++)
         afficher_projectile(tampon, &ej->projectiles[i]);
 
+    /* ===== ECLAIRS ===== */
+    if (ej->niveau >= 3)
+        dessiner_eclairs(tampon, &ej->eclairs);
+
+    /* Bonus */
+    for (int i = 0; i < MAX_BONUS; i++) {
+        if (!ej->bonus[i].active) continue;
+        int bx = (int)ej->bonus[i].x;
+        int by = (int)ej->bonus[i].y;
+
+        /* Clignote dans les 3 dernières secondes */
+        if (ej->bonus[i].timer < 3.0f && (int)(ej->bonus[i].timer * 6) % 2 == 0)
+            continue;   /* saute l'affichage une frame sur deux */
+
+        if (ej->bonus[i].type == ARME_TIR_RAPIDE - 1 && sprite_bonus_rapide) {
+            draw_sprite(tampon, sprite_bonus_rapide,
+                        bx - sprite_bonus_rapide->w / 2,
+                        by - sprite_bonus_rapide->h / 2);
+        } else if (ej->bonus[i].type == ARME_TIR_TRIPLE - 1 && sprite_bonus_triple) {
+            draw_sprite(tampon, sprite_bonus_triple,
+                        bx - sprite_bonus_triple->w / 2,
+                        by - sprite_bonus_triple->h / 2);
+        } else if (ej->bonus[i].type == ARME_EXPLOSION - 1 && sprite_bonus_explosion) {
+            draw_sprite(tampon, sprite_bonus_explosion,
+                        bx - sprite_bonus_explosion->w / 2,
+                        by - sprite_bonus_explosion->h / 2);
+        } else {
+            /* Fallback cercle */
+            circlefill(tampon, bx, by, 10, makecol(255, 255, 255));
+            circle(tampon,     bx, by, 10, makecol(200, 200, 200));
+        }
+
+        /* Flash explosion */
+        if (ej->explosion_timer > 0) {
+            float ratio = ej->explosion_timer / 0.3f;
+            int rayon   = (int)(120 * (1.0f - ratio));
+            int alpha   = (int)(200 * ratio);
+            drawing_mode(DRAW_MODE_TRANS, NULL, 0, 0);
+            set_trans_blender(255, 100, 0, alpha);
+            circlefill(tampon, (int)ej->explosion_x, (int)ej->explosion_y,
+                       rayon, makecol(255, 100, 0));
+            drawing_mode(DRAW_MODE_SOLID, NULL, 0, 0);
+            circle(tampon, (int)ej->explosion_x, (int)ej->explosion_y,
+                   rayon, makecol(255, 220, 0));
+        }
+    }
+
     afficher_joueur(tampon, &ej->joueur);
     if (ej->boss.active)
         afficher_boss(tampon, &ej->boss);
     afficher_hud(tampon, ej);
 }
+
 
 void afficher_pause(BITMAP *tampon, const EtatJeu *ej) {
     /* Overlay sombre semi-transparent */
@@ -365,48 +445,6 @@ void afficher_pause(BITMAP *tampon, const EtatJeu *ej) {
 
 }
 
-/* Dessine un chiffre géant en pixel art à la position (x, y) */
-static void dessiner_chiffre_geant(BITMAP *tampon, int chiffre, int x, int y, int couleur) {
-    /* Chaque chiffre = grille 3x5 blocs de 20x20px */
-    int b = 20; /* taille d'un bloc */
-
-    /* 0=vide 1=plein — grille [chiffre][ligne][colonne] */
-    static const int grilles[10][5][3] = {
-        {{1,1,1},{1,0,1},{1,0,1},{1,0,1},{1,1,1}}, /* 0 */
-        {{0,1,0},{1,1,0},{0,1,0},{0,1,0},{1,1,1}}, /* 1 */
-        {{1,1,1},{0,0,1},{1,1,1},{1,0,0},{1,1,1}}, /* 2 */
-        {{1,1,1},{0,0,1},{1,1,1},{0,0,1},{1,1,1}}, /* 3 */
-        {{1,0,1},{1,0,1},{1,1,1},{0,0,1},{0,0,1}}, /* 4 */
-        {{1,1,1},{1,0,0},{1,1,1},{0,0,1},{1,1,1}}, /* 5 */
-        {{1,1,1},{1,0,0},{1,1,1},{1,0,1},{1,1,1}}, /* 6 */
-        {{1,1,1},{0,0,1},{0,0,1},{0,0,1},{0,0,1}}, /* 7 */
-        {{1,1,1},{1,0,1},{1,1,1},{1,0,1},{1,1,1}}, /* 8 */
-        {{1,1,1},{1,0,1},{1,1,1},{0,0,1},{1,1,1}}, /* 9 */
-    };
-
-    int larg_totale = 3 * b;
-    int haut_totale = 5 * b;
-    int ox = x - larg_totale / 2;
-    int oy = y - haut_totale / 2;
-
-    for (int ligne = 0; ligne < 5; ligne++) {
-        for (int col = 0; col < 3; col++) {
-            if (grilles[chiffre][ligne][col]) {
-                /* Bloc principal */
-                rectfill(tampon,
-                         ox + col*b + 2, oy + ligne*b + 2,
-                         ox + col*b + b - 2, oy + ligne*b + b - 2,
-                         couleur);
-                /* Reflet clair en haut à gauche */
-                rectfill(tampon,
-                         ox + col*b + 2, oy + ligne*b + 2,
-                         ox + col*b + b - 2, oy + ligne*b + 6,
-                         makecol(255, 255, 255));
-            }
-        }
-    }
-}
-
 void afficher_decompte(BITMAP *tampon, int compte) {
     /* Overlay sombre */
     drawing_mode(DRAW_MODE_TRANS, NULL, 0, 0);
@@ -423,27 +461,53 @@ void afficher_decompte(BITMAP *tampon, int compte) {
     else if (compte == 2) couleur = makecol(255, 180,   0);
     else                  couleur = makecol(50,  255,  80);
 
-    /* Halo derrière le chiffre */
-    circlefill(tampon, cx, cy, 90, makecol(
-        getr(couleur) / 5,
-        getg(couleur) / 5,
-        getb(couleur) / 5));
-    circle(tampon, cx, cy, 90, couleur);
-    circle(tampon, cx, cy, 91, couleur);
-    circle(tampon, cx, cy, 92, makecol(
-        getr(couleur) / 3,
-        getg(couleur) / 3,
-        getb(couleur) / 3));
+    /* Police externe déclarée dans menu.c — on la recharge ici */
+    ALFONT_FONT *police_decompte = alfont_load_font("ressources/police.ttf");
+    if (police_decompte) {
+        alfont_set_font_size(police_decompte, 180);
 
-    /* Chiffre géant centré */
-    dessiner_chiffre_geant(tampon, compte, cx, cy, couleur);
+        char buf[4];
+        sprintf(buf, "%d", compte);
 
-    /* Texte en bas */
-    char *msg = (compte == 1) ? "C'EST PARTI !" : "PRET ?";
-    textout_centre_ex(tampon, font, msg,
-                      cx, cy + 110,
-                      makecol(255, 255, 255), -1);
+        /* Ombre portée */
+        alfont_textout_centre_aa_ex(tampon, police_decompte, buf,
+                                    cx + 5, cy - 95, makecol(0, 0, 0), -1);
+        /* Halo coloré décalé */
+        alfont_textout_centre_aa_ex(tampon, police_decompte, buf,
+                                    cx + 3, cy - 93,
+                                    makecol(getr(couleur)/3, getg(couleur)/3, getb(couleur)/3), -1);
+        /* Chiffre principal */
+        alfont_textout_centre_aa_ex(tampon, police_decompte, buf,
+                                    cx, cy - 90, couleur, -1);
+        /* Reflet blanc léger */
+        alfont_set_font_size(police_decompte, 180);
+        alfont_textout_centre_aa_ex(tampon, police_decompte, buf,
+                                    cx, cy - 92, makecol(
+                                        getr(couleur) + (255 - getr(couleur)) / 2,
+                                        getg(couleur) + (255 - getg(couleur)) / 2,
+                                        getb(couleur) + (255 - getb(couleur)) / 2), -1);
+
+        /* Message en dessous */
+        alfont_set_font_size(police_decompte, 28);
+        const char *msg = (compte == 1) ? "C'EST PARTI !" : "PRET ?";
+        /* Ombre */
+        alfont_textout_centre_aa_ex(tampon, police_decompte, msg,
+                                    cx + 2, cy + 102, makecol(0, 0, 0), -1);
+        /* Texte */
+        alfont_textout_centre_aa_ex(tampon, police_decompte, msg,
+                                    cx, cy + 100, makecol(255, 255, 255), -1);
+
+        alfont_destroy_font(police_decompte);
+    } else {
+        /* Fallback texte basique */
+        char buf[4];
+        sprintf(buf, "%d", compte);
+        textout_centre_ex(tampon, font, buf, cx, cy - 20, couleur, -1);
+        const char *msg = (compte == 1) ? "C'EST PARTI !" : "PRET ?";
+        textout_centre_ex(tampon, font, msg, cx, cy + 30, makecol(255, 255, 255), -1);
+    }
 }
+
 
 
 
