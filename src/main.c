@@ -1,5 +1,6 @@
 #include <allegro.h>
 #include <string.h>
+#include <alfont.h>
 #include "affichage.h"
 #include "jeu.h"
 #include "entrees.h"
@@ -9,8 +10,6 @@
 volatile int tics = 0;
 void compteur(void) { tics++; }
 END_OF_FUNCTION(compteur)
-
-//test
 
 typedef enum {
     ETAT_MENU,
@@ -25,6 +24,7 @@ typedef enum {
 int main(void) {
     affichage_init();
     affichage_charger_ressources();
+    alfont_init();
 
     BITMAP *tampon = create_bitmap(LARGEUR_FENETRE, HAUTEUR_FENETRE);
     LOCK_VARIABLE(tics);
@@ -170,6 +170,7 @@ int main(void) {
 
     affichage_liberer_ressources();
     destroy_bitmap(tampon);
+    alfont_exit();
     allegro_exit();
     return 0;
 }
