@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['verifier_5fcollision_5fcercle_5frect_0',['verifier_collision_cercle_rect',['../jeu_8h.html#adbd875e13250e4155452816f4a51f9ac',1,'verifier_collision_cercle_rect(float cx, float cy, float r, float rx, float ry, float larg, float haut):&#160;jeu.c'],['../jeu_8c.html#adbd875e13250e4155452816f4a51f9ac',1,'verifier_collision_cercle_rect(float cx, float cy, float r, float rx, float ry, float larg, float haut):&#160;jeu.c']]],
-  ['vivant_1',['vivant',['../struct_joueur.html#a83ffd7975e660463a18b1ad04b9429f3',1,'Joueur']]],
-  ['vx_2',['vx',['../struct_joueur.html#a70d5fe053297331173073eb5d7e688bd',1,'Joueur::vx'],['../struct_bulle.html#a3bcdab971a3d6a56c1feeadd839456d7',1,'Bulle::vx'],['../struct_boss.html#a3f9482821d86e68131678f33a1ed65c6',1,'Boss::vx']]],
-  ['vy_3',['vy',['../struct_bulle.html#a8b0cb46603242b18e489f0bf05cff2d3',1,'Bulle::vy'],['../struct_projectile.html#a2081fe99e23a4605b86c8aab4a5d78b0',1,'Projectile::vy'],['../struct_boss.html#ab08d69ef70e68d1e681293dfaf218dcb',1,'Boss::vy']]]
+  ['taille_0',['taille',['../struct_bulle.html#aa2fe503d7861cc39def5d652acd65e10',1,'Bulle']]],
+  ['taillebulle_1',['TailleBulle',['../entites_8h.html#af101043d6c277c6a337c9babd0c75c1d',1,'entites.h']]],
+  ['temps_5frestant_2',['temps_restant',['../struct_etat_jeu.html#acf0776c2730b28ae9879c3c2ec5fb205',1,'EtatJeu']]],
+  ['tics_3',['tics',['../main_8c.html#ae4cb8f99f5f96d1a98ba57a75dab5c09',1,'main.c']]],
+  ['tirer_4',['tirer',['../struct_etat_entrees.html#a0ae11e053c6423cb0d4db90feed1d571',1,'EtatEntrees']]],
+  ['type_5',['type',['../struct_bonus_arme.html#aad545942fb407a2f1ee4fc19ac36b87e',1,'BonusArme']]],
+  ['typearme_6',['TypeArme',['../entites_8h.html#aeea858c806fecc146afba5319180d9ae',1,'entites.h']]]
 ];

@@ -1,12 +1,6 @@
 var searchData=
 [
-  ['pause_0',['pause',['../struct_etat_entrees.html#a816f24f258b10adcb07b14babc0cc160',1,'EtatEntrees']]],
-  ['pause_5fappuye_1',['pause_appuye',['../struct_etat_entrees.html#a00c4b13957488beb17f148601de0ab6c',1,'EtatEntrees']]],
-  ['platform_5fid_2',['PLATFORM_ID',['../_c_make_c_compiler_id_8c.html#adbc5372f40838899018fadbc89bd588b',1,'CMakeCCompilerId.c']]],
-  ['points_5fvie_3',['points_vie',['../struct_boss.html#a9276aeb24cc00e6bd8aada39190f0334',1,'Boss']]],
-  ['projectile_4',['Projectile',['../struct_projectile.html',1,'']]],
-  ['projectiles_5',['projectiles',['../struct_etat_jeu.html#ac4d48c020619f28fbd4b5a5ff7a8dcf0',1,'EtatJeu']]],
-  ['pseudo_6',['pseudo',['../struct_joueur.html#ad6002b984c853fa3080d9b68181bbdb9',1,'Joueur']]],
-  ['pseudo_5flen_7',['PSEUDO_LEN',['../entites_8h.html#a5d2813c915f8962316bdba34165daef5',1,'entites.h']]],
-  ['pseudo_5fsaisi_8',['pseudo_saisi',['../struct_etat_menu.html#a8b693f3c69736ec2ae129887b17d93d5',1,'EtatMenu']]]
+  ['nb_5fbulles_0',['nb_bulles',['../struct_etat_jeu.html#aba9c833f5fd68d3d93e9781c282c8229',1,'EtatJeu']]],
+  ['nb_5felements_5fmenu_1',['NB_ELEMENTS_MENU',['../menu_8h.html#a08500339c9e3ef0a4e5f54fb67fce728',1,'menu.h']]],
+  ['niveau_2',['niveau',['../struct_etat_jeu.html#ad6d7ae27c8298976545ebfde15b4df4a',1,'EtatJeu']]]
 ];

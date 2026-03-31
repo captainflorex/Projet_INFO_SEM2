@@ -1,19 +1,18 @@
-\doxysection{src/\+jeu.c File Reference}
+\doxysection{Référence du fichier src/\+jeu.c}
 \hypertarget{jeu_8c}{}\label{jeu_8c}\index{src/jeu.c@{src/jeu.c}}
 {\ttfamily \+\#include "{}jeu.\+h"{}}\newline
 {\ttfamily \+\#include "{}entites.\+h"{}}\newline
 {\ttfamily \+\#include $<$math.\+h$>$}\newline
 {\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \+\#include $<$string.\+h$>$}\newline
-Include dependency graph for jeu.\+c:\+
-\nopagebreak
+Graphe des dépendances par inclusion de jeu.\+c:\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{jeu_8c__incl}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Functions}
+\doxysubsubsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
 float \doxymbox{\hyperlink{jeu_8c_a04fd5d00b05181b0046eec5c7a877412}{rayon\+\_\+bulle}} (\doxymbox{\hyperlink{entites_8h_af101043d6c277c6a337c9babd0c75c1d}{Taille\+Bulle}} t)
@@ -42,15 +41,14 @@ int \doxymbox{\hyperlink{jeu_8c_adbd875e13250e4155452816f4a51f9ac}{verifier\+\_\
 
 \label{doc-func-members}
 \Hypertarget{jeu_8c_doc-func-members}
-\doxysubsection{Function Documentation}
+\doxysubsection{Documentation des fonctions}
 \Hypertarget{jeu_8c_a0fec73e93b6dc52d71bfc31f4c20fbf5}\index{jeu.c@{jeu.c}!boss\_deplacer@{boss\_deplacer}}
 \index{boss\_deplacer@{boss\_deplacer}!jeu.c@{jeu.c}}
 \doxysubsubsection{\texorpdfstring{boss\_deplacer()}{boss\_deplacer()}}
 {\footnotesize\ttfamily \label{jeu_8c_a0fec73e93b6dc52d71bfc31f4c20fbf5} 
 void boss\+\_\+deplacer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_boss}{Boss}} \texorpdfstring{$\ast$}{*}}]{b}{, }\item[{float}]{dt}{, }\item[{float}]{largeur\+\_\+zone}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function:\+
-\nopagebreak
+Voici le graphe des appelants de cette fonction :\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -63,16 +61,14 @@ Here is the caller graph for this function:\+
 {\footnotesize\ttfamily \label{jeu_8c_a35db185c59a638dfe4f06995eaeb7e00} 
 void bulle\+\_\+deplacer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_bulle}{Bulle}} \texorpdfstring{$\ast$}{*}}]{b}{, }\item[{float}]{dt}{, }\item[{float}]{largeur\+\_\+zone}{, }\item[{float}]{hauteur\+\_\+zone}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function:\+
-\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction :\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=292pt]{jeu_8c_a35db185c59a638dfe4f06995eaeb7e00_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function:\+
-\nopagebreak
+Voici le graphe des appelants de cette fonction :\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -85,8 +81,7 @@ Here is the caller graph for this function:\+
 {\footnotesize\ttfamily \label{jeu_8c_a95bdea7c66358469b0f5587032814c83} 
 void bulle\+\_\+diviser (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{, }\item[{int}]{indice}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function:\+
-\nopagebreak
+Voici le graphe des appelants de cette fonction :\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -99,8 +94,7 @@ Here is the caller graph for this function:\+
 {\footnotesize\ttfamily \label{jeu_8c_ac3b9eb13e1446e9c5aa5ee8c7bae31f9} 
 void jeu\+\_\+init\+\_\+niveau (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{, }\item[{int}]{niveau}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function:\+
-\nopagebreak
+Voici le graphe des appelants de cette fonction :\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -113,16 +107,14 @@ Here is the caller graph for this function:\+
 {\footnotesize\ttfamily \label{jeu_8c_a6c267bac373aba16a2d30f98c5786dfd} 
 void jeu\+\_\+mettre\+\_\+a\+\_\+jour (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{, }\item[{float}]{dt}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function:\+
-\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction :\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{jeu_8c_a6c267bac373aba16a2d30f98c5786dfd_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function:\+
-\nopagebreak
+Voici le graphe des appelants de cette fonction :\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -135,8 +127,7 @@ Here is the caller graph for this function:\+
 {\footnotesize\ttfamily \label{jeu_8c_accec6939a115e95b6fe0dd557161d78e} 
 int jeu\+\_\+niveau\+\_\+gagne (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function:\+
-\nopagebreak
+Voici le graphe des appelants de cette fonction :\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -149,8 +140,7 @@ Here is the caller graph for this function:\+
 {\footnotesize\ttfamily \label{jeu_8c_addc45c25e35e48d44131714b8e7f7516} 
 int jeu\+\_\+niveau\+\_\+perdu (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function:\+
-\nopagebreak
+Voici le graphe des appelants de cette fonction :\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -163,16 +153,14 @@ Here is the caller graph for this function:\+
 {\footnotesize\ttfamily \label{jeu_8c_a0fdf5ccf00e016cdf02d6fd09ef52295} 
 void jeu\+\_\+verifier\+\_\+collisions (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{}\end{DoxyParamCaption})}
 
-Here is the call graph for this function:\+
-\nopagebreak
+Voici le graphe d\textquotesingle{}appel pour cette fonction :\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=340pt]{jeu_8c_a0fdf5ccf00e016cdf02d6fd09ef52295_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function:\+
-\nopagebreak
+Voici le graphe des appelants de cette fonction :\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -185,8 +173,7 @@ Here is the caller graph for this function:\+
 {\footnotesize\ttfamily \label{jeu_8c_aa567b6f3c9bd1a4df9d6b4683b5b46be} 
 void joueur\+\_\+tirer (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_etat_jeu}{Etat\+Jeu}} \texorpdfstring{$\ast$}{*}}]{ej}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function:\+
-\nopagebreak
+Voici le graphe des appelants de cette fonction :\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -199,8 +186,7 @@ Here is the caller graph for this function:\+
 {\footnotesize\ttfamily \label{jeu_8c_a04fd5d00b05181b0046eec5c7a877412} 
 float rayon\+\_\+bulle (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{entites_8h_af101043d6c277c6a337c9babd0c75c1d}{Taille\+Bulle}}}]{t}{}\end{DoxyParamCaption})}
 
-Here is the caller graph for this function:\+
-\nopagebreak
+Voici le graphe des appelants de cette fonction :\+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

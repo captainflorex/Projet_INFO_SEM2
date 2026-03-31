@@ -25,22 +25,35 @@
 var NAVTREE =
 [
   [ "My Project", "index.html", [
+    [ "Super Bulles - Projet INFO S2", "md__r_e_a_d_m_e.html", [
+      [ "Presentation", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
+      [ "Fonctionnalites", "md__r_e_a_d_m_e.html#autotoc_md2", null ],
+      [ "Controles", "md__r_e_a_d_m_e.html#autotoc_md3", null ],
+      [ "Arborescence utile", "md__r_e_a_d_m_e.html#autotoc_md4", null ],
+      [ "Prerequis", "md__r_e_a_d_m_e.html#autotoc_md5", null ],
+      [ "Compilation rapide (GCC)", "md__r_e_a_d_m_e.html#autotoc_md6", null ],
+      [ "Compilation avec CMake", "md__r_e_a_d_m_e.html#autotoc_md7", null ],
+      [ "Sauvegardes", "md__r_e_a_d_m_e.html#autotoc_md8", null ],
+      [ "Ressources et remarques", "md__r_e_a_d_m_e.html#autotoc_md9", null ],
+      [ "Documentation", "md__r_e_a_d_m_e.html#autotoc_md10", null ],
+      [ "Auteurs", "md__r_e_a_d_m_e.html#autotoc_md11", null ]
+    ] ],
     [ "Classes", "annotated.html", [
-      [ "Class List", "annotated.html", "annotated_dup" ],
-      [ "Class Index", "classes.html", null ],
-      [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
+      [ "Liste des classes", "annotated.html", "annotated_dup" ],
+      [ "Index des classes", "classes.html", null ],
+      [ "Membres de classe", "functions.html", [
+        [ "Tout", "functions.html", null ],
         [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
-    [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ],
-      [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ],
+    [ "Fichiers", "files.html", [
+      [ "Liste des fichiers", "files.html", "files_dup" ],
+      [ "Membres de fichier", "globals.html", [
+        [ "Tout", "globals.html", null ],
+        [ "Fonctions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
-        [ "Enumerations", "globals_enum.html", null ],
-        [ "Enumerator", "globals_eval.html", null ],
+        [ "Énumérations", "globals_enum.html", null ],
+        [ "Valeurs énumérées", "globals_eval.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -49,9 +62,10 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_c_make_c_compiler_id_8c.html"
+"_c_make_c_compiler_id_8c.html",
+"struct_joueur.html#ad6002b984c853fa3080d9b68181bbdb9"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronization';
-var SYNCOFFMSG = 'click to enable panel synchronization';
-var LISTOFALLMEMBERS = 'List of all members';
+var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';
+var SYNCOFFMSG = 'cliquez pour activer la synchronisation du panel';
+var LISTOFALLMEMBERS = 'Liste de tous les membres';

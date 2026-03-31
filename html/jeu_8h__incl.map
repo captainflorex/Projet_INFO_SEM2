@@ -1,5 +1,5 @@
-<map id="heat/jeu.h" name="heat/jeu.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,98,38"/>
-<area shape="rect" id="Node000002" href="$entites_8h.html" title=" " alt="" coords="10,86,93,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="53,36,54,71,49,70,50,41"/>
+<map id="header/jeu.h" name="header/jeu.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,116,38"/>
+<area shape="rect" id="Node000002" href="$entites_8h.html" title=" " alt="" coords="19,86,102,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,36,63,71,58,70,59,41"/>
 </map>

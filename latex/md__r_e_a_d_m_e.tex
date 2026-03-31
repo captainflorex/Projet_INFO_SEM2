@@ -1,0 +1,132 @@
+\chapter{Super Bulles -\/ Projet INFO S2 }
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{Super Bulles -\/ Projet INFO S2@{Super Bulles -\/ Projet INFO S2}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+
+
+Jeu 2D en C avec Allegro 4, inspire de Pang. Le joueur se deplace horizontalement, tire sur des bulles qui se divisent, et doit finir les niveaux avant la fin du temps.\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{Presentation}{Presentation}}\label{md__r_e_a_d_m_e_autotoc_md1}
+
+\begin{DoxyItemize}
+\item Langage:\+ C99
+\item Bibliotheque graphique:\+ Allegro 4 ({\ttfamily allegro.\+h})
+\item Resolution:\+ 800x600
+\item Moteur de jeu:\+ boucle a 60 FPS avec timer Allegro
+\item Etats de l\textquotesingle{}application:\+
+\begin{DoxyItemize}
+\item menu principal
+\item saisie pseudo
+\item en jeu
+\item pause
+\item victoire /\+ defaite
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{\texorpdfstring{Fonctionnalites}{Fonctionnalites}}\label{md__r_e_a_d_m_e_autotoc_md2}
+
+\begin{DoxyItemize}
+\item Menu principal:\+
+\begin{DoxyItemize}
+\item Nouvelle partie
+\item Reprendre une partie
+\item Regles du jeu
+\item Quitter
+\end{DoxyItemize}
+\item 4 niveaux de difficulte croissante
+\item Systeme de bulles qui se divisent en tailles plus petites
+\item HUD:\+ pseudo, score, niveau, temps restant
+\item Ecran de pause et decompte de debut de niveau
+\item Sauvegarde/\+chargement simple par pseudo dans {\ttfamily sauvegardes.\+txt}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{\texorpdfstring{Controles}{Controles}}\label{md__r_e_a_d_m_e_autotoc_md3}
+
+\begin{DoxyItemize}
+\item Fleche gauche /\+ droite:\+ deplacement
+\item Espace:\+ tirer
+\item P:\+ pause /\+ reprise
+\item Echap:\+
+\begin{DoxyItemize}
+\item quitter la partie en cours vers le menu
+\item revenir depuis l\textquotesingle{}ecran des regles
+\end{DoxyItemize}
+\item Entree:\+
+\begin{DoxyItemize}
+\item valider un choix dans le menu
+\item valider le pseudo
+\item revenir au menu apres victoire/\+defaite
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{\texorpdfstring{Arborescence utile}{Arborescence utile}}\label{md__r_e_a_d_m_e_autotoc_md4}
+
+\begin{DoxyItemize}
+\item {\ttfamily src/\+}:\+ fichiers source C
+\item {\ttfamily heat/\+}:\+ headers
+\item {\ttfamily ressources/\+}:\+ assets (fond et sprites)
+\item {\ttfamily html/\+} et {\ttfamily latex/\+}:\+ documentation generee (Doxygen)
+\item {\ttfamily cmake-\/build-\/debug/\+}:\+ artefacts de build CMake
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{\texorpdfstring{Prerequis}{Prerequis}}\label{md__r_e_a_d_m_e_autotoc_md5}
+Sur Windows (Min\+GW recommande):\+
+
+
+\begin{DoxyItemize}
+\item GCC
+\item CMake (optionnel)
+\item Allegro 4 developpement (bibliotheques + headers)
+\end{DoxyItemize}
+
+Exemple de bibliotheques a l\textquotesingle{}edition de liens:\+
+
+
+\begin{DoxyItemize}
+\item {\ttfamily -\/lmingw32}
+\item {\ttfamily -\/lalleg44}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysection{\texorpdfstring{Compilation rapide (GCC)}{Compilation rapide (GCC)}}\label{md__r_e_a_d_m_e_autotoc_md6}
+Depuis la racine du projet ({\ttfamily Projet\+\_\+\+INFO\+\_\+\+SEM2}):\+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gcc\ -\/Wall\ -\/Wextra\ -\/g3\ \(\backslash\)}
+\DoxyCodeLine{\ \ src/main.c\ src/affichage.c\ src/jeu.c\ src/entrees.c\ src/menu.c\ src/sauvegarde.c\ \(\backslash\)}
+\DoxyCodeLine{\ \ -\/Iheat\ -\/o\ SuperBulles.exe\ -\/lmingw32\ -\/lalleg44}
+
+\end{DoxyCode}
+
+
+Execution:\+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./SuperBulles.exe}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysection{\texorpdfstring{Compilation avec CMake}{Compilation avec CMake}}\label{md__r_e_a_d_m_e_autotoc_md7}
+Le projet contient un {\ttfamily CMake\+Lists.\+txt}. Si votre environnement Allegro 4 est correctement configure:\+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\ -\/S\ .\ -\/B\ build}
+\DoxyCodeLine{cmake\ -\/-\/build\ build}
+
+\end{DoxyCode}
+
+
+Puis lancez l\textquotesingle{}executable genere dans le dossier {\ttfamily build/\+}.\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysection{\texorpdfstring{Sauvegardes}{Sauvegardes}}\label{md__r_e_a_d_m_e_autotoc_md8}
+
+\begin{DoxyItemize}
+\item Fichier utilise:\+ {\ttfamily sauvegardes.\+txt} (a la racine d\textquotesingle{}execution)
+\item Format d\textquotesingle{}une ligne:\+ {\ttfamily pseudo niveau}
+\item Le chargement reprend le dernier niveau trouve pour un pseudo
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysection{\texorpdfstring{Ressources et remarques}{Ressources et remarques}}\label{md__r_e_a_d_m_e_autotoc_md9}
+
+\begin{DoxyItemize}
+\item Le fond principal est present dans {\ttfamily ressources/\+fonds/\+fond\+\_\+jeu.\+bmp}.
+\item Plusieurs sprites attendus dans {\ttfamily ressources/\+sprites/\+} peuvent etre absents.
+\begin{DoxyItemize}
+\item Le code gere des fallback graphiques (formes colorees) si un sprite manque.
+\end{DoxyItemize}
+\item Une partie du chargement de fond dans {\ttfamily \doxylink{affichage_8c}{src/\+affichage.\+c}} utilise un chemin absolu local.
+\begin{DoxyItemize}
+\item Si le fichier n\textquotesingle{}est pas trouve, un fond de secours est cree automatiquement.
+\end{DoxyItemize}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysection{\texorpdfstring{Documentation}{Documentation}}\label{md__r_e_a_d_m_e_autotoc_md10}
+
+\begin{DoxyItemize}
+\item Config Doxygen:\+ {\ttfamily Doxyfile}
+\item Sorties deja presentes:\+ {\ttfamily html/\+} et {\ttfamily latex/\+}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysection{\texorpdfstring{Auteurs}{Auteurs}}\label{md__r_e_a_d_m_e_autotoc_md11}
+Projet realise dans le cadre du cours d\textquotesingle{}INFO S2. 

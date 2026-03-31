@@ -1,5 +1,5 @@
-<map id="heat/sauvegarde.h" name="heat/sauvegarde.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,157,38"/>
-<area shape="rect" id="Node000002" href="$entites_8h.html" title=" " alt="" coords="40,86,122,119"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,36,84,71,78,70,79,40"/>
+<map id="header/sauvegarde.h" name="header/sauvegarde.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,175,38"/>
+<area shape="rect" id="Node000002" href="$entites_8h.html" title=" " alt="" coords="49,86,131,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,36,93,71,87,70,88,40"/>
 </map>
