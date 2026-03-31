@@ -224,18 +224,18 @@ void jeu_verifier_collisions(EtatJeu *ej) {
             float dx = p->x - b->x, dy = p->y - b->y;
             if (dx*dx + dy*dy < (rb+4)*(rb+4)) {
                 p->active = 0;
-                ej->explosion_x     = p->x;
-                ej->explosion_y     = p->y;
-                ej->explosion_timer = 0.3f;
                 ej->joueur.score += 10 * (4 - b->taille);
 
                 if (p->explosion) {
+                    ej->explosion_x     = p->x;
+                    ej->explosion_y     = p->y;
+                    ej->explosion_timer = 0.3f;
                     /* Explose toutes les bulles dans un rayon de 80px */
                     for (int j = 0; j < MAX_BULLES; j++) {
                         if (!ej->bulles[j].active) continue;
                         float ex = ej->bulles[j].x - p->x;
                         float ey = ej->bulles[j].y - p->y;
-                        if (ex*ex + ey*ey < 100*100) {
+                        if (ex*ex + ey*ey < 80*80) {
                             ej->joueur.score += 10 * (4 - ej->bulles[j].taille);
                             bulle_diviser(ej, j);
                         }
