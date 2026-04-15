@@ -23,6 +23,11 @@ static BITMAP *sprite_marche_d2 = NULL;
 static BITMAP *sprite_marche_g1 = NULL;
 static BITMAP *sprite_marche_g2 = NULL;
 
+/* BOSS */
+static BITMAP *sprite_boss[3] = {NULL, NULL, NULL};
+static int     anim_boss      = 0;
+static int     timer_anim_boss = 0;
+
 static BITMAP *sprite_bonus_explosion = NULL;
 static BITMAP *sprite_bonus_triple = NULL;
 static BITMAP *sprite_bonus_rapide = NULL;
@@ -98,6 +103,15 @@ void affichage_charger_ressources(void) {
     sprite_marche_g1 = load_bitmap("ressources/sprites/joueur_marche_g1.bmp",  NULL);
     sprite_marche_g2 = load_bitmap("ressources/sprites/joueur_marche_g2.bmp",  NULL);
 
+    /* BOSS */
+    sprite_boss[0] = load_bitmap("ressources/sprites/boss1.bmp", NULL);
+    sprite_boss[1] = load_bitmap("ressources/sprites/boss2.bmp", NULL);
+    sprite_boss[2] = load_bitmap("ressources/sprites/boss3.bmp", NULL);
+
+    appliquer_masque(sprite_boss[0]);
+    appliquer_masque(sprite_boss[1]);
+    appliquer_masque(sprite_boss[2]);
+
     sprite_bonus_explosion = load_bitmap("ressources/sprites/bonus_explosion.bmp", NULL);
     sprite_bonus_triple = load_bitmap("ressources/sprites/bonus_triple.bmp", NULL);
     sprite_bonus_rapide = load_bitmap("ressources/sprites/bonus_rapide.bmp", NULL);
@@ -129,6 +143,9 @@ void affichage_liberer_ressources(void) {
     if (sprite_marche_d2) { destroy_bitmap(sprite_marche_d2); sprite_marche_d2 = NULL; }
     if (sprite_marche_g1) { destroy_bitmap(sprite_marche_g1); sprite_marche_g1 = NULL; }
     if (sprite_marche_g2) { destroy_bitmap(sprite_marche_g2); sprite_marche_g2 = NULL; }
+
+    for (int i = 0; i < 3; i++)
+        if (sprite_boss[i]) { destroy_bitmap(sprite_boss[i]); sprite_boss[i] = NULL; }
 
     if (sprite_bonus_explosion) { destroy_bitmap(sprite_bonus_explosion); sprite_bonus_explosion = NULL; }
     if (sprite_bonus_triple) { destroy_bitmap(sprite_bonus_triple); sprite_bonus_triple = NULL; }
@@ -311,13 +328,43 @@ void afficher_hud(BITMAP *tampon, const EtatJeu *ej) {
 
 void afficher_boss(BITMAP *tampon, const Boss *boss) {
     if (!boss->active) return;
-    rectfill(tampon, (int)boss->x-30, (int)boss->y-30,
-                     (int)boss->x+30, (int)boss->y+30, makecol(200, 0, 200));
-    rect(tampon,     (int)boss->x-30, (int)boss->y-30,
-                     (int)boss->x+30, (int)boss->y+30, makecol(255, 100, 255));
-    rectfill(tampon, (int)boss->x-30, (int)boss->y-45,
-                     (int)boss->x-30 + boss->points_vie*2,
-                     (int)boss->y-35, makecol(255, 0, 0));
+
+    int x = (int)boss->x;
+    int y = (int)boss->y;
+
+    /* Animation : change de frame toutes les 8 tics */
+    timer_anim_boss++;
+    if (timer_anim_boss >= 8) {
+        timer_anim_boss = 0;
+        anim_boss = (anim_boss + 1) % 3;
+    }
+
+    /* Sprite ou fallback cercle */
+    if (sprite_boss[anim_boss]) {
+        draw_sprite(tampon, sprite_boss[anim_boss],
+                    x - sprite_boss[anim_boss]->w / 2,
+                    y - sprite_boss[anim_boss]->h / 2);
+    } else {
+        circlefill(tampon, x, y, 40, makecol(180,   0, 180));
+        circle    (tampon, x, y, 40, makecol(255, 100, 255));
+    }
+
+    /* Barre de vie (conservée) */
+    float ratio   = (float)boss->points_vie / (float)boss->points_vie_max;
+    int   barre_w = 120;
+    int   barre_x = x - barre_w / 2;
+    int   barre_y = y - 70;
+
+    rectfill(tampon, barre_x, barre_y,
+             barre_x + barre_w, barre_y + 10, makecol(40, 0, 0));
+    rectfill(tampon, barre_x + 1, barre_y + 1,
+             barre_x + 1 + (int)((barre_w - 2) * ratio),
+             barre_y + 9,
+             ratio > 0.5f ? makecol(0, 220, 0) :
+             ratio > 0.25f ? makecol(255, 180, 0) :
+                             makecol(255, 0, 0));
+    rect(tampon, barre_x, barre_y,
+         barre_x + barre_w, barre_y + 10, makecol(255, 255, 255));
 }
 
 void afficher_projectile(BITMAP *tampon, const Projectile *p) {
