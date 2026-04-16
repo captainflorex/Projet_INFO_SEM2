@@ -5,14 +5,22 @@ set(CMAKE_C_STANDARD 99)
 
 # Sources
 add_executable(Projet_INFO_SEM2
-        main.c
-        affichage.c
-        jeu.c
-        entrees.c
-        menu.c
-        sauvegarde.c
-        eclair.c
-        eclair.h
+        src/main.c
+        src/affichage.c
+        src/jeu.c
+        src/entrees.c
+        src/menu.c
+        src/sauvegarde.c
+        src/eclair.c
+        header/eclair.h
+        header/affichage.h
+        header/alfont.h
+        header/alfontdll.h
+        header/entites.h
+        header/entrees.h
+        header/jeu.h
+        header/menu.h
+        header/sauvegarde.h
 )
 
 # Includes alfont

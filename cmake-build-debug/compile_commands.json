@@ -1,38 +1,44 @@
 [
 {
   "directory": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug",
-  "command": "C:\\Users\\flori\\Downloads\\MinGW\\MinGW\\bin\\gcc.exe -g -std=gnu99 -fdiagnostics-color=always -o CMakeFiles\\Projet_INFO_SEM2.dir\\main.c.obj -c \"C:\\Users\\flori\\Downloads\\Projet Info MI RENDU\\Projet_INFO_SEM2\\main.c\"",
-  "file": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/main.c",
-  "output": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug/CMakeFiles/Projet_INFO_SEM2.dir/main.c.obj"
+  "command": "C:\\Users\\flori\\Downloads\\MinGW\\MinGW\\bin\\gcc.exe -I\"C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/alfont-code-r12-trunk/alfont-code-r12-trunk/include\" -g -std=gnu99 -fdiagnostics-color=always -o CMakeFiles\\Projet_INFO_SEM2.dir\\src\\main.c.obj -c \"C:\\Users\\flori\\Downloads\\Projet Info MI RENDU\\Projet_INFO_SEM2\\src\\main.c\"",
+  "file": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/src/main.c",
+  "output": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug/CMakeFiles/Projet_INFO_SEM2.dir/src/main.c.obj"
 },
 {
   "directory": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug",
-  "command": "C:\\Users\\flori\\Downloads\\MinGW\\MinGW\\bin\\gcc.exe -g -std=gnu99 -fdiagnostics-color=always -o CMakeFiles\\Projet_INFO_SEM2.dir\\affichage.c.obj -c \"C:\\Users\\flori\\Downloads\\Projet Info MI RENDU\\Projet_INFO_SEM2\\affichage.c\"",
-  "file": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/affichage.c",
-  "output": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug/CMakeFiles/Projet_INFO_SEM2.dir/affichage.c.obj"
+  "command": "C:\\Users\\flori\\Downloads\\MinGW\\MinGW\\bin\\gcc.exe -I\"C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/alfont-code-r12-trunk/alfont-code-r12-trunk/include\" -g -std=gnu99 -fdiagnostics-color=always -o CMakeFiles\\Projet_INFO_SEM2.dir\\src\\affichage.c.obj -c \"C:\\Users\\flori\\Downloads\\Projet Info MI RENDU\\Projet_INFO_SEM2\\src\\affichage.c\"",
+  "file": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/src/affichage.c",
+  "output": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug/CMakeFiles/Projet_INFO_SEM2.dir/src/affichage.c.obj"
 },
 {
   "directory": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug",
-  "command": "C:\\Users\\flori\\Downloads\\MinGW\\MinGW\\bin\\gcc.exe -g -std=gnu99 -fdiagnostics-color=always -o CMakeFiles\\Projet_INFO_SEM2.dir\\jeu.c.obj -c \"C:\\Users\\flori\\Downloads\\Projet Info MI RENDU\\Projet_INFO_SEM2\\jeu.c\"",
-  "file": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/jeu.c",
-  "output": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug/CMakeFiles/Projet_INFO_SEM2.dir/jeu.c.obj"
+  "command": "C:\\Users\\flori\\Downloads\\MinGW\\MinGW\\bin\\gcc.exe -I\"C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/alfont-code-r12-trunk/alfont-code-r12-trunk/include\" -g -std=gnu99 -fdiagnostics-color=always -o CMakeFiles\\Projet_INFO_SEM2.dir\\src\\jeu.c.obj -c \"C:\\Users\\flori\\Downloads\\Projet Info MI RENDU\\Projet_INFO_SEM2\\src\\jeu.c\"",
+  "file": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/src/jeu.c",
+  "output": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug/CMakeFiles/Projet_INFO_SEM2.dir/src/jeu.c.obj"
 },
 {
   "directory": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug",
-  "command": "C:\\Users\\flori\\Downloads\\MinGW\\MinGW\\bin\\gcc.exe -g -std=gnu99 -fdiagnostics-color=always -o CMakeFiles\\Projet_INFO_SEM2.dir\\entrees.c.obj -c \"C:\\Users\\flori\\Downloads\\Projet Info MI RENDU\\Projet_INFO_SEM2\\entrees.c\"",
-  "file": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/entrees.c",
-  "output": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug/CMakeFiles/Projet_INFO_SEM2.dir/entrees.c.obj"
+  "command": "C:\\Users\\flori\\Downloads\\MinGW\\MinGW\\bin\\gcc.exe -I\"C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/alfont-code-r12-trunk/alfont-code-r12-trunk/include\" -g -std=gnu99 -fdiagnostics-color=always -o CMakeFiles\\Projet_INFO_SEM2.dir\\src\\entrees.c.obj -c \"C:\\Users\\flori\\Downloads\\Projet Info MI RENDU\\Projet_INFO_SEM2\\src\\entrees.c\"",
+  "file": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/src/entrees.c",
+  "output": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug/CMakeFiles/Projet_INFO_SEM2.dir/src/entrees.c.obj"
 },
 {
   "directory": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug",
-  "command": "C:\\Users\\flori\\Downloads\\MinGW\\MinGW\\bin\\gcc.exe -g -std=gnu99 -fdiagnostics-color=always -o CMakeFiles\\Projet_INFO_SEM2.dir\\menu.c.obj -c \"C:\\Users\\flori\\Downloads\\Projet Info MI RENDU\\Projet_INFO_SEM2\\menu.c\"",
-  "file": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/menu.c",
-  "output": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug/CMakeFiles/Projet_INFO_SEM2.dir/menu.c.obj"
+  "command": "C:\\Users\\flori\\Downloads\\MinGW\\MinGW\\bin\\gcc.exe -I\"C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/alfont-code-r12-trunk/alfont-code-r12-trunk/include\" -g -std=gnu99 -fdiagnostics-color=always -o CMakeFiles\\Projet_INFO_SEM2.dir\\src\\menu.c.obj -c \"C:\\Users\\flori\\Downloads\\Projet Info MI RENDU\\Projet_INFO_SEM2\\src\\menu.c\"",
+  "file": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/src/menu.c",
+  "output": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug/CMakeFiles/Projet_INFO_SEM2.dir/src/menu.c.obj"
 },
 {
   "directory": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug",
-  "command": "C:\\Users\\flori\\Downloads\\MinGW\\MinGW\\bin\\gcc.exe -g -std=gnu99 -fdiagnostics-color=always -o CMakeFiles\\Projet_INFO_SEM2.dir\\sauvegarde.c.obj -c \"C:\\Users\\flori\\Downloads\\Projet Info MI RENDU\\Projet_INFO_SEM2\\sauvegarde.c\"",
-  "file": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/sauvegarde.c",
-  "output": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug/CMakeFiles/Projet_INFO_SEM2.dir/sauvegarde.c.obj"
+  "command": "C:\\Users\\flori\\Downloads\\MinGW\\MinGW\\bin\\gcc.exe -I\"C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/alfont-code-r12-trunk/alfont-code-r12-trunk/include\" -g -std=gnu99 -fdiagnostics-color=always -o CMakeFiles\\Projet_INFO_SEM2.dir\\src\\sauvegarde.c.obj -c \"C:\\Users\\flori\\Downloads\\Projet Info MI RENDU\\Projet_INFO_SEM2\\src\\sauvegarde.c\"",
+  "file": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/src/sauvegarde.c",
+  "output": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug/CMakeFiles/Projet_INFO_SEM2.dir/src/sauvegarde.c.obj"
+},
+{
+  "directory": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug",
+  "command": "C:\\Users\\flori\\Downloads\\MinGW\\MinGW\\bin\\gcc.exe -I\"C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/alfont-code-r12-trunk/alfont-code-r12-trunk/include\" -g -std=gnu99 -fdiagnostics-color=always -o CMakeFiles\\Projet_INFO_SEM2.dir\\src\\eclair.c.obj -c \"C:\\Users\\flori\\Downloads\\Projet Info MI RENDU\\Projet_INFO_SEM2\\src\\eclair.c\"",
+  "file": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/src/eclair.c",
+  "output": "C:/Users/flori/Downloads/Projet Info MI RENDU/Projet_INFO_SEM2/cmake-build-debug/CMakeFiles/Projet_INFO_SEM2.dir/src/eclair.c.obj"
 }
 ]
