@@ -60,9 +60,7 @@ void affichage_init(void) {
 
 void affichage_charger_ressources(void) {
     /* Fond jeu */
-    fond_jeu = load_bitmap(
-        "C:\\Users\\Rems1\\CLionProjects\\Projet_INFO_SEM2\\cmake-build-debug\\ressources\\fonds\\fond_jeu.bmp",
-        NULL);
+    fond_jeu = load_bitmap("ressources/fonds/fond_jeu.bmp", NULL);
     if (fond_jeu && (fond_jeu->w != LARGEUR_FENETRE || fond_jeu->h != HAUTEUR_ZONE)) {
         BITMAP *redim = create_bitmap(LARGEUR_FENETRE, HAUTEUR_ZONE);
         stretch_blit(fond_jeu, redim, 0, 0, fond_jeu->w, fond_jeu->h,
@@ -96,25 +94,25 @@ void affichage_charger_ressources(void) {
     appliquer_masque(sprite_bulle_minuscule);
 
     /* Sprites joueur */
-    sprite_idle      = load_bitmap("ressources/sprites/joueur_idle.bmp",       NULL);
-    sprite_tir       = load_bitmap("ressources/sprites/joueur_tir.bmp",        NULL);
-    sprite_marche_d1 = load_bitmap("ressources/sprites/joueur_marche_d1.bmp",  NULL);
-    sprite_marche_d2 = load_bitmap("ressources/sprites/joueur_marche_d2.bmp",  NULL);
-    sprite_marche_g1 = load_bitmap("ressources/sprites/joueur_marche_g1.bmp",  NULL);
-    sprite_marche_g2 = load_bitmap("ressources/sprites/joueur_marche_g2.bmp",  NULL);
+    sprite_idle      = load_bitmap("ressources/sprites/joueur_idle.bmp",NULL);
+    sprite_tir       = load_bitmap("ressources/sprites/joueur_tir.bmp",NULL);
+    sprite_marche_d1 = load_bitmap("ressources/sprites/joueur_marche_d1.bmp",NULL);
+    sprite_marche_d2 = load_bitmap("ressources/sprites/joueur_marche_d2.bmp",NULL);
+    sprite_marche_g1 = load_bitmap("ressources/sprites/joueur_marche_g1.bmp",NULL);
+    sprite_marche_g2 = load_bitmap("ressources/sprites/joueur_marche_g2.bmp",NULL);
 
     /* BOSS */
-    sprite_boss[0] = load_bitmap("ressources/sprites/boss1.bmp", NULL);
-    sprite_boss[1] = load_bitmap("ressources/sprites/boss2.bmp", NULL);
-    sprite_boss[2] = load_bitmap("ressources/sprites/boss3.bmp", NULL);
+    sprite_boss[0] = load_bitmap("ressources/sprites/boss1.bmp",NULL);
+    sprite_boss[1] = load_bitmap("ressources/sprites/boss2.bmp",NULL);
+    sprite_boss[2] = load_bitmap("ressources/sprites/boss3.bmp",NULL);
 
     appliquer_masque(sprite_boss[0]);
     appliquer_masque(sprite_boss[1]);
     appliquer_masque(sprite_boss[2]);
 
-    sprite_bonus_explosion = load_bitmap("ressources/sprites/bonus_explosion.bmp", NULL);
-    sprite_bonus_triple = load_bitmap("ressources/sprites/bonus_triple.bmp", NULL);
-    sprite_bonus_rapide = load_bitmap("ressources/sprites/bonus_rapide.bmp", NULL);
+    sprite_bonus_explosion = load_bitmap("ressources/sprites/bonus_explosion.bmp",NULL);
+    sprite_bonus_triple = load_bitmap("ressources/sprites/bonus_triple.bmp",NULL);
+    sprite_bonus_rapide = load_bitmap("ressources/sprites/bonus_rapide.bmp",NULL);
 
     appliquer_masque(sprite_bonus_rapide);
     appliquer_masque(sprite_bonus_triple);
@@ -132,13 +130,13 @@ void affichage_liberer_ressources(void) {
     if (fond_jeu)  { destroy_bitmap(fond_jeu);  fond_jeu  = NULL; }
     if (fond_menu) { destroy_bitmap(fond_menu); fond_menu = NULL; }
 
-    if (sprite_bulle_grande)    { destroy_bitmap(sprite_bulle_grande);    sprite_bulle_grande    = NULL; }
-    if (sprite_bulle_moyenne)   { destroy_bitmap(sprite_bulle_moyenne);   sprite_bulle_moyenne   = NULL; }
-    if (sprite_bulle_petite)    { destroy_bitmap(sprite_bulle_petite);    sprite_bulle_petite    = NULL; }
+    if (sprite_bulle_grande) { destroy_bitmap(sprite_bulle_grande);   sprite_bulle_grande = NULL; }
+    if (sprite_bulle_moyenne)  { destroy_bitmap(sprite_bulle_moyenne);  sprite_bulle_moyenne = NULL; }
+    if (sprite_bulle_petite) { destroy_bitmap(sprite_bulle_petite);   sprite_bulle_petite  = NULL; }
     if (sprite_bulle_minuscule) { destroy_bitmap(sprite_bulle_minuscule); sprite_bulle_minuscule = NULL; }
 
-    if (sprite_idle)      { destroy_bitmap(sprite_idle);      sprite_idle      = NULL; }
-    if (sprite_tir)       { destroy_bitmap(sprite_tir);       sprite_tir       = NULL; }
+    if (sprite_idle)  { destroy_bitmap(sprite_idle); sprite_idle = NULL; }
+    if (sprite_tir)   { destroy_bitmap(sprite_tir); sprite_tir = NULL; }
     if (sprite_marche_d1) { destroy_bitmap(sprite_marche_d1); sprite_marche_d1 = NULL; }
     if (sprite_marche_d2) { destroy_bitmap(sprite_marche_d2); sprite_marche_d2 = NULL; }
     if (sprite_marche_g1) { destroy_bitmap(sprite_marche_g1); sprite_marche_g1 = NULL; }
@@ -266,43 +264,35 @@ void afficher_hud(BITMAP *tampon, const EtatJeu *ej) {
     vline(tampon, 320, y0 + 8, y0 + HAUTEUR_INFO - 8, makecol(0, 100, 150));
 
     /* === NIVEAU (centre) === */
-    textprintf_ex(tampon, font, 335, y0 + 10,
-                  makecol(150, 150, 150), -1, "NIVEAU");
-    textprintf_ex(tampon, font, 335, y0 + 24,
-                  makecol(0, 220, 255), -1, "%d / 4", ej->niveau);
+    textprintf_ex(tampon, font, 335, y0 + 10, makecol(150, 150, 150), -1, "NIVEAU");
+    textprintf_ex(tampon, font, 335, y0 + 24, makecol(0, 220, 255), -1, "%d / 4", ej->niveau);
 
     /* Séparateur vertical */
     vline(tampon, 460, y0 + 8, y0 + HAUTEUR_INFO - 8, makecol(0, 100, 150));
 
     /* === TEMPS (droite) avec barre de progression === */
-    textprintf_ex(tampon, font, 475, y0 + 10,
-                  makecol(150, 150, 150), -1, "TEMPS");
+    textprintf_ex(tampon, font, 475, y0 + 10,makecol(150, 150, 150), -1, "TEMPS");
 
     /* Couleur qui vire au rouge quand il reste peu de temps */
     int col_temps;
-    if      (ej->temps_restant > 30.0f) col_temps = makecol(0,   255, 100);
+    if  (ej->temps_restant > 30.0f) col_temps = makecol(0,   255, 100);
     else if (ej->temps_restant > 10.0f) col_temps = makecol(255, 180,   0);
-    else                                col_temps = makecol(255,  50,  50);
+    else  col_temps = makecol(255,  50,  50);
 
-    textprintf_ex(tampon, font, 475, y0 + 24,
-                  col_temps, -1, "%.0fs", ej->temps_restant);
+    textprintf_ex(tampon, font, 475, y0 + 24, col_temps, -1, "%.0fs", ej->temps_restant);
 
     /* Barre de temps */
-    int barre_x     = 540;
+    int barre_x = 540;
     int barre_largeur = 240;
-    int barre_h     = 10;
-    int barre_y     = y0 + 25;
-    float ratio     = ej->temps_restant / 60.0f;
+    int barre_h = 10;
+    int barre_y = y0 + 25;
+    float ratio = ej->temps_restant / 60.0f;
     if (ratio < 0) ratio = 0;
     if (ratio > 1) ratio = 1;
 
     /* Fond barre */
-    rectfill(tampon, barre_x, barre_y,
-             barre_x + barre_largeur, barre_y + barre_h,
-             makecol(20, 20, 40));
-    rect(tampon, barre_x, barre_y,
-         barre_x + barre_largeur, barre_y + barre_h,
-         makecol(0, 80, 120));
+    rectfill(tampon, barre_x, barre_y,barre_x + barre_largeur, barre_y + barre_h,makecol(20, 20, 40));
+    rect(tampon, barre_x, barre_y,barre_x + barre_largeur, barre_y + barre_h,makecol(0, 80, 120));
 
     /* Remplissage barre */
     if (ratio > 0)
@@ -319,12 +309,10 @@ void afficher_hud(BITMAP *tampon, const EtatJeu *ej) {
             case ARME_EXPLOSION:  nom_arme = "EXPLOSION";  break;
             default: break;
         }
-        textprintf_ex(tampon, font, LARGEUR_FENETRE - 200, y0 + 10,
-                      makecol(0, 255, 100), -1, "%s  %.0fs", nom_arme, ej->timer_arme_speciale);
+        textprintf_ex(tampon, font, LARGEUR_FENETRE - 200, y0 + 10,makecol(0, 255, 100), -1, "%s  %.0fs", nom_arme, ej->timer_arme_speciale);
     }
 
 }
-
 
 void afficher_boss(BITMAP *tampon, const Boss *boss) {
     if (!boss->active) return;
@@ -357,9 +345,7 @@ void afficher_boss(BITMAP *tampon, const Boss *boss) {
 
     rectfill(tampon, barre_x, barre_y,
              barre_x + barre_w, barre_y + 10, makecol(40, 0, 0));
-    rectfill(tampon, barre_x + 1, barre_y + 1,
-             barre_x + 1 + (int)((barre_w - 2) * ratio),
-             barre_y + 9,
+    rectfill(tampon, barre_x + 1, barre_y + 1,barre_x + 1 + (int)((barre_w - 2) * ratio),barre_y + 9,
              ratio > 0.5f ? makecol(0, 220, 0) :
              ratio > 0.25f ? makecol(255, 180, 0) :
                              makecol(255, 0, 0));
@@ -432,16 +418,14 @@ void afficher_jeu(BITMAP *tampon, const EtatJeu *ej) {
 
         /* Flash explosion */
         if (ej->explosion_timer > 0) {
-            float ratio = ej->explosion_timer / 0.3f;
-            int rayon   = (int)(120 * (1.0f - ratio));
-            int alpha   = (int)(200 * ratio);
+            float ratio = ej->explosion_timer / DUREE_EXPLOSION;
+            int rayon = (int)(120 * (1.0f - ratio));
+            int alpha = (int)(200 * ratio);
             drawing_mode(DRAW_MODE_TRANS, NULL, 0, 0);
             set_trans_blender(255, 100, 0, alpha);
-            circlefill(tampon, (int)ej->explosion_x, (int)ej->explosion_y,
-                       rayon, makecol(255, 100, 0));
+            circlefill(tampon, (int)ej->explosion_x, (int)ej->explosion_y,rayon, makecol(255, 100, 0));
             drawing_mode(DRAW_MODE_SOLID, NULL, 0, 0);
-            circle(tampon, (int)ej->explosion_x, (int)ej->explosion_y,
-                   rayon, makecol(255, 220, 0));
+            circle(tampon, (int)ej->explosion_x, (int)ej->explosion_y,rayon, makecol(255, 220, 0));
         }
     }
 
@@ -462,14 +446,12 @@ void afficher_pause(BITMAP *tampon, const EtatJeu *ej) {
     /* Panneau central */
     int px = LARGEUR_FENETRE / 2 - 150;
     int py = HAUTEUR_ZONE    / 2 - 80;
-    rectfill(tampon, px,     py,     px+300, py+160, makecol(10,  10,  40));
-    rect    (tampon, px,     py,     px+300, py+160, makecol(0,  200, 255));
-    rect    (tampon, px+2,   py+2,   px+298, py+158, makecol(0,  80,  120));
+    rectfill(tampon, px,py,+300, py+160, makecol(10,  10,  40));
+    rect (tampon, px,py,px+300, py+160, makecol(0,  200, 255));
+    rect (tampon, px+2,py+2,px+298, py+158, makecol(0,  80,  120));
 
     /* Titre PAUSE */
-    textout_centre_ex(tampon, font, "PAUSE",
-                      LARGEUR_FENETRE / 2, py + 20,
-                      makecol(0, 220, 255), -1);
+    textout_centre_ex(tampon, font, "PAUSE",LARGEUR_FENETRE / 2, py + 20,makecol(0, 220, 255), -1);
 
     /* Ligne décorative */
     hline(tampon, px + 20, py + 40, px + 280, makecol(0, 100, 150));
@@ -604,4 +586,75 @@ void afficher_saisie_pseudo(BITMAP *tampon, const EtatMenu *em) {
 
     textprintf_centre_ex(tampon, font, SCREEN_W / 2, py + 120,
                          makecol(180, 180, 180), -1, "Appuyez sur ENTREE pour valider");
+}
+
+void afficher_ecran_sauvegarde(BITMAP *tampon, int choix, const EtatJeu *ej) {
+    /* Overlay sombre */
+    drawing_mode(DRAW_MODE_TRANS, NULL, 0, 0);
+    set_trans_blender(0, 0, 0, 160);
+    rectfill(tampon, 0, 0, LARGEUR_FENETRE, HAUTEUR_ZONE, makecol(0, 0, 0));
+    drawing_mode(DRAW_MODE_SOLID, NULL, 0, 0);
+
+    int px = LARGEUR_FENETRE / 2 - 180;
+    int py = HAUTEUR_ZONE    / 2 - 90;
+
+    rectfill(tampon, px,   py,   px+360, py+180, makecol(10,  10,  40));
+    rect    (tampon, px,   py,   px+360, py+180, makecol(0,  200, 255));
+    rect    (tampon, px+2, py+2, px+358, py+178, makecol(0,   80, 120));
+
+    textout_centre_ex(tampon, font, "SAUVEGARDER ?",
+                      LARGEUR_FENETRE / 2, py + 20, makecol(0, 220, 255), -1);
+    hline(tampon, px + 20, py + 42, px + 340, makecol(0, 100, 150));
+
+    /* Option OUI */
+    int col_oui = (choix == 0) ? makecol(0, 255, 100) : makecol(180, 180, 180);
+    if (choix == 0)
+        rectfill(tampon, px+30, py+60, px+330, py+85, makecol(0, 40, 20));
+    rect(tampon, px+30, py+60, px+330, py+85, col_oui);
+    textout_centre_ex(tampon, font, "OUI  -  Sauvegarder et continuer",
+                      LARGEUR_FENETRE / 2, py + 68, col_oui, -1);
+
+    /* Option NON */
+    int col_non = (choix == 1) ? makecol(255, 80, 80) : makecol(180, 180, 180);
+    if (choix == 1)
+        rectfill(tampon, px+30, py+100, px+330, py+125, makecol(40, 0, 0));
+    rect(tampon, px+30, py+100, px+330, py+125, col_non);
+    textout_centre_ex(tampon, font, "NON  -  Continuer sans sauvegarder",
+                      LARGEUR_FENETRE / 2, py + 108, col_non, -1);
+
+    /* Info score/niveau */
+    hline(tampon, px + 20, py + 138, px + 340, makecol(0, 100, 150));
+    textprintf_centre_ex(tampon, font, LARGEUR_FENETRE / 2, py + 152,
+                         makecol(255, 220, 0), -1,
+                         "Niveau %d  |  Score %06d",
+                         ej->niveau, ej->joueur.score);
+}
+
+void afficher_liste_sauvegardes(BITMAP *tampon,
+                                 const char noms[][PSEUDO_LEN],
+                                 int nb, int choix) {
+    if (fond_menu)
+        blit(fond_menu, tampon, 0, 0, 0, 0, SCREEN_W, SCREEN_H);
+    else
+        clear_to_color(tampon, makecol(10, 10, 50));
+
+    int cx = LARGEUR_FENETRE / 2;
+    int py = 150;
+
+    textout_centre_ex(tampon, font, "CHOISIR UNE SAUVEGARDE",
+                      cx, py, makecol(0, 220, 255), -1);
+    hline(tampon, cx - 200, py + 20, cx + 200, makecol(0, 100, 150));
+
+    for (int i = 0; i < nb; i++) {
+        int col = (i == choix) ? makecol(255, 220, 0) : makecol(200, 200, 200);
+        if (i == choix)
+            rectfill(tampon, cx - 150, py + 40 + i*30 - 2,
+                             cx + 150, py + 40 + i*30 + 18, makecol(0, 40, 80));
+        textout_centre_ex(tampon, font, noms[i], cx, py + 40 + i * 30, col, -1);
+    }
+
+    textout_centre_ex(tampon, font, "HAUT/BAS pour naviguer  ENTREE pour choisir",
+                      cx, py + 40 + nb * 30 + 20, makecol(150, 150, 150), -1);
+    textout_centre_ex(tampon, font, "ECHAP pour revenir",
+                      cx, py + 40 + nb * 30 + 40, makecol(150, 150, 150), -1);
 }

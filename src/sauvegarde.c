@@ -2,37 +2,75 @@
 #include <stdio.h>
 #include <string.h>
 
-void sauvegarder_partie(const char *pseudo, int niveau) {
-    FILE *f = fopen(FICHIER_SAUVEGARDE, "a");
+#define NOGDI // Source Claude: car sinon bug avec allegro
+#define WIN32_LEAN_AND_MEAN // Source Claude: car sinon bug avec allegro
+#include <windows.h>
+
+/* Nom de fichier unique par pseudo */
+static void nom_fichier(const char *pseudo, char *buf, int buf_size) {
+    snprintf(buf, buf_size, "sauvegarde_%s.txt", pseudo);
+}
+
+void sauvegarde_ecrire(const EtatJeu *ej) {
+    char fichier[64];
+    nom_fichier(ej->joueur.pseudo, fichier, sizeof(fichier));
+    FILE *f = fopen(fichier, "w");
     if (!f) return;
-    fprintf(f, "%s %d\n", pseudo, niveau);
+    fprintf(f, "%s\n%d\n%d\n", ej->joueur.pseudo, ej->joueur.score, ej->niveau);
     fclose(f);
 }
 
-int charger_partie(const char *pseudo) {
-    FILE *f = fopen(FICHIER_SAUVEGARDE, "r");
-    if (!f) return -1;
-
-    char buf[PSEUDO_LEN];
-    int  niveau, trouve = -1;
-
-    while (fscanf(f, "%s %d", buf, &niveau) == 2)
-        if (strcmp(buf, pseudo) == 0)
-            trouve = niveau;
-
-    fclose(f);
-    return trouve; /* retourne le dernier niveau sauvegardé, -1 si introuvable */
-}
-
-int lister_sauvegardes(char tampons[][PSEUDO_LEN], int *niveaux, int taille_max) {
-    FILE *f = fopen(FICHIER_SAUVEGARDE, "r");
+int sauvegarde_lire(EtatJeu *ej) {
+    char fichier[64];
+    nom_fichier(ej->joueur.pseudo, fichier, sizeof(fichier));
+    FILE *f = fopen(fichier, "r");
     if (!f) return 0;
+    char pseudo[PSEUDO_LEN];
+    int  score, niveau;
+    if (fscanf(f, "%49s\n%d\n%d\n", pseudo, &score, &niveau) != 3) {
+        fclose(f); return 0;
+    }
+    strncpy(ej->joueur.pseudo, pseudo, PSEUDO_LEN);
+    ej->joueur.score = score;
+    ej->niveau       = niveau;
+    fclose(f);
+    return 1;
+}
 
+int sauvegarde_existe(const char *pseudo) {
+    char fichier[64];
+    nom_fichier(pseudo, fichier, sizeof(fichier));
+    FILE *f = fopen(fichier, "r");
+    if (!f) return 0;
+    fclose(f);
+    return 1;
+}
+
+int sauvegarde_lister(char noms[][PSEUDO_LEN], int max) {
+    WIN32_FIND_DATA fd;
+    HANDLE h;
     int nb = 0;
-    while (nb < taille_max &&
-           fscanf(f, "%s %d", tampons[nb], &niveaux[nb]) == 2)
+
+    h = FindFirstFileA("sauvegarde_*.txt", &fd);
+    if (h == INVALID_HANDLE_VALUE) return 0;
+
+    do {
+        if (nb >= max) break;
+        if (fd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) continue;
+
+        char *debut = fd.cFileName + 11; /* len("sauvegarde_") == 11 */
+        char *fin   = strrchr(fd.cFileName, '.');
+        if (!fin || fin <= debut) continue;
+
+        int len = (int)(fin - debut);
+        if (len <= 0 || len >= PSEUDO_LEN) continue;
+
+        strncpy(noms[nb], debut, len);
+        noms[nb][len] = '\0';
         nb++;
 
-    fclose(f);
-    return nb; /* retourne le nombre de sauvegardes trouvées */
+    } while (FindNextFileA(h, &fd) != 0);
+
+    FindClose(h);
+    return nb;
 }

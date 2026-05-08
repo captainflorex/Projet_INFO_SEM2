@@ -16,7 +16,18 @@ float rayon_bulle(TailleBulle t) {
 }
 
 void jeu_init_niveau(EtatJeu *ej, int niveau) {
+
+    /* Sauvegarde avant reset */
+    int score_sauvegarde = (niveau > 1) ? ej->joueur.score : 0;
+    char pseudo_sauvegarde[PSEUDO_LEN];
+    strncpy(pseudo_sauvegarde, ej->joueur.pseudo, PSEUDO_LEN);
+
     memset(ej, 0, sizeof(EtatJeu));
+
+    /* Restauration après reset */
+    ej->joueur.score = score_sauvegarde;
+    strncpy(ej->joueur.pseudo, pseudo_sauvegarde, PSEUDO_LEN);
+
     eclairs_init(&ej->eclairs);
     ej->niveau        = niveau;
     ej->temps_restant = 60.0f;
@@ -38,8 +49,16 @@ void jeu_init_niveau(EtatJeu *ej, int niveau) {
             ej->bulles[i].vy     = 0.0f;
             ej->nb_bulles++;
         }
+    } else if (niveau == 4) {
+        /* Niveau 4 : le boss apparaît après le décompte */
+        ej->boss.active         = 0;   /* spawne après décompte */
+        ej->boss.points_vie     = 10;
+        ej->boss.points_vie_max = 10;
+        ej->boss.x              = LARGEUR_FENETRE / 2.0f;
+        ej->boss.y              = 80.0f;
+        ej->boss.vx             = 100.0f;
+        ej->boss.timer_tir      = 2.0f;
     } else {
-        /* Niveaux 3 et 4 : bulles apparaissent après le décompte */
         ej->bulles_en_attente = niveau;
     }
 }
@@ -54,18 +73,26 @@ void jeu_mettre_a_jour(EtatJeu *ej, float dt) {
             ej->decompte_timer = 0.0f;
             ej->decompte--;
 
-            /* Spawn des bulles en attente quand le décompte se termine */
-            if (ej->decompte == 0 && ej->bulles_en_attente > 0) {
-                for (int i = 0; i < ej->bulles_en_attente && i < MAX_BULLES; i++) {
-                    ej->bulles[i].active = 1;
-                    ej->bulles[i].taille = BULLE_GRANDE;
-                    ej->bulles[i].x      = 100.0f + i * 150.0f;
-                    ej->bulles[i].y      = 100.0f;
-                    ej->bulles[i].vx     = 80.0f + ej->niveau * 10.0f;
-                    ej->bulles[i].vy     = 0.0f;
-                    ej->nb_bulles++;
+            if (ej->decompte == 0) {
+                /* Spawn bulles en attente (niveaux 3) */
+                if (ej->bulles_en_attente > 0) {
+                    for (int i = 0; i < ej->bulles_en_attente && i < MAX_BULLES; i++) {
+                        ej->bulles[i].active = 1;
+                        ej->bulles[i].taille = BULLE_GRANDE;
+                        ej->bulles[i].x      = 100.0f + i * 150.0f;
+                        ej->bulles[i].y      = 100.0f;
+                        ej->bulles[i].vx     = 80.0f + ej->niveau * 10.0f;
+                        ej->bulles[i].vy     = 0.0f;
+                        ej->nb_bulles++;
+                    }
+                    ej->bulles_en_attente = 0;
                 }
-                ej->bulles_en_attente = 0;
+
+                /* Spawn boss niveau 4 — condition séparée */
+                if (ej->niveau == 4 && !ej->boss_a_spawne) {
+                    ej->boss.active    = 1;
+                    ej->boss_a_spawne  = 1;
+                }
             }
         }
         return;
@@ -128,6 +155,26 @@ void jeu_mettre_a_jour(EtatJeu *ej, float dt) {
 
     /* Boss */
     if (ej->boss.active) boss_deplacer(&ej->boss, dt, LARGEUR_FENETRE);
+
+    /* Tir du boss */
+    if (ej->boss.active) {
+        ej->boss.timer_tir -= dt;
+        if (ej->boss.timer_tir <= 0) {
+            float ratio = (float)ej->boss.points_vie / (float)ej->boss.points_vie_max;
+            ej->boss.timer_tir = 0.5f + ratio * 1.5f;
+            for (int i = 0; i < MAX_BULLES; i++) {
+                if (!ej->bulles[i].active) {
+                    ej->bulles[i].active = 1;
+                    ej->bulles[i].taille = BULLE_PETITE;
+                    ej->bulles[i].x      = ej->boss.x;
+                    ej->bulles[i].y      = ej->boss.y + 40.0f;
+                    ej->bulles[i].vx     = (rand() % 2 == 0 ? -100.0f : 100.0f);
+                    ej->bulles[i].vy     = 80.0f;
+                    break;
+                }
+            }
+        }
+    }
 
     /* Collisions */
     jeu_verifier_collisions(ej);
@@ -229,20 +276,21 @@ void jeu_verifier_collisions(EtatJeu *ej) {
                 if (p->explosion) {
                     ej->explosion_x     = p->x;
                     ej->explosion_y     = p->y;
-                    ej->explosion_timer = 0.3f;
+                    ej->explosion_timer = DUREE_EXPLOSION;
                     /* Explose toutes les bulles dans un rayon de 80px */
-                    for (int j = 0; j < MAX_BULLES; j++) {
-                        if (!ej->bulles[j].active) continue;
-                        float ex = ej->bulles[j].x - p->x;
-                        float ey = ej->bulles[j].y - p->y;
+                    for (int e = 0; e < MAX_BULLES; e++) {
+                        if (!ej->bulles[e].active) continue;
+                        float ex = ej->bulles[e].x - p->x;
+                        float ey = ej->bulles[e].y - p->y;
                         if (ex*ex + ey*ey < 80*80) {
-                            ej->joueur.score += 10 * (4 - ej->bulles[j].taille);
-                            bulle_diviser(ej, j);
+                            ej->joueur.score += 10 * (4 - ej->bulles[e].taille);
+                            bulle_diviser(ej, e);
                         }
                     }
+                    break;
                 } else {
                     bulle_diviser(ej, i);
-                }
+                  }
                 break;
             }
         }
@@ -258,8 +306,22 @@ void jeu_verifier_collisions(EtatJeu *ej) {
     /* Boss / joueur */
     if (ej->boss.active) {
         float dx = j->x - ej->boss.x, dy = j->y - ej->boss.y;
-        if (dx*dx + dy*dy < (rj+30)*(rj+30))
+        if (dx*dx + dy*dy < (rj+40)*(rj+40))
             j->vivant = 0;
+
+        /* Projectile / boss */
+        for (int k = 0; k < MAX_PROJECTILES; k++) {
+            Projectile *p = &ej->projectiles[k];
+            if (!p->active) continue;
+            float bx = p->x - ej->boss.x, by = p->y - ej->boss.y;
+            if (bx*bx + by*by < 40*40) {
+                p->active = 0;
+                ej->joueur.score += 50;
+                ej->boss.points_vie--;
+                if (ej->boss.points_vie <= 0)
+                    ej->boss.active = 0;
+            }
+        }
     }
 }
 
@@ -340,16 +402,25 @@ void joueur_tirer(EtatJeu *ej) {
 
 void boss_deplacer(Boss *b, float dt, float largeur_zone) {
     if (!b->active) return;
-    b->x += b->vx * dt;
-    if (b->x < 30 || b->x > largeur_zone - 30) b->vx = -b->vx;
+
+    float ratio   = (float)b->points_vie / (float)b->points_vie_max;
+    float vitesse = b->vx * (1.0f + (1.0f - ratio) * 2.0f);
+
+    b->x += vitesse * dt;
+    if (b->x < 40)                { b->x = 40;                b->vx =  fabsf(b->vx); }
+    if (b->x > largeur_zone - 40) { b->x = largeur_zone - 40; b->vx = -fabsf(b->vx); }
 }
 
 int jeu_niveau_gagne(const EtatJeu *ej) {
-    /* Si le décompte est encore en cours, on n'a pas gagné */
     if (ej->decompte > 0) return 0;
-
-    /* Si des bulles sont encore en attente de spawn, on n'a pas gagné */
     if (ej->bulles_en_attente > 0) return 0;
+
+    /* Niveau 4 : le boss doit avoir spawné ET être mort */
+    if (ej->niveau == 4) {
+        if (!ej->boss_a_spawne) return 0;   /* ← pas encore apparu */
+        if (ej->boss.active)    return 0;   /* ← encore vivant */
+        return 1;
+    }
 
     for (int i = 0; i < MAX_BULLES; i++)
         if (ej->bulles[i].active) return 0;

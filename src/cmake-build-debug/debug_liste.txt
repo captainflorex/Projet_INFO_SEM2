@@ -1,0 +1,17 @@
+Repertoire courant: C:\Users\Rems1\CLionProjects\Projet_INFO_SEM2\cmake-build-debug
+  Fichier: .
+  Fichier: ..
+  Fichier: .cmake
+  Fichier: .ninja_deps
+  Fichier: .ninja_log
+  Fichier: build.ninja
+  Fichier: CMakeCache.txt
+  Fichier: CMakeFiles
+  Fichier: cmake_install.cmake
+  Fichier: debug_liste.txt
+  Fichier: fond_jeu.bmp
+  Fichier: Projet_INFO_SEM2.exe
+  Fichier: ressources
+  Fichier: sauvegarde_du.txt
+  Fichier: sauvegarde_dz.txt
+  Fichier: Testing

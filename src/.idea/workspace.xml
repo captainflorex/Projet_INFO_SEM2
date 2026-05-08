@@ -5,9 +5,31 @@
   </component>
   <component name="BackendCodeEditorMiscSettings">
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue" value="CppGeneralOptions" type="string" />
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="Projet_INFO_SEM2" targetName="Projet_INFO_SEM2" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5dae45e4-457f-4c72-8a58-cc56a047bb35" name="Changes" comment="" />
+    <list default="true" id="7299c2f0-63ac-4c7d-9cd6-28c24fbb7b0c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,32 +39,39 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="9" />
+    <option name="cachedIndexableFilesCount" value="612" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Projet_Programmation_Structurée_Avancée" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="jXphtvtS" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
-    <option name="majorVersion" value="2025" />
-    <option name="minorVersion" value="3.4" />
+    <option name="majorVersion" value="2024" />
+    <option name="minorVersion" value="2.1" />
     <option name="productBranch" value="Classic" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 8,
-  &quot;fromUser&quot;: false
+  &quot;associatedIndex&quot;: 4
 }</component>
-  <component name="ProjectId" id="3BenpZwXkI95roTBynNYjkifxL2" />
+  <component name="ProjectId" id="3BLYw31su8ZMbqlfXctxAOlqIQW" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "CMake Application.Projet_INFO_SEM2.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.RadMigrateCodeStyle": "true",
@@ -51,27 +80,78 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "RunOnceActivity.west.config.association.type.startup.service": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
-    "org.rust.first.attach.projects": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.qodana",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Projet_INFO_SEM2" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Projet_INFO_SEM2" TARGET_NAME="Projet_INFO_SEM2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Projet_INFO_SEM2" RUN_TARGET_NAME="Projet_INFO_SEM2">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5dae45e4-457f-4c72-8a58-cc56a047bb35" name="Changes" comment="" />
-      <created>1774858589656</created>
+      <changelist id="7299c2f0-63ac-4c7d-9cd6-28c24fbb7b0c" name="Changes" comment="" />
+      <created>1774270052565</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1774858589656</updated>
-      <workItem from="1774858590779" duration="3000" />
-      <workItem from="1774871200394" duration="40000" />
-      <workItem from="1776243611823" duration="219000" />
+      <updated>1774270052565</updated>
+      <workItem from="1774270054040" duration="2166000" />
+      <workItem from="1774272340868" duration="83000" />
+      <workItem from="1774278554671" duration="105000" />
+      <workItem from="1774354262809" duration="19464000" />
+      <workItem from="1774433066050" duration="426000" />
+      <workItem from="1774512976749" duration="744000" />
+      <workItem from="1774514014653" duration="583000" />
+      <workItem from="1774602158225" duration="3546000" />
+      <workItem from="1774615559860" duration="6000" />
+      <workItem from="1774880370468" duration="2334000" />
+      <workItem from="1774886079770" duration="6888000" />
+      <workItem from="1774971897254" duration="19005000" />
+      <workItem from="1775033011726" duration="6523000" />
+      <workItem from="1775812396852" duration="1489000" />
+      <workItem from="1776113766285" duration="12000" />
+      <workItem from="1776159093883" duration="279000" />
+      <workItem from="1776238818586" duration="2213000" />
+      <workItem from="1776242167609" duration="3897000" />
+      <workItem from="1776262263045" duration="6335000" />
+      <workItem from="1776272460081" duration="556000" />
+      <workItem from="1776330840347" duration="1710000" />
+      <workItem from="1776333935114" duration="917000" />
+      <workItem from="1777301673087" duration="321000" />
+      <workItem from="1778249800602" duration="290000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+    <isAutomaticBootstrapAfterUpdate value="false" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
